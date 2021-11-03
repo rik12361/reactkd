@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import React from 'react'
 import styled from 'styled-components'
 import backgrnd from './static/home-background.png'
@@ -10,6 +10,9 @@ import setMovies from './features/MovieSlice'
 import { createStore } from 'redux'
 import { createSlice } from "@reduxjs/toolkit";
 function Home() {
+
+    // removed useState .........
+    
     // const dispatch = useDispatch();
 
     // const store = createStore(todos, ['Use Redux'])
