@@ -1,0 +1,27 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+    movies: []
+}
+
+// payload is de parameter die naar setMovies zal worden doorgegeven.
+//
+const movieSlice = createSlice( {
+    name: 'movie',
+    initialState,
+    reducers: {
+        setMovies: (state, action) => {
+            state.movies = action.payload;
+        }
+    }
+})
+
+// 1. export reduces:
+export const { setMovies } = movieSlice.actions;
+
+// 2. export movie-state itself, dwz:
+// export const select<wat uit de slice exporteren = (state) => {state.<"name">.<wat uit de slice exporteren}>
+export const selectMovies = (state) => state.movie.movies;
+
+// 3. export movieSlice.reducer:
+export default movieSlice.reducer;
