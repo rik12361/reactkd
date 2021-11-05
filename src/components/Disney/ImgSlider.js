@@ -22,16 +22,16 @@ function ImgSlider() {
     return (
         <Carousel {...settings}>
           <Wrap>
-            <img src={i1}></img>
+            <img src={i1} alt='jammer'></img>
           </Wrap>
           <Wrap>
-            <img src={i2}></img>
+            <img src={i2} alt='jammer'></img>
           </Wrap>
           <Wrap>
-            <img src={i3}></img>
+            <img src={i3} alt='jammer'></img>
           </Wrap>
           <Wrap>
-            <img src={i4}></img>
+            <img src={i4} alt='jammer'></img>
           </Wrap>
         </Carousel>
     )

@@ -1,9 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit"
-import movieReducer from "./components/Disney/features/MovieSlice";
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from './components/Disney/counterSlice'
+import movieReducer from './components/Disney/moviesSlice'
 
-// <movie>: <movie>Reducer
-export const store = configureStore ({
-    reducer: {
-        movie: movieReducer
-    },
-});
+export default configureStore({
+  reducer: {
+    counter: counterReducer,
+    movie: movieReducer,
+  }
+})

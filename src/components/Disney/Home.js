@@ -5,44 +5,27 @@ import backgrnd from './static/home-background.png'
 import ImgSlider from './ImgSlider'
 import Viewers from './Viewers'
 import Movies from './Movies'
+
 import { useDispatch } from 'react-redux'
-import setMovies from './features/MovieSlice'
-import { createStore } from 'redux'
-import { createSlice } from "@reduxjs/toolkit";
+// import { decrement, increment } from './counterSlice'
+// import { mdecrement, mincrement, setmovies, incrementAsync, fetchTasks } from './moviesSlice'
+import { fetchTasks } from './moviesSlice'
+
 function Home() {
-
-    // removed useState .........
-    
-    // const dispatch = useDispatch();
-
-    // const store = createStore(todos, ['Use Redux'])
-    // const initialState = {
-    //     todos: ''
-    // }
-    // function addTodo(text) {
-    //   return {
-    //     type: 'ADD_TODO',
-    //     text
-    //   }
-    // }
-    
-    // store.dispatch(addTodo('Read the docs'))
-    // store.dispatch(addTodo('Read about the middleware'))
     const dispatch = useDispatch();
-
-    async function fetchTasks () {
-        console.log("fetching");
-        const res = await fetch ('http://localhost:8080/movie')
-        const data = await res.json();
-        return (data);
-    }
     useEffect (() => {
-        dispatch(setMovies(fetchTasks()));
-    }, []);
+        dispatch(fetchTasks());
+    },[]);
 
     return (
         <Container>
             <ImgSlider/>
+            {/* {<h1>{title}</h1>} */}
+            {/* <button onClick={() => dispatch(increment())} >inc</button>
+            <button onClick={() => dispatch(decrement())} >dec</button>
+            <button onClick={() => dispatch(mincrement())} >minc</button>
+            <button onClick={() => dispatch(mdecrement())} >mdec</button>
+            <button onClick={() => DoIt()} >doit</button> */}
             <Viewers></Viewers>
             <Movies></Movies>
         </Container>            

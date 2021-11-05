@@ -15,7 +15,7 @@ function Login() {
         <Container>
             <Content>
                 <Logo1>
-                    <img src={logoOne}></img>
+                    <img src={logoOne} alt='jammer'></img>
                 </Logo1>
                 <SignUp>
                     GET ALL THERE
@@ -24,7 +24,7 @@ function Login() {
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?
                 </Description>
                 <Logo2>
-                    <img src={logoTwo}></img>
+                    <img src={logoTwo} alt='jammer'></img>
                 </Logo2>
             </Content>              
         </Container>
@@ -61,8 +61,6 @@ const Content = styled.div`
     max-width: 32vw;
     width: 32vw;
 `
-
-const Button = styled.div``
 
 const Logo1 = styled.div`
     width: inherit;

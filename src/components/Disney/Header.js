@@ -14,28 +14,28 @@ function Header() {
             <Nav>
                 <Logo src={logo}/>
                 <NavMenu>
-                    <a href="#">
+                    <a href="www.nu.nl">
                         <img src={home} alt='jammer'/>
                         <span>Home</span>
                     </a>
-                    <a href="#">
+                    <a href="www.nu.nl">
                         <img src={search} alt='jammer'/>
                         <span>search</span>
                     </a>
-                    <a href="#">
+                    <a href="www.nu.nl">
                         <img src={watchlist} alt='jammer'/>
                         <span>watchlist</span>
                     </a>
-                    <a href="#">
+                    <a href="www.nu.nl">
                         <img src={original} alt='jammer'/>
                         <span>original</span>
                     </a>
-                    <a href="#">
+                    <a href="www.nu.nl">
                         <img src={series} alt='jammer'/>
                         <span>series</span>
                     </a>
                 </NavMenu>
-                <UserImg src={userImg}></UserImg>
+                <UserImg src={userImg} alt='jammer'></UserImg>
             </Nav>
         </div>
     )

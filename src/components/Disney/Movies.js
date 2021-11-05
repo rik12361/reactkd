@@ -1,31 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useSelector } from 'react-redux'
+
 function Movies() {
+
+    var movies = useSelector(state => state.movie.movies);
     return (
         <Container>
             <h4>Recommended for you: </h4>
             <Content>
-                <Wrap>
-                    <a href='http://localhost:3000/disney/detail'><img src='https://www.rtlnieuws.nl/sites/default/files/content/images/2019/11/13/Simpsons.jpg?itok=FjiMdDn8&offsetX=0&offsetY=0&cropWidth=2000&cropHeight=1125&width=1024&height=576&impolicy=dynamic'></img></a>        
-                </Wrap>
-                <Wrap>
-                <a href='http://www.telegraaf.nl'><img src='https://www.rtlnieuws.nl/sites/default/files/content/images/2019/11/13/Simpsons.jpg?itok=FjiMdDn8&offsetX=0&offsetY=0&cropWidth=2000&cropHeight=1125&width=1024&height=576&impolicy=dynamic'></img></a>        
-                </Wrap>
-                <Wrap>
-               <a href='http://localhost:3000/disney/login'> <img src='https://www.rtlnieuws.nl/sites/default/files/content/images/2019/11/13/Simpsons.jpg?itok=FjiMdDn8&offsetX=0&offsetY=0&cropWidth=2000&cropHeight=1125&width=1024&height=576&impolicy=dynamic'></img></a>
-                </Wrap>
-                <Wrap>
+                {movies && movies.map((movie) => (
+                    <Wrap key={movie.id} >
+                        <a href='http://localhost:3000/disney/detail'><img src={movie.cardImg}></img></a>        
+                    </Wrap>
+                ))}
+                {/* <Wrap>
                     <img src='https://www.rtlnieuws.nl/sites/default/files/content/images/2019/11/13/Simpsons.jpg?itok=FjiMdDn8&offsetX=0&offsetY=0&cropWidth=2000&cropHeight=1125&width=1024&height=576&impolicy=dynamic'></img>        
-                </Wrap>
-                <Wrap>
-                    <img src='https://www.rtlnieuws.nl/sites/default/files/content/images/2019/11/13/Simpsons.jpg?itok=FjiMdDn8&offsetX=0&offsetY=0&cropWidth=2000&cropHeight=1125&width=1024&height=576&impolicy=dynamic'></img>        
-                </Wrap>
-                <Wrap>
-                    <img src='https://www.rtlnieuws.nl/sites/default/files/content/images/2019/11/13/Simpsons.jpg?itok=FjiMdDn8&offsetX=0&offsetY=0&cropWidth=2000&cropHeight=1125&width=1024&height=576&impolicy=dynamic'></img>        
-                </Wrap>
-                <Wrap>
-                    <img src='https://www.rtlnieuws.nl/sites/default/files/content/images/2019/11/13/Simpsons.jpg?itok=FjiMdDn8&offsetX=0&offsetY=0&cropWidth=2000&cropHeight=1125&width=1024&height=576&impolicy=dynamic'></img>        
-                </Wrap>
+                </Wrap> */}
            </Content>
         </Container>
     )

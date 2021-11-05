@@ -1,4 +1,3 @@
-import { configureStore } from '@reduxjs/toolkit'
 import React from 'react'
 import styled from 'styled-components'
 import i1 from './static/scale.png'

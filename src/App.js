@@ -6,7 +6,7 @@ import TeslaApp from "./components/Tesla/TeslaApp";
 import DisneyApp from "./components/Disney/DisneyApp";
 import Header from "./components/Disney/Header";
 import Detail from "./components/Disney/Detail";
-import Login from "./components/Disney/Login";
+import Login from "./components/Disney/Login";;
 const App = () => {
 
   return (

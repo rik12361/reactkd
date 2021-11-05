@@ -10,19 +10,19 @@ function Viewers() {
     return (
         <Container>
             <Wrap>
-                <a href="#"><img src={v1}></img></a>
+                <a href="www.nu.nl"><img src={v1} alt='jammer'></img></a>
             </Wrap>
             <Wrap>
-                <a href="#"><img src={v2}></img></a>
+                <a href="www.nu.nl"><img src={v2} alt='jammer'></img></a>
             </Wrap>
             <Wrap>
-                <a href="#"><img src={v3}></img></a>
+                <a href="www.nu.nl"><img src={v3} alt='jammer'></img></a>
             </Wrap>
             <Wrap>
-                <a href="#"><img src={v4}></img></a>
+                <a href="www.nu.nl"><img src={v4} alt='jammer'></img></a>
             </Wrap>
             <Wrap>
-                <a href="#"><img src={v5}></img></a>
+                <a href="www.nu.nl"><img src={v5} alt='jammer'></img></a>
             </Wrap>
         </Container>
     )

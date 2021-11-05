@@ -1,10 +1,8 @@
 import React from 'react'
 import { useEffect } from 'react'
-import faviconIco from './Static/favicon.ico'
 import LeftMenu from './LeftMenu';
 import MidMenu from './MidMenu';
 import RightMenu from './RightMenu';
-import logo from './Static/logo.svg';
 
 const Header = ({favicon, closeSideBar, sideBarClosed}) => {
 
@@ -15,7 +13,7 @@ const Header = ({favicon, closeSideBar, sideBarClosed}) => {
         elfavicon.href = './Static/favicon.ico';
         };
         faviconUpdate();
-      }, []);
+      });
 
     return (
 
