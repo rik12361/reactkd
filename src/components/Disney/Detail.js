@@ -4,13 +4,26 @@ import i1 from './static/scale.png'
 import b1 from './static/play-icon-black.png'
 import b2 from './static/play-icon-white.png'
 import b3 from './static/group-icon.png'
+import { useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 function Detail() {
+    const { id } = useParams();
+    const  [movieDetails, setmovieDetails ] = useState ('');
+
+    useEffect ( async () => {
+        const data = await fetch ('http://localhost:8080/movie/' + id).then(res => res.json());
+        setmovieDetails(data);
+        console.log(movieDetails);
+    }, []);
+    console.log(movieDetails);
+
     return (
         <Container id="sc01">
-            <Background>
+            <Background style={{backgroundImage: `url(${movieDetails.backgroundImg})`}}>
+
             <ImageTitle>
-                <img src={i1} alt='jammer'></img>
+                <img src={movieDetails.titleImg} alt='jammer'></img>
             </ImageTitle>
             <Controls>
                 <PlayButton>
@@ -29,10 +42,10 @@ function Detail() {
                 </GroupWatchButton>
             </Controls>
             <SubTitle>
-            <h4>   2018 - 7 min - familt, happiness, fun </h4>
+            <h4>{movieDetails.subTitle}</h4>
             </SubTitle>
             <Description>
-            <p className="kd-c-white" >In Toronto, Canada, a Chinese Canadian woman cooks a meal of baozi for her and her husband. One of her buns comes alive, much to her shock. She raises the steamed bun as a child, feeding and caring for it, as it enjoys the time spent with her.</p>
+            <p className="kd-c-white" >{movieDetails.description}</p>
             </Description>
             </Background>
         </Container>

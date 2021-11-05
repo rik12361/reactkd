@@ -58,8 +58,8 @@ const Container = styled.div`
 
 `
 const Content = styled.div`
-    max-width: 32vw;
-    width: 32vw;
+    max-width: 45vw;
+    width: 45vw;
 `
 
 const Logo1 = styled.div`

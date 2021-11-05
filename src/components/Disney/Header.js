@@ -7,6 +7,7 @@ import watchlist from './static/watchlist-icon.svg'
 import original from './static/original-icon.svg'
 import series from './static/series-icon.svg'
 import userImg from './static/Rik 2014.jpg'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
@@ -15,8 +16,10 @@ function Header() {
                 <Logo src={logo}/>
                 <NavMenu>
                     <a href="www.nu.nl">
+                        <Link to={'/disney'}>
                         <img src={home} alt='jammer'/>
                         <span>Home</span>
+                        </Link>
                     </a>
                     <a href="www.nu.nl">
                         <img src={search} alt='jammer'/>
@@ -35,7 +38,9 @@ function Header() {
                         <span>series</span>
                     </a>
                 </NavMenu>
+                <Link to='/disney/Login'>
                 <UserImg src={userImg} alt='jammer'></UserImg>
+                </Link>
             </Nav>
         </div>
     )
