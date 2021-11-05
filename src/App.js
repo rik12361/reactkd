@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/tesla">
             <TeslaApp/>
           </Route>
-          <Route path="/disney/detail">
+          <Route path="/disney/detail/:id">
             <Header></Header>
             <Detail/>
           </Route>

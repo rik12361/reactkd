@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 function Movies() {
 
@@ -11,7 +12,9 @@ function Movies() {
             <Content>
                 {movies && movies.map((movie) => (
                     <Wrap key={movie.id} >
-                        <a href='http://localhost:3000/disney/detail'><img src={movie.cardImg}></img></a>        
+                        <Link to={`/disney/detail/${movie.id}`}>
+                            <img src={movie.cardImg}></img>       
+                        </Link>
                     </Wrap>
                 ))}
                 {/* <Wrap>
