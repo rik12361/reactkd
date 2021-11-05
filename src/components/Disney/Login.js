@@ -4,8 +4,15 @@ import styled from 'styled-components'
 import bg1 from './static/login-background.jpg'
 import logoOne from './static/cta-logo-one.svg'
 import logoTwo from './static/cta-logo-two.png'
+import userName from './userSlice'
+import userPhoto from './userSlice'
+import {selectUserName, selectuserPhoto } from './userSlice'
+import { useSelector } from 'react-redux'
 
 function Login() {
+
+    const userName = useSelector(selectUserName)
+    const userPhoto = useSelector(selectuserPhoto)
 
     useEffect(() => {
         console.log("UseEffect");

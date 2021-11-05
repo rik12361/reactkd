@@ -20,34 +20,39 @@ function Detail() {
 
     return (
         <Container id="sc01">
-            <Background style={{backgroundImage: `url(${movieDetails.backgroundImg})`}}>
 
-            <ImageTitle>
-                <img src={movieDetails.titleImg} alt='jammer'></img>
-            </ImageTitle>
-            <Controls>
-                <PlayButton>
-                    <img src={b1} alt='jammer'></img>
-                    <span>PLAY</span>
-                </PlayButton>
-                <TrailerButton>
-                    <img src={b2} alt='jammer'></img>
-                    <span>TRAILER</span>
-                </TrailerButton>
-                <AddButton>
-                    <span>+</span>
-                </AddButton>
-                <GroupWatchButton>
-                    <img src={b3} alt='jammer'></img>
-                </GroupWatchButton>
-            </Controls>
-            <SubTitle>
-            <h4>{movieDetails.subTitle}</h4>
-            </SubTitle>
-            <Description>
-            <p className="kd-c-white" >{movieDetails.description}</p>
-            </Description>
-            </Background>
+            {movieDetails && (
+            <>
+                <Background style={{backgroundImage: `url(${movieDetails.backgroundImg})`}}>
+
+                <ImageTitle>
+                    <img src={movieDetails.titleImg} alt='jammer'></img>
+                </ImageTitle>
+                <Controls>
+                    <PlayButton>
+                        <img src={b1} alt='jammer'></img>
+                        <span>PLAY</span>
+                    </PlayButton>
+                    <TrailerButton>
+                        <img src={b2} alt='jammer'></img>
+                        <span>TRAILER</span>
+                    </TrailerButton>
+                    <AddButton>
+                        <span>+</span>
+                    </AddButton>
+                    <GroupWatchButton>
+                        <img src={b3} alt='jammer'></img>
+                    </GroupWatchButton>
+                </Controls>
+                <SubTitle>
+                <h4>{movieDetails.subTitle}</h4>
+                </SubTitle>
+                <Description>
+                <p className="kd-c-white" >{movieDetails.description}</p>
+                </Description>
+                </Background>
+            </>
+            )}
         </Container>
     )
 }
