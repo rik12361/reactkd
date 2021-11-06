@@ -8,19 +8,52 @@ import original from './static/original-icon.svg'
 import series from './static/series-icon.svg'
 import userImg from './static/Rik 2014.jpg'
 import { Link } from 'react-router-dom'
+import { selectUserName, selectUserEmail, selectUserPhoto, setUserLogin } from'./userSlice'
+import {useSelector} from 'react-redux'
+import { increment } from './counterSlice'
+import { auth, provider } from './firebaseDisney'
+import { useDispatch } from 'react-redux'
 
 function Header() {
+    var userName=  useSelector (selectUserName);
+    var userEmail=  useSelector (selectUserEmail);
+    var userPhoto=  useSelector (selectUserPhoto);
+    const dispatch = useDispatch();
+
+    const shwUser = () => {
+        console.log('>' + userName + '<');
+    }
+
+    const signIn = () => {
+        auth.signInWithPopup(provider).then((result) => {
+            // console.log(result.user.displayName);
+            // console.log(result.user.email);
+            // console.log(result.user.photoURL);
+            dispatch(setUserLogin(
+                {
+                    userName: result.user.displayName, 
+                    userEmail: result.user.email, 
+                    userPhoto: result.user.photoURL, 
+                }))
+        })
+    }
+
     return (
         <div>
             <Nav>
                 <Logo src={logo}/>
+                {!userName ? (
+                    <LoginContainer>
+                        <Login onClick={signIn}>
+                            Login
+                        </Login>  
+                    </LoginContainer>) :
+                (<>
                 <NavMenu>
-                    <a href="www.nu.nl">
-                        <Link to={'/disney'}>
+                    <Link to={'/disney'}>
                         <img src={home} alt='jammer'/>
                         <span>Home</span>
-                        </Link>
-                    </a>
+                    </Link>
                     <a href="www.nu.nl">
                         <img src={search} alt='jammer'/>
                         <span>search</span>
@@ -39,8 +72,9 @@ function Header() {
                     </a>
                 </NavMenu>
                 <Link to='/disney/Login'>
-                <UserImg src={userImg} alt='jammer'></UserImg>
+                    <UserImg src={userPhoto} alt='jammer'></UserImg>
                 </Link>
+                </>)} 
             </Nav>
         </div>
     )
@@ -107,4 +141,25 @@ const UserImg = styled.img `
     height: 60px;
     border-radius: 50%;
     cursor: pointer;
+`
+const Login = styled.div`
+    border: 1px solid #f9f9f9;
+    color: #f9f9f9;
+    border-radius: 4px;
+    padding: 8px 16px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,0.6);
+    &:hover {
+        background-color:#f9f9f9;
+        color: #000;
+        border-color: transparent;
+        transform: 0.25s;
+        cursor: pointer;
+    }
+`
+const LoginContainer = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 `

@@ -17,11 +17,10 @@ import { createSlice } from '@reduxjs/toolkit'
                 // doesn't actually mutate the state because it uses the Immer library,
                 // which detects changes to a "draft state" and produces a brand new
                 // immutable state based off those changes
-                
+                // console.log(action.payload);
                 state.userName = action.payload.userName;
                 state.userEmail = action.payload.userEmail;
                 state.userPhoto = action.payload.userPhoto;
-                console.log(state.userName)
             },
             setSignOut: (state) => {
                 state.userName = null
@@ -34,8 +33,8 @@ import { createSlice } from '@reduxjs/toolkit'
   // Action creators are generated for each case reducer function
   export const { setUserLogin, setSignOut } = userSlice.actions
   
-  export const selectUserName = (state) => state.userName;
-  export const selectUserEmail = (state) => state.userEmail;
-  export const selectuserPhoto = (state) => state.userPhoto;
+  export const selectUserName = (state) => state.user.userName;
+  export const selectUserEmail = (state) => state.user.userEmail;
+  export const selectUserPhoto = (state) => state.user.userPhoto;
 
   export default userSlice.reducer
