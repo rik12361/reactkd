@@ -1,5 +1,3 @@
-import { isCompositeComponent } from "react-dom/test-utils";
-
 const IssueTableRow = ({ issue, showOrHideIssue}) => {
 
     return (

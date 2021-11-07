@@ -6,22 +6,24 @@ import search from './static/search-icon.svg'
 import watchlist from './static/watchlist-icon.svg'
 import original from './static/original-icon.svg'
 import series from './static/series-icon.svg'
-import userImg from './static/Rik 2014.jpg'
 import { Link } from 'react-router-dom'
-import { selectUserName, selectUserEmail, selectUserPhoto, setUserLogin } from'./userSlice'
+import { selectUserName, selectUserPhoto, setUserLogin, setSignOut } from'./userSlice'
 import {useSelector} from 'react-redux'
-import { increment } from './counterSlice'
 import { auth, provider } from './firebaseDisney'
 import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router'
+import Cookies from 'universal-cookie';
 
 function Header() {
     var userName=  useSelector (selectUserName);
-    var userEmail=  useSelector (selectUserEmail);
     var userPhoto=  useSelector (selectUserPhoto);
+    const history = useHistory();
     const dispatch = useDispatch();
 
-    const shwUser = () => {
-        console.log('>' + userName + '<');
+    const shwCookies = () => {
+        const allCookies = new Cookies();
+        const dispCookies = allCookies.getAll();
+        console.log(dispCookies);
     }
 
     const signIn = () => {
@@ -29,13 +31,20 @@ function Header() {
             // console.log(result.user.displayName);
             // console.log(result.user.email);
             // console.log(result.user.photoURL);
+            shwCookies();
             dispatch(setUserLogin(
                 {
                     userName: result.user.displayName, 
                     userEmail: result.user.email, 
                     userPhoto: result.user.photoURL, 
                 }))
-        })
+                history.push("/disney/home");
+            })
+    }
+
+    const signOut = () => {
+        auth.signOut().then(dispatch(setSignOut()));
+        history.push("/disney/login");
     }
 
     return (
@@ -47,6 +56,9 @@ function Header() {
                         <Login onClick={signIn}>
                             Login
                         </Login>  
+                        {/* <Login onClick={shwCookies}>
+                            cookies
+                        </Login>   */}
                     </LoginContainer>) :
                 (<>
                 <NavMenu>
@@ -71,9 +83,7 @@ function Header() {
                         <span>series</span>
                     </a>
                 </NavMenu>
-                <Link to='/disney/Login'>
-                    <UserImg src={userPhoto} alt='jammer'></UserImg>
-                </Link>
+                    <UserImg onClick={signOut} src={userPhoto} alt='jammer'></UserImg>
                 </>)} 
             </Nav>
         </div>
@@ -138,7 +148,7 @@ const NavMenu = styled.div `
     flex: 1;
 `
 const UserImg = styled.img `
-    height: 60px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
 `

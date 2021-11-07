@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import i1 from './static/scale.png'
 import b1 from './static/play-icon-black.png'
 import b2 from './static/play-icon-white.png'
 import b3 from './static/group-icon.png'

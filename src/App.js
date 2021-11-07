@@ -6,7 +6,8 @@ import TeslaApp from "./components/Tesla/TeslaApp";
 import DisneyApp from "./components/Disney/DisneyApp";
 import Header from "./components/Disney/Header";
 import Detail from "./components/Disney/Detail";
-import Login from "./components/Disney/Login";;
+import Login from "./components/Disney/Login";
+
 const App = () => {
 
   return (
@@ -29,6 +30,9 @@ const App = () => {
           <Route path="/disney/login">
             <Header></Header>
             <Login/>
+          </Route>
+          <Route path="/disney/home">
+            <DisneyApp/>
           </Route>
           <Route path="/disney">
             <DisneyApp/>

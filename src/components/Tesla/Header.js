@@ -7,13 +7,14 @@ import RightMenu from './RightMenu';
 const Header = ({favicon, closeSideBar, sideBarClosed}) => {
 
     useEffect(() => {
-        const faviconUpdate = async () => {
-          console.log(closeSideBar);
-        const elfavicon = document.getElementById("favicon");
-        elfavicon.href = './Static/favicon.ico';
-        };
-        faviconUpdate();
-      });
+      //   const faviconUpdate = async () => {
+      //     console.log(closeSideBar);
+      //   const elfavicon = document.getElementById("favicon");
+      //   elfavicon.href = './Static/favicon.ico';
+      //   };
+      //   faviconUpdate();
+      // 
+    });
 
     return (
 

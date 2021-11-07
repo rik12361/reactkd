@@ -1,5 +1,3 @@
-import redux from 'react-redux'
-
 import { createSlice } from '@reduxjs/toolkit'
 
     const initialState = {
