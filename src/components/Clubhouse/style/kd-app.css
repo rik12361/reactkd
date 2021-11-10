@@ -1,6 +1,30 @@
 * {
-    /* font-size: 16px; */
-    /* font-family: Arial, Helvetica, sans-serif; */
+    --text-color: rgb (65,64,66);
+    --btnBgColor: #3287b7;
+    background-color: rgb (65,64,66);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    /* font-size: 1em; */
+    font-family: Neutrif-pro;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#I01 {
+  color: black;
+  filter: invert(100%);
 }
 
 form #F01 {

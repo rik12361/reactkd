@@ -7,6 +7,9 @@ import DisneyApp from "./components/Disney/DisneyApp";
 import Header from "./components/Disney/Header";
 import Detail from "./components/Disney/Detail";
 import Login from "./components/Disney/Login";
+import ClubHouseApp from "./components/Clubhouse/ClubHouseApp";
+import PhoneConfirmation from "./components/Clubhouse/pages/PhoneConfirmation";
+import PlanLayout from './components/Clubhouse/layouts/PlanLayout'
 
 const App = () => {
 
@@ -36,6 +39,21 @@ const App = () => {
           </Route>
           <Route path="/disney">
             <DisneyApp/>
+          </Route>
+          <Route path="/clubhouse/getUsername">
+            <PlanLayout>
+              <ClubHouseApp/>
+            </PlanLayout>
+          </Route>          
+          <Route path="/clubhouse/phoneconfirmation">
+            <PlanLayout>
+              <PhoneConfirmation/>
+            </PlanLayout>
+          </Route>
+          <Route path="/clubhouse">
+            <PlanLayout>
+                <ClubHouseApp/>
+            </PlanLayout>
           </Route>
           <Route path="/">
             <LandingPage/>

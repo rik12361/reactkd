@@ -8,7 +8,10 @@ function Movies() {
     var movies = useSelector(state => state.movie.movies);
     return (
         <Container>
+            <TitleContainer>
+            <h1>Welkom</h1>
             <h4>Recommended for you: </h4>
+            </TitleContainer>
             <Content>
                 {movies && movies.map((movie) => (
                     <Wrap key={movie.id} >
@@ -27,16 +30,37 @@ function Movies() {
 
 export default Movies
 const Container = styled.div`
-h4 {
+h1 {
     color: white;
     padding: 10px 40px;
 }
+h4 {
+    color: white;
+    padding: 30px 40px;
+}
 `
+const TitleContainer = styled.div`
+    padding-top: 10%;
+    padding-bottom: 1%;
+`
+
 const Content = styled.div`
     padding: 10px 40px 270px  40px;
     display:grid;
-    grid-gap: 75px;
+    grid-gap: 4%;
     grid-template-columns: repeat(5, minmax(00px, 1fr));
+    @media screen and (max-width: 1536px) {
+        grid-template-columns: repeat(4, minmax(00px, 1fr));
+    }
+    @media screen and (max-width: 1368px) {
+        grid-template-columns: repeat(3, minmax(00px, 1fr));
+    }
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, minmax(00px, 1fr));
+    }
+    @media screen and (max-width: 480px) {
+        grid-template-columns: repeat(2, minmax(00px, 1fr));
+    }
 `
 const Wrap = styled.div`
 cursor: pointer;

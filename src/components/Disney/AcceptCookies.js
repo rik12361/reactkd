@@ -83,9 +83,9 @@ const ModalContainer = styled.div`
     z-index: 2;
     padding: 24px;
     top: 20vh;
-    left: calc(50vw - 25vw);
-    right: calc(50vw - 25vw);
-    width: 50vw;
+    left: calc(50vw - 35vw);
+    right: calc(50vw - 35vw);
+    width: 70vw;
     height: 50vh;
     font-size: 1rem;
 `

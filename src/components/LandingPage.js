@@ -8,6 +8,7 @@ const LandingPage = () => {
         <a href="http://localhost:3000/tasktracker">http://localhost:3000/tasktracker</a>
         <a href="http://localhost:3000/tesla">http://localhost:3000/tesla</a>
         <a href="http://localhost:3000/disney">http://localhost:3000/disney</a>
+        <a href="http://localhost:3000/clubhouse">http://localhost:3000/clubhouse</a>
         
         </div>
     )

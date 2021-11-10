@@ -40,13 +40,13 @@ const ButtonGroup = styled.div`
     align-items: flex-start;
     justify-content: space-between;
     flex-shrink: 1;
+    padding: 10px;
 `
 
 const LeftButton = styled.button`
     background-color: #202020;
     border: 2px solid #202020;
     color: #f0f0f0;
-    padding: 10px 20px;
     margin: 0px 8px;
     text-align: center;
     border-radius: 4px;

@@ -12,6 +12,7 @@ import {useSelector} from 'react-redux'
 import { auth, provider } from './firebaseDisney'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router'
+import { useEffect } from 'react'
 import Cookies from 'universal-cookie';
 
 function Header() {
@@ -19,12 +20,27 @@ function Header() {
     var userPhoto=  useSelector (selectUserPhoto);
     const history = useHistory();
     const dispatch = useDispatch();
-
+ 
     const shwCookies = () => {
         const allCookies = new Cookies();
         const dispCookies = allCookies.getAll();
         console.log(dispCookies);
     }
+
+    useEffect (() => {
+        auth.onAuthStateChanged(async (user) => {
+            if (user)
+            {
+            dispatch(setUserLogin(
+                {
+                    userName: user.displayName, 
+                    userEmail: user.email, 
+                    userPhoto: user.photoURL, 
+                }))
+                history.push("/disney/home");
+            }
+         })
+    }, []);
 
     const signIn = () => {
         auth.signInWithPopup(provider).then((result) => {
@@ -38,6 +54,11 @@ function Header() {
                     userEmail: result.user.email, 
                     userPhoto: result.user.photoURL, 
                 }))
+                console.log("USER ");
+                console.log(result.user.photoURL);
+                console.log(result.user.email);
+                console.log(result.user.displayName);
+
                 history.push("/disney/home");
             })
     }
@@ -47,10 +68,14 @@ function Header() {
         history.push("/disney/login");
     }
 
+    const goHome = () => {
+        history.push("/disney/home");
+    }
+
     return (
         <div>
             <Nav>
-                <Logo src={logo}/>
+                <Logo src={logo} onClick={goHome}/>
                 {!userName ? (
                     <LoginContainer>
                         <Login onClick={signIn}>
@@ -62,23 +87,25 @@ function Header() {
                     </LoginContainer>) :
                 (<>
                 <NavMenu>
-                    <Link to={'/disney'}>
-                        <img src={home} alt='jammer'/>
-                        <span>Home</span>
-                    </Link>
-                    <a href="www.nu.nl">
+                    <a>
+                        <Link to={'/disney'}>
+                            <img src={home} alt='jammer'/>
+                            <span>Home</span>
+                        </Link>
+                    </a>
+                    <a>
                         <img src={search} alt='jammer'/>
                         <span>search</span>
                     </a>
-                    <a href="www.nu.nl">
+                    <a>
                         <img src={watchlist} alt='jammer'/>
                         <span>watchlist</span>
                     </a>
-                    <a href="www.nu.nl">
+                    <a>
                         <img src={original} alt='jammer'/>
                         <span>original</span>
                     </a>
-                    <a href="www.nu.nl">
+                    <a>
                         <img src={series} alt='jammer'/>
                         <span>series</span>
                     </a>
@@ -139,13 +166,43 @@ const Logo = styled.img `
     height: 70px;
 `
 const NavMenu = styled.div `
-    @media (max-width: 679px) {
-        display: none;
-    }
     color: white;
     display: flex;
     justify-content: row;
     flex: 1;
+    
+    @media screen and (max-width: 1536px) {
+        grid-template-columns: repeat(4, minmax(00px, 1fr));
+    }
+    @media screen and (max-width: 1368px) {
+        grid-template-columns: repeat(3, minmax(00px, 1fr));
+    }
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, minmax(00px, 1fr));
+    }
+
+    /* @media screen and (max-width: 0px) {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: white;
+        width:200px;
+        z-index: 2;
+        flex-direction: column;
+        align-items: flex-start;
+        a span {
+            margin: 0px;
+            padding: 20 20px;
+            font-size: 32px;
+            color: black;
+        }
+        a img {
+            display: none;
+        }
+    } */
+ 
 `
 const UserImg = styled.img `
     height: 40px;
