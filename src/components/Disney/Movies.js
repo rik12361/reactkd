@@ -16,7 +16,7 @@ function Movies() {
                 {movies && movies.map((movie) => (
                     <Wrap key={movie.id} >
                         <Link to={`/disney/detail/${movie.id}`}>
-                            <img src={movie.cardImg}></img>       
+                            <img src={movie.cardImg} alt='jammer'></img>       
                         </Link>
                     </Wrap>
                 ))}

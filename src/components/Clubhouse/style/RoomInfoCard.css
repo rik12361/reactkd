@@ -1,0 +1,59 @@
+h1 {
+    color:black;
+    background-color: aqua;
+}
+
+.kd-roomcontainer {
+    background-color: white;
+    padding: 1em 1em;
+    border-radius: 1em;
+    border: none;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.kd-roomcontainer h6 {
+    font-size: 0.675em;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.kd-roomcontainer h2 {
+    font-size: 0.875em;
+    font-weight: 600;
+    line-height: 1;
+    color: black;
+
+}
+
+.kd-roommembers {
+    display: flex;
+    align-items: flex-start;
+}
+
+.kd-roommembers img {
+    width: 35px;
+    height: 35px;
+    border-radius: 0.6em;
+    top: 10;
+    left: 10;
+}
+
+.kd-roommembers p {
+    font-size: 0.976em;
+    font-weight: 100;
+    line-height: 1;
+    margin-bottom: 0.2em;
+}
+
+.kd-roommembers > div:nth-child(2) {
+    position: relative;
+    margin-left: -1em;
+    margin-top: 0.7em;
+}
+
+.kd-roommembers > div:nth-child(2) {
+    position: relative;
+    margin-right: 2em;
+}

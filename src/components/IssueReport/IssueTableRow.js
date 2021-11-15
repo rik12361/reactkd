@@ -1,7 +1,7 @@
 const IssueTableRow = ({ issue, showOrHideIssue}) => {
 
     return (
-        <tr>
+        <tr onDoubleClick={() => showOrHideIssue(issue.id, "edit")}>
         <td> { issue.id } </td>
         <td> { issue.email } </td>
         <td> { issue.url } </td>

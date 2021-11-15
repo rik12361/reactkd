@@ -18,7 +18,7 @@ const Header = ({favicon, closeSideBar, sideBarClosed}) => {
 
     return (
 
-            <div id='Container' >
+            <div id='Container'>
               {/* <button onClick={() => closeSideBar()}>XX</button> */}
                   <LeftMenu>
                   </LeftMenu>

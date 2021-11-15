@@ -1,0 +1,46 @@
+.kd-dailyInfoCard-container {
+    padding: 3em 1em 1em 1em;
+}
+
+.kd-dailyInfoCard {
+    padding: 0.5em;
+    margin: 0px;
+    background-color: #e7e4d5;
+    border-radius: 0.9em;
+}
+
+.kd-dailyInfoCard > div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5em;
+}
+
+.kd-dailyInfoCard > div > span {
+    text-align: right;
+    width:20%;
+}
+
+.kd-dailyInfoCard > div > div {
+    margin-left: 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.kd-dailyInfoCard span {
+    font-size: 0.675em;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.kd-dailyInfoCard p {
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+    text-overflow: ellipsis;
+    width: 195px;
+}

@@ -1,6 +1,6 @@
 import '../../css/kd-general.css'
 import '../../css/kd-devices.css'
-import './css/kd-app.css'
+import '../../css/kd-app.css'
 import Header from './Header'
 import IssueTable from './IssueTable'
 import IssueDetailWindow from './IssueDetailWindow'

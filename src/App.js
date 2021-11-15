@@ -10,6 +10,14 @@ import Login from "./components/Disney/Login";
 import ClubHouseApp from "./components/Clubhouse/ClubHouseApp";
 import PhoneConfirmation from "./components/Clubhouse/pages/PhoneConfirmation";
 import PlanLayout from './components/Clubhouse/layouts/PlanLayout'
+import CodeConfirm from "./components/Clubhouse/pages/CodeConfirm";
+import AllowNotification from  "./components/Clubhouse/pages/AllowNotification";
+import ClubHouseHome from  "./components/Clubhouse/pages/ClubHouseHome";
+import AppLayout from './components/Clubhouse/layouts/AppLayout'
+import Welcome from "./components/Clubhouse/pages/Welcome";
+import ClubHouseHeader from './components/Clubhouse/components/ClubHouseHeader'
+import ReduxMain from "./components/ReduxLab/ReduxMain";
+import RoomInfoCards from "./components/Clubhouse/pages/RoomInfoCards";
 
 const App = () => {
 
@@ -17,46 +25,74 @@ const App = () => {
     <div>
       <Router> 
         <Switch>
-          <Route path="/tasktracker">
+          <Route exact path="/tasktracker">
             <TaskTrackerApp/>
           </Route>
-          <Route path="/issuereport">
+          <Route exact path="/issuereport">
             <IssueReportApp/>
           </Route>
-          <Route path="/tesla">
+          <Route exact path="/tesla">
             <TeslaApp/>
           </Route>
-          <Route path="/disney/detail/:id">
+          <Route exact path="/disney/detail/:id">
             <Header></Header>
             <Detail/>
           </Route>
-          <Route path="/disney/login">
+          <Route exact path="/disney/login">
             <Header></Header>
             <Login/>
           </Route>
-          <Route path="/disney/home">
+          <Route exact path="/disney/home">
             <DisneyApp/>
           </Route>
-          <Route path="/disney">
+          <Route exact path="/disney">
             <DisneyApp/>
           </Route>
-          <Route path="/clubhouse/getUsername">
+          <Route exact path="/clubhouse/getUsername">
             <PlanLayout>
               <ClubHouseApp/>
             </PlanLayout>
           </Route>          
-          <Route path="/clubhouse/phoneconfirmation">
+          <Route exact path="/clubhouse/phoneconfirmation">
             <PlanLayout>
               <PhoneConfirmation/>
             </PlanLayout>
           </Route>
-          <Route path="/clubhouse">
+          <Route exact path="/clubhouse/codeconfirm">
             <PlanLayout>
-                <ClubHouseApp/>
+              <CodeConfirm/>
             </PlanLayout>
           </Route>
-          <Route path="/">
+          <Route exact path="/clubhouse/allownotification">
+            <PlanLayout>
+              <AllowNotification/>
+            </PlanLayout>
+          </Route>
+          <Route exact path="/clubhouse/explore">
+            <PlanLayout>
+              <ClubHouseHeader/>
+            </PlanLayout>
+          </Route>
+          <Route exact path="/clubhouse">
+            <PlanLayout>
+                <Welcome/>
+            </PlanLayout>
+          </Route>
+          <Route exact path="/clubhouse/home">
+            <AppLayout>
+                <ClubHouseHome/>
+            </AppLayout>
+          </Route>
+          <Route exact path="/clubhouse/roominfocards">
+            <AppLayout>
+              <RoomInfoCards/>
+            </AppLayout>
+          </Route>
+          <Route exact path="/">
             <LandingPage/>
+          </Route>
+          <Route exact path="/reduxlab">
+            <ReduxMain/>
           </Route>
       </Switch>
       </Router>

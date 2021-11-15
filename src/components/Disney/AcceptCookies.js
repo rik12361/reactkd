@@ -65,14 +65,15 @@ function AcceptCookies() {
 const TextContainer = styled.div`
     overflow-y: scroll;
     overflow-x: scroll;
-`
-const ModalContainer = styled.div`
     h1 { 
         color: black;
         padding-top: 20px;
         margin-top: 20px;
         font-size: 1rem;
     } 
+`
+const ModalContainer = styled.div`
+    color: black;
     position: fixed;
     display: flex;
     flex-direction: column;

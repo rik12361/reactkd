@@ -1,6 +1,6 @@
 import '../../css/kd-general.css'
 import '../../css/kd-devices.css'
-import './css/kd-app.css'
+import '../../css/kd-app.css'
 
 import React from 'react'
 import Header from './Header'
@@ -9,13 +9,11 @@ import { CookiesProvider } from 'react-cookie';
 
 function DisneyApp() {
   
- 
-    // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
     return (
         <div>
             <CookiesProvider>
-            <Header></Header>
-            <Home></Home>
+              <Header></Header>
+              <Home></Home>
             </CookiesProvider>
         </div>
     )

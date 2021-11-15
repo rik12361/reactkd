@@ -2,7 +2,7 @@ import {useState} from 'react'
 import React from 'react'
 import '../../css/kd-general.css'
 import '../../css/kd-devices.css'
-import './css/kd-app.css'
+import '../../css/kd-app.css'
 import Header from './Header'
 import Section from './Section'
 import background1 from './Static/model-3.jpg';

@@ -1,0 +1,57 @@
+        [{
+            "id": 1,
+            "title": "Good times",
+            "sub_title": "Calvin Harris & Eva Novel on the Good times show",
+            "members": [
+                {
+                    "first_name": "John",
+                    "last_name": "Doe"                
+                },
+                {
+                    "first_name": "Sakia",
+                    "last_name": "Fielding"                
+                },
+                {
+                    "first_name": "Harry",
+                    "last_name": "Volded"                
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Tutti frutti",
+            "sub_title": "Best cooking on tv done interactively",
+            "members": [
+                {
+                    "first_name": "David",
+                    "last_name": "Fat"                
+                },
+                {
+                    "first_name": "Carmen",
+                    "last_name": "Frog"                
+                },
+                {
+                    "first_name": "Joe",
+                    "last_name": "Holdener"                
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "From the depth",
+            "sub_title": "Danger arrises as something lingers in the depth of the ocean",
+            "members": [
+                {
+                    "first_name": "John",
+                    "last_name": "Rabit"                
+                },
+                {
+                    "first_name": "Shy",
+                    "last_name": "Woodford"                
+                },
+                {
+                    "first_name": "Crystel",
+                    "last_name": "Beserk"                
+                }
+            ]
+        }]

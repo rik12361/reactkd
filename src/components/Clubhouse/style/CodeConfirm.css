@@ -1,0 +1,88 @@
+.CodeConfirmation {
+    padding: 3em 1.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f2f0e4;
+    position: relative;
+}
+
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-center h1 {
+    width: 100%;
+    max-width: 200px;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.CodeConfirmation input {
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+.CodeConfirmation p {
+    padding-bottom: 15%;
+}
+
+.CodeConfirmation span {
+    font-weight: 100;
+}
+
+.kd-backButton img {
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    width: 20px;
+    height: auto;
+ }
+
+/* .CodeConfirmation h1 {
+    font-size: 1.3em;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0%;
+    color: var(--text-color);
+} */
+
+.CodeConfirmation p {
+    font-size: 0.775em;
+    margin: 0;
+    font-style: normal;
+    width: 100vh;
+    max-width: 270px;
+}
+
+.CodeConfirmation p span {
+    font-weight: 500;
+}
+
+.kd-code-confirm-button {
+    background-color: var(--btnBgColor);
+    color: #fff;
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    font-size: 1.2em;
+    width: 50%;
+}
+
+.kd-code-confirm-button:hover {
+    transform: scale(1.06);
+    transition: all 250ms ease-out;
+    background-color: var(--btnHoverBgColor);
+    color: white;
+}
+
+.kd-CodeInput {
+  width: 24%;
+  height: 20%;
+}
+

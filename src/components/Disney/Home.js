@@ -15,7 +15,7 @@ import Cookies from 'universal-cookie';
 
 function Home() {
     const dispatch = useDispatch();
-    const allCookies = new Cookies();
+    // const allCookies = new Cookies();
 
     useEffect (() => {
         dispatch(fetchTasks());
@@ -77,7 +77,7 @@ const Container = styled.main `
     left: 0px;
     right: 0px;
     z-index: -1;
-    color: white;
-    h1 { color: white;}
+    /* color: white; */
+    /* h1 { color: white;} */
 
 `

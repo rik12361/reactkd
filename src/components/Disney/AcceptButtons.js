@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useCookies } from 'react-cookie';
-import Cookies from 'universal-cookie';
 
 function AcceptButtons({setShowModal}) {
     const [cookies, setCookie] = useCookies();

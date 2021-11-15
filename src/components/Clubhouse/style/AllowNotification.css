@@ -1,0 +1,55 @@
+.AllowNotification {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.AllowNotification h1 {
+    padding: 5% 2em;
+}
+
+.kd-clubhouse-notifications {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.AllowNotificationContainer {
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0px 0px 5px #ccc;
+    color: black;
+    margin: auto;
+    margin-bottom: 0.3em;
+}
+
+.AllowNotificationContainer p3 {
+    font-size: 0.825em;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.kd-allow-action-button {
+    position: relative;
+}
+
+.kd-allow-action-button a {
+    display: inline-block;
+    width: 50%;
+    padding: 0.5em;
+    border-top: 1px solid #cccccc;
+    color: var(--btnBgColor);
+}
+
+.kd-allow-action-button a:first-child {
+    border-right: 1px solid #cccccc;
+}
+
+.kd-allow-action-button img {
+    position: absolute;
+    bottom: -90px;
+    right: 20px;
+    width: 80px;
+}

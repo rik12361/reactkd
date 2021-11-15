@@ -4,8 +4,9 @@ export const movieSlice = createSlice({
 
   name: 'movie',
   initialState: {
-    count: 0,
+    count: 99,
     movies: [],
+    dailyCards: [],
   },
   reducers: {
     mincrement: state => {

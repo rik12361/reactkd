@@ -1,1 +1,65 @@
-p {color:red}
+.PhoneConfirmation {
+    padding: 3em 1.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    background-color: #f2f0e4;
+    position: relative;
+}
+
+.PhoneConfirmation h1 {
+    font-size: 1.3em;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0%;
+    color: var(--text-color);
+}
+
+.PhoneConfirmation p {
+    font-size: 0.775em;
+    margin: 0;
+    font-style: normal;
+    width: 100%;
+    max-width: 270px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.PhoneConfirmation p span {
+    font-weight: 500;
+}
+
+.kd-prim-button {
+    background-color: var(--btnBgColor);
+    color: #fff;
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    font-size: 1.2em;
+}
+
+.kd-prim-butto:hover {
+    transform: scale(1.06);
+    transition: all 250ms ease-out;
+    background-color: var(--btnHoverBgColor);
+    color: white;
+}
+
+.kd-confirm-button {
+  outline: none !important;
+}
+
+.kd-backButton {
+   position: absolute;
+   top: 2%;
+   left: 2%;
+   width: 20px;
+   height: auto;
+}
+  
+.kd-PhoneInput {
+  width: 24%;
+  height: 20%;
+}

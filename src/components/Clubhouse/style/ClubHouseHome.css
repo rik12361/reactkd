@@ -1,0 +1,49 @@
+.kd-homeContainer {
+    background-color: var(--bgColor);
+}
+
+.kd-home-action-button button {
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+}
+
+.kd-home-action-button button svg {
+     font-size: 1.3em;
+}
+
+.kd-home-action-button  {
+    display: flex;
+    align-items: center;
+    padding: 4em 1.5em 2em 1.5em;
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0ms ease-out;
+    background-image: linear-gradient(transparant 20%)
+}
+
+.kd-home-action-button button:first-child {
+    border-radius: 2em;
+    background-color: #28ae61;
+    padding: 0.3em 1em;
+    color: #ffffff;
+    border-radius: 2em;
+    font-size: 1.1em;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform:  translateX(-50%);
+    left: 50%;
+}
+
+.kd-home-action-button button:nth-child(2) {
+    line-height: 1;
+}
+
+.kd-home-action-button button:nth-child(2) {
+    color: var(--text-color);
+    margin-right: 2em;
+}
