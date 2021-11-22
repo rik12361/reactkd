@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import AcceptButtons from './AcceptButtons'
 import { useState, useEffect } from 'react'
 import Cookies from 'universal-cookie';
 import { useCookies } from 'react-cookie';

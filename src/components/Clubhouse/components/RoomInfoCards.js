@@ -1,6 +1,6 @@
 import React from 'react'
 import '../style/RoomInfoCard.css'
-import data from '../components/RoomCards.json'
+import data from './RoomCards.json'
 import { BsChatDots, BsChatDotsFill, BsFillPersonFill } from 'react-icons/bs'
 function RoomInfoCards() {
 

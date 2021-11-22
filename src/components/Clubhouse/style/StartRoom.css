@@ -1,0 +1,70 @@
+.kd-switch-line{
+    
+}
+
+.kd-add-topic-btn {
+    background-color: transparent;
+    border: none;
+    color: #28ae61;
+    padding: 1em 0em 0em 0em;
+
+}
+
+.kd-select-room {
+    border-bottom: solid 1px #cccccc;
+    padding: 1.5em 0em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.kd-select-room button {
+    border: none;
+    background-color: transparent;
+    border-radius: 1em;
+    padding: 0.5em, 1.3em, 0.2em, 1.3em;
+    /* margin-left: 1em;
+    margin-right: 1em; */
+    color: rgb (65,64,66);
+    line-height: 1.2;
+}
+
+/* .kd-select-room button:active {
+    border: 1px solid lightseagreen;
+    background-color: lightblue;
+}
+ */
+.kd-active {
+    border: 31px solid lightseagreen;
+    background-color: lightseagreen!important;
+}
+
+.kd-select-room button div {
+    background-color: lightseagreen;
+    border-radius: 1.5em;
+}
+
+.kd-select-room button svg {
+    font-size: 4em;
+}
+
+.kd-let-go-btn {
+    font-size: 1.3em;
+    font-weight: 500;
+    border: none;
+    border-radius: 2em;
+    color: white;
+    background-color: #28ae61;
+    padding: 0.3em 2em;
+    text-align: center;
+}
+
+.kd-text-center {
+
+}
+
+.kd-text-right {
+    text-align: center;
+}

@@ -7,6 +7,7 @@ import DisneyApp from "./components/Disney/DisneyApp";
 import Header from "./components/Disney/Header";
 import Detail from "./components/Disney/Detail";
 import Login from "./components/Disney/Login";
+import Jumbo from "./components/Jumbo/Jumbo";
 import ClubHouseApp from "./components/Clubhouse/ClubHouseApp";
 import PhoneConfirmation from "./components/Clubhouse/pages/PhoneConfirmation";
 import PlanLayout from './components/Clubhouse/layouts/PlanLayout'
@@ -17,7 +18,7 @@ import AppLayout from './components/Clubhouse/layouts/AppLayout'
 import Welcome from "./components/Clubhouse/pages/Welcome";
 import ClubHouseHeader from './components/Clubhouse/components/ClubHouseHeader'
 import ReduxMain from "./components/ReduxLab/ReduxMain";
-import RoomInfoCards from "./components/Clubhouse/pages/RoomInfoCards";
+import RoomInfoCards from "./components/Clubhouse/components/RoomInfoCards"
 
 const App = () => {
 
@@ -93,6 +94,9 @@ const App = () => {
           </Route>
           <Route exact path="/reduxlab">
             <ReduxMain/>
+          </Route>
+          <Route exact path="/jumbo.com">
+            <Jumbo/>
           </Route>
       </Switch>
       </Router>

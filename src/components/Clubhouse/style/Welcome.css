@@ -10,12 +10,14 @@
 }
 
 .WelcomeContainer h1 { 
-    padding: 1em 2em;
+    padding: 1em 1em;
+    margin: auto;
     font-size: 1.7em;
     font-weight: 500;
     font-style: normal;
     margin-bottom: 0px;
     color: var(--text-color);
+    background-color: #f2f0e4;
 }
 
 .WelcomeInfo {
@@ -50,7 +52,6 @@
     padding: 0.5em 1.5em;
     font-size: 1.2em;
 }
-
 
 .kd-action-button:hover {
     transform: scale(1.06);

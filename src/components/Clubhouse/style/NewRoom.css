@@ -1,0 +1,126 @@
+.kd-roomdetail-container {
+    height: 80vh;
+    background-color: #f2f8e4;
+    margin: -1.5em 1em;
+}
+
+.kd-roomdetail-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8em 0.5em 1.5em 0.5em;
+    background-color: rgb(242,240,228);
+}
+
+.kd-user-start-a-room {
+    width: 70px;
+    height: auto;
+    border-radius: 1.7em;
+    margin-left: 1.2em;
+}
+
+.kd-roomdetail-head span {
+    font-size: 1em;
+    margin-left: 0.5em;
+}
+
+.kd-roomdetail-head svg {
+    font-size: 1.4em;
+}
+
+.kd-room-detailcard{
+    background-color: #ffffff;
+    padding: 1em 1em  3em 1em;
+    border-radius: 1.5em;
+    height: 90vh;
+    overflow: auto;
+}
+
+
+.kd-room-detailcard h6{
+    font-size: 0.65em;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 0.3em;
+}
+
+.kd-audio-icon{
+    border-radius: 50%;    
+}
+.kd-member-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+    position: relative;
+}
+
+.kd-member-container .kd-audio-icon {
+    position: absolute;
+    right: -15px;
+    bottom: 24px;
+    z-index: 5;
+    background-color: #ffffff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 3px #cccccc;
+}
+
+.kd-member-container .kd-audio-icon svg {
+    color: #28ae61;
+}
+
+.kd-member-container  p {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+
+}
+
+.kd-member-container  span {
+    font-size: 2.5em;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #28ae61;
+    color: #ffffff;
+    margin-right: 0.1em;
+    line-height: 0.8;
+}
+
+
+.kd-arrow-icon {
+    width: 15px;
+    height: 1em;
+    transform: rotate(-90);
+    margin-top: -0.5em;
+}
+
+.kd-user-image {
+    width: 25px;
+    height: 1em;
+    border-radius: 0.5em;
+    margin-left: 1.2em;
+}
+
+.kd-footer-new-room{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(242,240,228);
+}
+
+.kd-newroom-hand-peace {
+    border: none;
+    padding: 0em 1em;
+    margin-left: 1em;
+}
