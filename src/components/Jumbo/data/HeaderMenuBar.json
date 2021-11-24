@@ -1,0 +1,194 @@
+[
+    {
+        "id": 1,
+        "title": "Producten",
+        "producten":  [
+            {
+                "ProductGroep": "Aardappel, rijst, pasta"
+            },
+            {
+                "ProductGroep": "Vlees, vis, vegetarisch"
+            },
+            {
+                "ProductGroep": "Groente"
+            },
+            {
+                "ProductGroep": "Fruit"
+            },
+            {
+                "ProductGroep": "Koken, soepen, maaltijden"
+            },
+            {
+                "ProductGroep": "Diepvries"
+            },
+            {
+                "ProductGroep": "Brood, cereals, beleg"
+            },
+            {
+                "ProductGroep": "Zuivel, eieren, boter"
+            },
+            {
+                "ProductGroep": "Koek, gebak, snoep, chips"
+            },
+            {
+                "ProductGroep": "Fris, sap, koffie, thee"
+            },
+            {
+                "ProductGroep": "Wijn, bier, sterke drank"
+            },
+            {
+                "ProductGroep": "Drogisterij"
+            },
+            {
+                "ProductGroep": "Baby, peuter"
+            },
+            {
+                "ProductGroep": "Huishouden, dieren, servicebalie"
+            },
+            {
+                "ProductGroep": "Handige lijstjes"
+            },
+            {
+                "ProductGroep": "Nieuw assortiment"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Aanbiedingen",
+        "producten":  [
+            {
+                "ProductGroep": "Weekaanbiedingen"
+            },
+            {
+                "ProductGroep": "Seizoensaanbiedingen"
+            },
+            {
+                "ProductGroep": "Geen bestelkosten"
+            },
+            {
+                "ProductGroep": "Bieraanbiedingen"
+            },
+            {
+                "ProductGroep": "Koken met Aanbiedingen"
+            },
+            {
+                "ProductGroep": "Altijd Lage Prijs"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Win- en spaaracties",
+        "producten":  [
+            {
+                "ProductGroep": "100 jaar"
+            },
+            {
+                "ProductGroep": "Gouden Ticket spaaractie"
+            },
+            {
+                "ProductGroep": "Jumbo Extra's"
+            },
+            {
+                "ProductGroep": "Vrienden van Amstel Live"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Online bestellen",
+        "producten":  [
+            {
+                "ProductGroep": "Start je bestelling"
+            },
+            {
+                "ProductGroep": "Thuisbezorgen"
+            },
+            {
+                "ProductGroep": "Pick Up Points"
+            },
+            {
+                "ProductGroep": "Zo werkt het"
+            },
+            {
+                "ProductGroep": "Jumbo app"
+            },
+            {
+                "ProductGroep": "Gebak bestellen"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Wat eten we?",
+        "producten":  [
+            {
+                "ProductGroep": "Weekmenu"
+            },
+            {
+                "ProductGroep": "Klaar in 20 minuten"
+            },
+            {
+                "ProductGroep": "5 ingredienten"
+            },
+            {
+                "ProductGroep": "Makkelijke gerechten"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Recepten",
+        "producten":  [
+            {
+                "ProductGroep": "Hoofdgerechten"
+            },
+            {
+                "ProductGroep": "Makkelijke recepten"
+            },
+            {
+                "ProductGroep": "Vegetarische recepten"
+            },
+            {
+                "ProductGroep": "Koolhydraatarme recepten"
+            },
+            {
+                "ProductGroep": "Pasta recepten"
+            },
+            {
+                "ProductGroep": "Budget recepten"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Services",
+        "producten":  [
+            {
+                "ProductGroep": "Er is iets mis met mijn bestelling"
+            },
+            {
+                "ProductGroep": "Actuele informatie"
+            },
+            {
+                "ProductGroep": "Veelgestelde vragen"
+            },
+            {
+                "ProductGroep": "Winkels & openingstijden"
+            },
+            {
+                "ProductGroep": "Weekaanbiedingen"
+            },
+            {
+                "ProductGroep": "Weekaanbiedingen"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Zakelijk bestellen",
+        "producten":  [
+        ]
+    }
+]

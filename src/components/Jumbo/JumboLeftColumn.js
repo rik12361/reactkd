@@ -8,8 +8,10 @@ function JumboLeftColumn() {
 export default JumboLeftColumn
 
 const LefColumn = styled.div`
-    @media (min-width: 1920px) {
-        width:0%;
+     
+
+    /* @media (min-width: 1920px) {
+        width:5%;
     }
     @media (max-width: 1919px) {
         width:5%;
@@ -28,8 +30,11 @@ const LefColumn = styled.div`
     }
     @media (max-width: 359px) {
         width:0%;
-    }
-    
+    } */
+
+
+
+
 `
 // const MidColumn = styled.div`
 //     @media (min-width: 1920px) {

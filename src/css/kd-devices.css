@@ -60,17 +60,22 @@
 
     /* Desktop view options */
   
-  @media (min-width: 1920px) {
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
-     }
-    
-    [class*="kd-col-"] {
-      float: left;
-      padding: 1px;
-    }
+    @media (min-width: 992px) {
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+       }
+      
+      [class*="kd-col-"] {
+        float: left;
+        padding: 15px;
+      }
+
+      [class*="kd-jum-col-"] {
+        float: left;
+        padding: 1px;
+      }
     
     .kd-col-1 {width: 8.33%;}
     .kd-col-2 {width: 16.66%;}
@@ -87,6 +92,53 @@
     .kd-col-13 {width: 20%;}
     .kd-col-14 {width: 22.22%;}
   }
+
+  @media (min-width: 1920px) {
+    .kd-jum-col-1 {width:0%;}
+  }
+  @media (max-width: 1919px) {
+    .kd-jum-col-1 {width:5%;}
+  }
+  @media (max-width: 1535px) {
+    .kd-jum-col-1 {width:5%;}
+  }
+  @media (max-width: 1199px) {
+    .kd-jum-col-1 {width:4%;}
+  }
+  @media (max-width: 839px) {
+    .kd-jum-col-1 {width:2%;background-color: aqua}
+  }
+  @media (max-width: 479px) {
+    .kd-jum-col-1 {width:1%;}
+  }
+  @media (max-width: 359px) {
+    .kd-jum-col-1 {width:0%;}
+  }
+
+  @media (min-width: 1920px) {
+    .kd-jum-col-11 {width:90%;}
+  }
+  @media (max-width: 1919px) {
+    .kd-jum-col-11 {width:95%;}
+  }
+  @media (max-width: 1535px) {
+    .kd-jum-col-11 {width:95%;background-color: brown}
+  }
+  @media (max-width: 1199px) {
+    .kd-jum-col-11 {width:96%;background-color: blue}
+  }
+  @media (max-width: 839px) {
+    .kd-jum-col-11 {width:98%;background-color: aqua}
+  }
+  @media (max-width: 479px) {
+    .kd-jum-col-11 {width:99%;}
+  }
+  @media (max-width: 359px) {
+    .kd-jum-col-11 {width:100%;}
+  }
+
+
+
   
   /* Tablet view options */
   

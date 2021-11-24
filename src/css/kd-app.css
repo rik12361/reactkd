@@ -1,4 +1,80 @@
+/* Jumbo */
+.kd-Jumbo-container {
+  width: 1520px;
+  margin: auto;
+}
+
+.kd-no-border {
+  border: none;
+}
+
+.kd-jumbo-button {
+  background-color: white;
+  color: black;
+  transition: all 250ms ease-out;
+  border-radius: 1em;
+  height: 40px;
+  border: solid 2px var(--jumbo-grey);
+}
+
+.kd-jumbo-button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 1920px) {
+    .kd-Jumbo-container {
+        width: 1500px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1919px) {
+      .kd-Jumbo-container {
+        width: 1500px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1535px) {
+      .kd-Jumbo-container {
+        width: 1260px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1199px) {
+      .kd-Jumbo-container {
+        width: 1060px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 839px) {
+      .kd-Jumbo-container {
+        width: 1060px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 479px) {
+      .kd-Jumbo-container {
+        width: 1060px;
+        margin: auto;
+    }
+}
+
+  @media (max-width: 359px) {
+      .kd-Jumbo-container {
+        width: 1500px;
+        margin: auto;
+    }
+}
+
+
 * {
+  --jumbo-yellow: rgb(238,183,23);
+  --jumbo-grey: rgb(227,227,227);
   --text-color: rgb (65,64,66);
   --btnBgColor: #3287b7;
   --btnHoverBgColor: #52A7D7;
