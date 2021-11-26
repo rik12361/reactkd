@@ -63,7 +63,6 @@ function HeaderSearchInfoBar() {
             </FlexMyJumbo>
 
             <JumboTopMenu></JumboTopMenu>
-
         </FlexMain>
         </div>
     )
@@ -113,10 +112,13 @@ const FlexMyJumbo = styled.div`
 `
 const FlexMain = styled.div`
     display:flex;
+    position: relative;
+    z-index: 4000;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 2.1em 0em;
+    padding: 1.8em 0em;
+    background-color: white;
 `
 const FlexLogo = styled.div `    
     display:flex;
@@ -125,10 +127,11 @@ const FlexLogo = styled.div `
 const JumboLogo = styled.img`
     width: 149px;
     height: 29px;
+    position: relative;
 `
 const JumboModal = styled.div`
   position: fixed;
-  z-index: 2;
+  z-index: -1;
   top: 0;
   bottom: 0;
   left: 0;
@@ -139,7 +142,7 @@ const JumboModal = styled.div`
 const FlexGroup = styled.div `
     display:flex;
     position: relative;
-    z-index: 2000;
+    z-index: 5000;
 `
 const SearchHint = styled.div `    
     position: absolute;
@@ -166,7 +169,6 @@ const SearchLoupe = styled.div `
     position: absolute;
     left: 822px;
     top: 7px;
-    z-index:2000;
 `
 
 

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { FaCheck, FaHome, FaPhoneAlt } from 'react-icons/fa'
 import styled from 'styled-components'
-import JumboLeftColumn from './JumboLeftColumn'
 function HeaderMessage() {
  
     const [showHeaderMessage, setshowHeaderMessage] = useState(true);
@@ -45,19 +44,23 @@ function HeaderMessage() {
 export default HeaderMessage
 
 const GreyBar = styled.div`
-    background-color: rgb(227,227,227);
-    height: 32px;
+    position: relative;
+    z-index: 4000;
+    background-color: var(--jumbo-grey);
+    height: 30px;
     @media screen and (max-width: 1024px) {
             display: none;
         }
 `
 const MessageBar = styled.div`
-    background-color: rgb(227,227,227);
+    position: relative;
+    z-index: 4000;
+    background-color: var(--jumbo-grey);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 32px;
+    height: 30px;
     a {
         color: black;
     }
@@ -127,7 +130,6 @@ const ServiceMsg = styled.div`
         }
     }
 `
-
 
 const ShopsAndCustomerService = styled.div`
     display: inline;

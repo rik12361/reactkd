@@ -4,6 +4,12 @@
   margin: auto;
 }
 
+.kd-relative-z-index {
+  position:relative;
+  z-index: 2000;
+  background-color:white;
+}
+
 .kd-no-border {
   border: none;
 }

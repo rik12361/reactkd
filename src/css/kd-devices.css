@@ -106,7 +106,7 @@
     .kd-jum-col-1 {width:4%;}
   }
   @media (max-width: 839px) {
-    .kd-jum-col-1 {width:2%;background-color: aqua}
+    .kd-jum-col-1 {width:2%;}
   }
   @media (max-width: 479px) {
     .kd-jum-col-1 {width:1%;}
@@ -122,13 +122,13 @@
     .kd-jum-col-11 {width:95%;}
   }
   @media (max-width: 1535px) {
-    .kd-jum-col-11 {width:95%;background-color: brown}
+    .kd-jum-col-11 {width:95%;}
   }
   @media (max-width: 1199px) {
-    .kd-jum-col-11 {width:96%;background-color: blue}
+    .kd-jum-col-11 {width:96%;}
   }
   @media (max-width: 839px) {
-    .kd-jum-col-11 {width:98%;background-color: aqua}
+    .kd-jum-col-11 {width:98%;}
   }
   @media (max-width: 479px) {
     .kd-jum-col-11 {width:99%;}
