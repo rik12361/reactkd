@@ -29,6 +29,7 @@ function HeaderSearchInfoBar() {
     }
 
     return (
+        <HeaderSearchContainer>
         <div className='kd-Jumbo-container'>
         <FlexMain>
             <FlexLogo>
@@ -65,9 +66,15 @@ function HeaderSearchInfoBar() {
             <JumboTopMenu></JumboTopMenu>
         </FlexMain>
         </div>
+        </HeaderSearchContainer>
     )
 }
 export default HeaderSearchInfoBar
+
+const HeaderSearchContainer = styled.div`
+    width: 100%;
+    height: 100px;
+`
 
 const DownArrow = styled.img `
     width: 16px;
@@ -93,6 +100,7 @@ const JumboLocator = styled.div`
 
 const JumboMyFavorite = styled.button `
     margin-left: 0.5em;
+    padding: 0em 2em;
     width: 40px;
     height: 40px;
     border-radius: 2em;
@@ -117,7 +125,7 @@ const FlexMain = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 1.8em 0em;
+    padding: 34px 0px 34px 0px;
     background-color: white;
 `
 const FlexLogo = styled.div `    
@@ -130,14 +138,14 @@ const JumboLogo = styled.img`
     position: relative;
 `
 const JumboModal = styled.div`
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #000;
-  opacity: 0.5;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
 `
 const FlexGroup = styled.div `
     display:flex;
@@ -156,7 +164,6 @@ const SearchHint = styled.div `
     border-radius: 0.5em;
     background-color: white;
 `
-
 const JumboSearch = styled.input `
     height: 40px;
     width: 726px;
