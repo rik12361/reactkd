@@ -6,7 +6,7 @@ function CodeConfirm() {
     return (
         <div className="CodeConfirmation">
             <div className="text-center">
-                <Link exact to='' className='kd-backButton'><img src="/images/clubhouse/arrow.png"></img></Link>
+                <Link exact to='' className='kd-backButton'><img src="/images/clubhouse/arrow.png" alt="jammer"></img></Link>
                 <h1>Enter the code we just texted you:</h1>
                 <input type="text"></input>
                 <p className="mt-2">Didn't recieve it? <span>tap to resend</span></p>

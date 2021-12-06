@@ -19,6 +19,7 @@ import Welcome from "./components/Clubhouse/pages/Welcome";
 import ClubHouseHeader from './components/Clubhouse/components/ClubHouseHeader'
 import ReduxMain from "./components/ReduxLab/ReduxMain";
 import RoomInfoCards from "./components/Clubhouse/components/RoomInfoCards"
+import Explorer from "./components/Clubhouse/pages/Explorer"
 
 const App = () => {
 
@@ -87,6 +88,11 @@ const App = () => {
           <Route exact path="/clubhouse/roominfocards">
             <AppLayout>
               <RoomInfoCards/>
+            </AppLayout>
+          </Route>
+          <Route exact path="/clubhouse/explorer">
+            <AppLayout>
+              <Explorer/>
             </AppLayout>
           </Route>
           <Route exact path="/">

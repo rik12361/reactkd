@@ -5,12 +5,12 @@ import StartRoom from '../components/bottomSheets/StartRoom'
 import AppLayout from '../layouts/AppLayout'
 import NewRoom from './bottomSheets/NewRoom'
 
-function BottomSheet({sheetTitle, setSheetTitle, rik, setSheetVisible, sheetVisible, cardDetail, setItemsVisible, setSheetCreateRoom }) {
+function BottomSheet({sheetTitle, setSheetTitle, setSheetVisible, sheetVisible, cardDetail, setItemsVisible, setSheetCreateRoom }) {
     // console.log(cardDetail);
     // console.log(setSheetVisible);
     console.log("rik:");
     console.log(sheetTitle);
-    // console.log(rik());
+    // setSheetVisible(false);
     console.log("einde rik");
 
     return (
@@ -19,25 +19,26 @@ function BottomSheet({sheetTitle, setSheetTitle, rik, setSheetVisible, sheetVisi
                 open={sheetVisible}
                 onChange={() => {setSheetVisible(!sheetVisible);
                     setItemsVisible(true)}}
-                fullscreen={sheetTitle == 'room detail' ? true : false}
+                fullscreen={sheetTitle === 'room detail' ? true : false}
             >
             <div className='kd-bottom-sheet-bontainer' 
-                style={{backgroundColor: sheetTitle == 'profile'? 'transparent' : ''}}
+                style={{backgroundColor: sheetTitle === 'profile'? 'transparent' : ''}}
             >
-            { sheetTitle=='New room'? (
+            { sheetTitle==='New room'? (
                 <AppLayout>
                     <NewRoom
                         cardDetail={cardDetail}
-                        setSheetVisible = {((item) => 
-                            {
-                                setSheetVisible(item);
-                                setItemsVisible(true);
-                            })}
-                    >
+                        rik = {(a) => console.log(a)}
+                            setSheetVisible = {((item) => 
+                                {
+                                    setSheetVisible(item);
+                                    setItemsVisible(true);
+                                })}
+                        >
                     </NewRoom>
                 </AppLayout>
             ) : (
-                    sheetTitle=='Start room'? (
+                    sheetTitle==='Start room'? (
                      <AppLayout>
                         <StartRoom 
                         setSheetTitle={setSheetTitle}

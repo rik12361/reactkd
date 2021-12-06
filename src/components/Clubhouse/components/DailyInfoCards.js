@@ -1,20 +1,19 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import '../style/DailyInfoCards.css'
-import { mincrement }  from '../Slices/DailyCardSlice';
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 
 function DailyInfoCards() {
     var dailyCardsDisp = useSelector(state => state.dailycards.dailyCards);
-    const [roomCrd, setroomCrd] = useState([]);
 
     useEffect (() => {
         // setroomCrd(Roomcards); 
         // console.log('Roomcards');
         // console.log(roomCrd);
+        
     }, []);
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const LocalDateTimeToAMPMHHMM = (rdate) => {
         var sdate = rdate.split('T');
         var AmPmc = sdate[1].substring(0, 2);

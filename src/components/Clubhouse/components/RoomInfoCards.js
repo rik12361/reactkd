@@ -12,8 +12,8 @@ function RoomInfoCards() {
                         <h6>{RoomInfo.title}</h6>
                         <h2>{RoomInfo.sub_title}</h2>
                         <div className='kd-roommembers'>
-                            <div><img src='/images/clubhouse/user-img.jpg'></img></div>
-                            <div><img src='/images/clubhouse/user-img2.jpg'></img></div>
+                            <div><img src='/images/clubhouse/user-img.jpg' alt='jammer'></img></div>
+                            <div><img src='/images/clubhouse/user-img2.jpg' alt='jammer'></img></div>
                             <div className='kd-member-data'>
                                 <div>
                                     {RoomInfo.members.map ((member) => (

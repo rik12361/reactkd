@@ -8,8 +8,10 @@ import SignInReducer from './components/ReduxLab/SignInReducer'
 import TextReducer from './components/ReduxLab/TextReducer'
 import CounterReducer from './components/ReduxLab/CounterReducer'
 import BooleanReducer from './components/ReduxLab/BooleanReducer'
+import JumboMessageBarReducer from './components/Jumbo/reducers/JumboMessageBarReducer'
 
 import { combineReducers } from 'redux';
+import { Component } from 'react'
 
 export default configureStore({
   reducer: {
@@ -22,6 +24,7 @@ export default configureStore({
     CounterReducer:CounterReducer,
     TextReducer:TextReducer,
     BooleanReducer:BooleanReducer,
+    JumboMessageBarReducer:JumboMessageBarReducer,
   }
 });
 

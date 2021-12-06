@@ -1,7 +1,6 @@
 import React, { useState} from 'react'
 import '../../style/StartRoom.css'
 import {FcGlobe} from 'react-icons/fc'
-import styled from 'styled-components';
 
 function StartRoom({setSheetCreateRoom, setSheetVisible, setSheetTitle, sheetTitle}) {
     const [room, setRoom] = useState('');

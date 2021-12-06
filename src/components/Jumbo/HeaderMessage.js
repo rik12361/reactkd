@@ -1,68 +1,58 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import { FaCheck, FaHome, FaPhoneAlt } from 'react-icons/fa'
 import styled from 'styled-components'
-function HeaderMessage() {
+
+function HeaderMessage({showMessageLine}) {
  
-    const [showHeaderMessage, setshowHeaderMessage] = useState(true);
-
-    useEffect (() => {
-        window.addEventListener("scroll", () => checkRemoveHeaderMessage(setshowHeaderMessage));
-        return () => window.removeEventListener("scroll", checkRemoveHeaderMessage);
-    }, []);
-
-    const checkRemoveHeaderMessage = () => {
-        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-        var sh =  document.documentElement.scrollTop;
-        sh > 0? setshowHeaderMessage(false):setshowHeaderMessage(true);
-        console.log("vh " + vh + " sh" + sh + " ==>" + showHeaderMessage);
-    }
-
     return (
-        <div>
-            {showHeaderMessage? (
-                    <GreyBar>
-                    <div className='kd-Jumbo-container'>
-                        <MessageBar>
-                            <ServiceMsg>
-                                <a href="#"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Gratis bezorging of afhalen bij actieproducten</span></a>
-                                <a href="#"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Grootste assortiment, laagste prijs</span></a>  
-                                <a href="#"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Vers is ook écht vers</span></a>
-                            </ServiceMsg>
-                            <ShopsAndCustomerService>
-                                <a href="#"><FaHome color='rgb(120,120,120)' size='0.9em'/><span>Winkels & openingstijden</span></a>
-                                <a href="#"><FaPhoneAlt color='rgb(120,120,120)' size='0.9em'/><span>Klantenservice</span></a>
-                            </ShopsAndCustomerService>
-                        </MessageBar>
-                    </div>
-                </GreyBar>
-                ) : ''}
+        <div className='kd-fixed'>
+            {showMessageLine?
+            <GreyBar>
+                <div className='kd-jumbo-container'>
+                    <MessageBar>
+                        <ServiceMsg>
+                            <a href="#"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Gratis bezorging of afhalen bij actieproducten</span></a>
+                            <a href="#"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Grootste assortiment, laagste prijs</span></a>  
+                            <a href="#"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Vers is ook écht vers</span></a>
+                        </ServiceMsg>
+                        <ShopsAndCustomerService>
+                            <a href="#"><FaHome color='rgb(120,120,120)' size='0.9em'/><span>Winkels & openingstijden</span></a>
+                            <a href="#"><FaPhoneAlt color='rgb(120,120,120)' size='0.9em'/><span>Klantenservice</span></a>
+                        </ShopsAndCustomerService>
+                    </MessageBar>
+                </div>
+            </GreyBar> : '' }
         </div>
- 
     )
 }
 
 export default HeaderMessage
 
 const GreyBar = styled.div`
-    position: relative;
+    display: block;
+    position: fixed;
+    width: 100%;
     z-index: 4000;
     background-color: var(--jumbo-grey);
-    height: 30px;
+    height: 40px;
     @media screen and (max-width: 1024px) {
             display: none;
-        }
+    }
 `
 const MessageBar = styled.div`
+    display: inline;
     position: relative;
+    top: 0px;
     z-index: 4000;
     background-color: var(--jumbo-grey);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 30px;
+    height: 40px;
     a {
         color: black;
+        margin: 0px 16px 0px 16px;
     }
     span {
             font-size: 0.75rem;

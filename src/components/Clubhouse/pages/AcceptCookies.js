@@ -13,7 +13,7 @@ function AcceptCookies() {
 
     useEffect (() => {
         CheckCookies();
-    },[]);
+    },[CheckCookies]);
 
     const setShowModal = (newState) => {
         setshowModal(newState);

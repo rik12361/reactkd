@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/35691442-fa6a-4cb0-96b6-477143b663b2.jpg",
+        "handyTitle": "Nieuw op jumbo.com",
+        "handyCheck": "jumbo"
+    },
+    {
+        "id": 2,
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/27d51365-0b8d-499e-aca3-90dbba9ae416.jpg",
+        "handyTitle": "Vaak vergeten boodschappen",
+        "handyCheck": "jumbo"
+    },
+    {
+        "id": 3,
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/43dad23f-88aa-4bb3-8da7-dd7c46ecbe68.jpg",
+        "handyTitle": "Koken met aanbiedingen",
+        "handyCheck": "jumbo"
+    },
+    {
+        "id": 4,
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/12177913-221d-47a2-bdc4-4868bbf0fe11.jpg",
+        "handyTitle": "Sinterklaas lekkernijen",
+        "handyCheck": "jumbo"
+    },
+    {
+        "id": 5,
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/2fcecc10-d46d-49cf-b5e5-10fcec72fd55.jpg",
+        "handyTitle": "Gourmet",
+        "handyCheck": "jumbo"
+    },
+    {
+        "id": 6,
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/678e4b8d-f978-4424-9997-ff2af14da193.jpg",
+        "handyTitle": "Sinterklaas presentjes",
+        "handyCheck": "jumbo"
+    }
+]
