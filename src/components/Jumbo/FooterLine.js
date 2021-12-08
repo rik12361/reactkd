@@ -2,9 +2,12 @@ import React from 'react'
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
 import styled from 'styled-components'
 
-function FooterLine() {
+function FooterLine({sWidth}) {
     return (
         <div className='kd-Jumbo-container'>
+            {sWidth<=1100?
+             ''
+             :
             <FlexContainer>
             <LeftBlock>
                 <Link href='#'><span>Algemene voorwaarden</span></Link>
@@ -20,6 +23,7 @@ function FooterLine() {
                 <Link href='#'><span><FaYoutube style={{width:'24px', height:'24px'}}/></span></Link>
             </RightBlock>
             </FlexContainer>
+            }
         </div>
     )
 }
@@ -57,3 +61,15 @@ const Link = styled.div`
         text-decoration: underline;
     }
 `
+ /* @media (max-width: 7681px) {} 
+    @media (max-width: 3840px) {} 
+    @media (max-width: 2560px) {} 
+    @media (max-width: 1920px) {} 
+    @media (max-width: 1536px) {} 
+    @media (max-width: 1280px) {} 
+    @media (max-width: 1100px) {} 
+    @media (max-width: 980px) {} 
+    @media (max-width: 768px) {} 
+    @media (max-width: 640px) {} 
+    @media (max-width: 480px) {} 
+    @media (max-width: 384) {}  */

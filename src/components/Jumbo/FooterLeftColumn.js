@@ -1,51 +1,37 @@
 import React from 'react'
 import { FaChevronRight, FaFacebook, FaPhone, FaTwitter } from 'react-icons/fa'
 import styled from 'styled-components'
+import FooterContactOptions from './FooterContactOptions'
 
-function FooterLeftColumn() {
+function FooterLeftColumn({sWidth}) {
     return (
         <div>           
             <LeftColumnContainer>
+            <WeHelpenImgContainer>
+                <WeHelpenImg src='https://jumbo.com/assets/dist/prod/assets/images/89d94da74e4c49e7fc3abbf235024159.png' alt='jammer'></WeHelpenImg>
+            </WeHelpenImgContainer>
             <LeftColumn>
-                    <WeHelpenImgContainer>
-                        <WeHelpenImg src='https://jumbo.com/assets/dist/prod/assets/images/89d94da74e4c49e7fc3abbf235024159.png' alt='jammer'></WeHelpenImg>
-                   </WeHelpenImgContainer>
-                   <WeHelpenTextContainer>
-
+                {sWidth <1100? 
+                    <WeHelpenTextContainerMobile>
+                        <div>
+                            <h4>We helpen je graag!</h4>
+                            <p>Heb je een vraag of een klacht? Laat het ons weten via het <ContactForm href='#'>contactformulier</ContactForm> of:</p>
+                            <Tip>
+                                <span>Tip!</span><FAQLink href="#">Bekijk veelgestelde vragen</FAQLink><FaChevronRight></FaChevronRight>
+                            </Tip>
+                        </div>
+                        <FooterContactOptions/>
+                    </WeHelpenTextContainerMobile>
+                :             
+                    <WeHelpenTextContainer>
                         <h4>We helpen je graag!</h4>
-
                         <p>Heb je een vraag of een klacht? Laat het ons weten via het <ContactForm href='#'>contactformulier</ContactForm> of:</p>
-                        <ContactOption>
-                        <div>
-                            <FaFacebook style={{fontSize: '22px'}}/>
-                        </div>
-                        <div>
-                            <p>Facebook</p>
-                            <p>Openingsuren:8.00 - 20.00 uur (ma. t/m zo.)</p>
-                        </div>
-                        </ContactOption>
-                        <ContactOption>
-                        <div>
-                            <FaTwitter style={{fontSize: '22px'}}/>
-                        </div>
-                        <div>
-                            <p>Twitter</p>
-                            <p>Openingsuren:8.00 - 20.00 uur (ma. t/m zo.)</p>
-                        </div>
-                        </ContactOption>
-                        <ContactOption>
-                        <div>
-                            <FaPhone style={{fontSize: '22px'}}/>
-                        </div>
-                        <div>
-                            <p>Telefoonnummer:0800 022 01 61</p>
-                            <p>Openingsuren:8.00 - 20.00 uur (ma. t/m zo.)</p>
-                        </div>
-                        </ContactOption>
+                        <FooterContactOptions/>
                         <Tip>
                         <span>Tip!</span><FAQLink href="#">Bekijk veelgestelde vragen</FAQLink><FaChevronRight></FaChevronRight>
                         </Tip>
-                        </WeHelpenTextContainer>
+                     </WeHelpenTextContainer>
+                }
             </LeftColumn>
             </LeftColumnContainer>
         </div>
@@ -54,6 +40,7 @@ function FooterLeftColumn() {
 export default FooterLeftColumn
 //https://www.pelvitec.nl/site/urologie/meatus-dilatatie/
 //https://www.fvdvooren.nl/Search.aspx?product=catheter
+
 
 const WeHelpenTextContainer = styled.div`
     width: 400px;
@@ -66,8 +53,21 @@ const WeHelpenTextContainer = styled.div`
     button:hover {
         background-color: green;
     }
+    @media (max-width: 1536px) {padding: 0px 20px 0px 34px;width: 380px;} 
+    @media (max-width: 1280px) {padding: 0px 20px 0px 30px;width: 370px;} 
 `
+
+const WeHelpenTextContainerMobile = styled(WeHelpenTextContainer)`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 800px;
+`
+
+
 const LeftColumnContainer = styled.div`
+    display: flex;
+    flex-direction: ro;
     padding: 0px 0px 0px 0px;
 `
 const LeftColumn = styled.div`
@@ -104,38 +104,6 @@ const Tip = styled.div`
     }
 `
 
-const ContactOption = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: white;
-    margin: 0px 0px 16px 12px;
-    div:nth-child(1) {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        margin: 0px;
-        flex: 1 1 10%;
-    }
-    div:nth-child(2) {
-        margin: 0px;
-        padding: 0px 0px 0px 8px;
-        flex: 1 1 90%;
-        p:nth-child(1) {
-            font-weight: 500;
-            margin: 0px;
-            line-height: 16px;
-        }
-        p:nth-child(2) {
-            margin: 0px;
-            font-size: 10px;
-            line-height: 12px;
-        }
-    }
-`
-
 const ContactForm = styled.a`
     color: white;
     text-decoration: underline;
@@ -150,3 +118,17 @@ const ContactForm = styled.a`
     }
 `
 
+
+
+ /* @media (max-width: 7681px) {} 
+    @media (max-width: 3840px) {} 
+    @media (max-width: 2560px) {} 
+    @media (max-width: 1920px) {} 
+    @media (max-width: 1536px) {} 
+    @media (max-width: 1280px) {} 
+    @media (max-width: 1100px) {} 
+    @media (max-width: 980px) {} 
+    @media (max-width: 768px) {} 
+    @media (max-width: 640px) {} 
+    @media (max-width: 480px) {} 
+    @media (max-width: 384) {}  */

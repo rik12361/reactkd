@@ -36,7 +36,7 @@ const HowToSaveButtonContainer = styled.div`
         flex-wrap: wrap;        
     } 
 
-    @media (max-width: 640px) { 
+    @media (max-width: 1100px) { 
         justify-content: flex-start;
     } 
 

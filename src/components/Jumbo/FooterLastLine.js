@@ -80,12 +80,6 @@ const ImageContainer = styled.div`
     margin: 0px 24px 0px 0px;
 `
 
-const ImageContainerRight = styled.div`
-    width: 48px;
-    height: 36px;
-    margin: 0px 24px 0px 0px;
-`
-
 const FlexContainer = styled.div`
     height: 100px;
     display: flex;
@@ -106,5 +100,17 @@ const RightBlock = styled.div`
     color: gray;
     margin-left: 30vw;
     width: 300px;
-
 `
+
+/* @media (max-width: 7681px) {} 
+    @media (max-width: 3840px) {} 
+    @media (max-width: 2560px) {} 
+    @media (max-width: 1920px) {} 
+    @media (max-width: 1536px) {} 
+    @media (max-width: 1280px) {} 
+    @media (max-width: 1100px) {} 
+    @media (max-width: 980px) {} 
+    @media (max-width: 768px) {} 
+    @media (max-width: 640px) {} 
+    @media (max-width: 480px) {} 
+    @media (max-width: 384) {}  */

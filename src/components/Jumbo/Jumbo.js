@@ -24,6 +24,7 @@ function Jumbo() {
     const [showMessageLine, setShowMessageLine] = useState(true);
     const [Scrollable, setScrollable] = useState(true);
     const [sWidth, setsWidth] = useState(0);
+    const [footerHeight, setFooterHeight] = useState(0);
 
     useEffect (() => {
         console.log("Add evemt");
@@ -31,6 +32,9 @@ function Jumbo() {
         window.addEventListener("click", () => checkRemoveHeaderMessage());
         window.addEventListener('resize', checkResolution);
         checkResolution();
+
+        // default footer height:
+        sWidth <= 1100? setFooterHeight(750) : setFooterHeight(730);
 
         return () => {window.removeEventListener("scroll", checkRemoveHeaderMessage)
         window.removeEventListener("click", checkRemoveHeaderMessage)};
@@ -67,21 +71,15 @@ function Jumbo() {
             <ExtraPromo/>
             <SevenGaranties/>
             <HowToSaveMoney/>
-            <FooterWeHelpen/>
+            <FooterWeHelpen  sWidth={sWidth} footerHeight={footerHeight} setFooterHeight={setFooterHeight} />
         </JumboMainContainer>
     )
 }
 export default Jumbo
 
-const BlockHeader = styled.div`
-    
-
-`
-
 const JumboMainContainer = styled.div` 
     position: relative;
-    overflow: hidden;
-    
+    overflow: hidden;    
 `
 
 const Desktopview = styled.div `

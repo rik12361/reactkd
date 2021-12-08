@@ -17,7 +17,7 @@ const Reso = styled.div`
     text-align: center;
     width: 4vw;
     right: 10vw;
-    top: 40vh;
+    top: 450vh;
     z-index: 29000;
     font-size: 3vh;
     border: 0.1vh solid black;

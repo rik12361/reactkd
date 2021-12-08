@@ -36,6 +36,31 @@ function FooterRightColumn() {
 
 export default FooterRightColumn
 
+
+const RightMiddleColumn = styled.div`
+    width: 400px;
+    margin: 0px 0px 0px 90px;
+    button {
+        width: 200px;
+        height: 40px;
+        :hover {
+            background: green;
+        }
+    }
+    h4 {
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+    @media (max-width: 1536px) {margin: 0px 0px 0px 90px; width: 380px} 
+    @media (max-width: 1280px) {padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; width: 360px;}
+    @media (max-width: 1100px) {padding: 0px 0px 0px 0px; margin: 16px 0px 0px 0px; width: 960px;}
+`    
+
 const AppContainer = styled.div`
     margin: 16px 0px 0px 0px;
     display: flex;
@@ -45,6 +70,7 @@ const AppContainer = styled.div`
     border-radius: 1em;
     border: 1px solid white;
     border-spacing: 15px 250px;
+    @media (max-width: 1100px) {margin: 32px 0px 8px 0px;}
 `
 const StoreContainer = styled.div`
     display: flex;
@@ -91,27 +117,19 @@ const AppLink = styled.a`
     }
 `
 
-const RightMiddleColumn = styled.div`
-    button {
-        width: 200px;
-        height: 40px;
-        :hover {
-            background: green;
-        }
-    }
-    margin: 0px 0px 0px 90px;
-    h4 {
-        font-size: 22px;
-        font-weight: 600;
-        color: white;
-    }
-
-    p {
-        color: white;
-    }
-
-`
 const RightColumn = styled.div`
 `
 const MidRightColumn = styled.div`
 `
+ /* @media (max-width: 7681px) {} 
+    @media (max-width: 3840px) {} 
+    @media (max-width: 2560px) {} 
+    @media (max-width: 1920px) {} 
+    @media (max-width: 1536px) {} 
+    @media (max-width: 1280px) {} 
+    @media (max-width: 1100px) {} 
+    @media (max-width: 980px) {} 
+    @media (max-width: 768px) {} 
+    @media (max-width: 640px) {} 
+    @media (max-width: 480px) {} 
+    @media (max-width: 384) {}  */
