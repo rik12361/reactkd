@@ -1,4 +1,4 @@
-import React, {useState, useEffect, } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import JumboLogo from './JumboLogo'
 import MyJumboGroup from './MyJumboGroup'
@@ -38,7 +38,6 @@ const HeaderSearchContainer = styled.div`
         border-bottom-width: 2px;
         border-bottom-color: var(--jumbo-grey);
     }
-
 `
 
 const FlexMain = styled.div`
@@ -50,4 +49,7 @@ const FlexMain = styled.div`
     padding: 34px 0px 0px 0px;
     height: 40px;
     z-index: 580;
+    @media (max-width: 960px) {
+        height: 46px;
+    }   
 `

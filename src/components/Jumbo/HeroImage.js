@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import MenuData from '../Jumbo/data/HeaderMenuBar.json'
 
 function HeroImage({sWidth}) {
     
     return (
         <HeroContainer className='kd-Jumbo-container'>
-            <HeroImgContainer><Hero src='/images/jumbo/Homepage-hero-S-week-48-Sint-Gourmet.webp' alt='jammer'></Hero></HeroImgContainer>
+            <HeroImgContainer><Hero src='https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/CMS/Images/2021/Homepage/Week_49/Homepage-hero-M-week-49-Kerst-voorgerecht-V2.jpg' alt='jammer'></Hero></HeroImgContainer>
             <HeroButton href="#" className='kd-jumbo-button'>Bekijk de producten</HeroButton>
             <CardContainer>
                 {sWidth<=640? <CardGroup>

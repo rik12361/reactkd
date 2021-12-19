@@ -11,7 +11,6 @@ import BooleanReducer from './components/ReduxLab/BooleanReducer'
 import JumboMessageBarReducer from './components/Jumbo/reducers/JumboMessageBarReducer'
 
 import { combineReducers } from 'redux';
-import { Component } from 'react'
 
 export default configureStore({
   reducer: {

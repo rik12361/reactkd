@@ -25,7 +25,6 @@ function HandyLists() {
                     </HandyContainer>
                     ))}
             </HandyFlex>
-
         </div>
     )
 }

@@ -1,13 +1,11 @@
 import React from 'react'
-import { FaChevronRight, FaFacebook, FaPhone, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaPhone, FaTwitter } from 'react-icons/fa'
 import styled from 'styled-components'
 
 function FooterContactOptions() {
     return (
         <div>           
             <LeftColumnContainer>
-                <h4>We helpen je graag!</h4>
-
                 <ContactOption>
                 <div>
                     <FaFacebook style={{fontSize: '22px'}}/>
@@ -31,7 +29,7 @@ function FooterContactOptions() {
                     <FaPhone style={{fontSize: '22px'}}/>
                 </div>
                 <div>
-                    <p>Telefoonnummer: 0800 022 01 61</p>
+                    <p>0800 022 01 61</p>
                     <p>Openingsuren: 8.00 - 20.00 uur (ma. t/m zo.)</p>
                 </div>
                 </ContactOption>
@@ -50,6 +48,7 @@ const LeftColumnContainer = styled.div`
     h4 {color: white}
 `
 const ContactOption = styled.div`
+    font-size: 18px;
     display: flex;
     width: 280px;
     flex-direction: row;
@@ -80,6 +79,7 @@ const ContactOption = styled.div`
             line-height: 12px;
         }
     }
+    @media (max-width: 768px) {width:250px;} 
 `
 
  /* @media (max-width: 7681px) {} 

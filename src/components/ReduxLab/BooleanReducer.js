@@ -6,8 +6,9 @@ const BooleanReducer = (state = false, action) => {
             return true;
         case 'TOGGLE':
             return !state;
+        default:
+            return state;
     }
-    return state;
 }
 export const selectBoolean = (state) => state.BooleanReducer;
 

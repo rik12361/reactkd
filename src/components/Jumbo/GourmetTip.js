@@ -8,12 +8,12 @@ function GourmetTip() {
                 <LeftContainer>
                     <TipContainer>
                      <p>Tafel dek je!</p>
-                     <p><span>Heerlijke gourmet mini's</span><span> in 35 soorten</span></p>
+                     <p><span>Gourmet mini's</span><span> voor iedereen</span> in vlees, vegetarisch en vis</p>
                      <ViewProductButton href="#" className='kd-jumbo-button'>Bekijk de producten</ViewProductButton>
                      </TipContainer>
                 </LeftContainer>
                 <RightContainer>
-                    <GourmetImg src='https://www.jumbo.com/dam/homepage/2021/48/hero/HP-L-Sint-Gourmet.jpg' alt='jammer'/>
+                    <GourmetImg src='https://www.jumbo.com/dam/homepage/2021/49/hero/Held-Week49-Gourmet-L.jpg' alt='jammer'/>
                 </RightContainer>
             </GourmetContainer>
         </div>
@@ -26,9 +26,8 @@ const GourmetImg = styled.img`
     width: 100%;
     height: auto;
 `
-const LeftContainer = styled.div`
-    
-`
+const LeftContainer = styled.div``
+
 const RightContainer = styled.div`
     width: 857px;
     height: 596px;
@@ -38,7 +37,6 @@ const RightContainer = styled.div`
     @media (max-width: 640px) {width:80%;margin-top:20px;}
 
 `
-
 const TipContainer = styled.div`
     width: 343px;
     display: flex;

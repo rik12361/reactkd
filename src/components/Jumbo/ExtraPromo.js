@@ -6,43 +6,43 @@ function ExtraPromo() {
     return (
         <div>
                 <div className='kd-Jumbo-container'>
-                    <BlockHeader>Alles voor een <span>Heerlijke avond</span></BlockHeader>
+                    <BlockHeader>Feestelijke <span>Kerstinspiratie</span></BlockHeader>
 
                     <ExtraPromoCentralizer>
                     <ExtraPromoContainer>
                         <ExtraPromoLink href='#'>
                             <ExtraImgContainer>
-                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/47/ingangen/Home-47-ingang-1.jpg' alt='jammer'></ExtraImg>
-                                <p>Gourmet<FaChevronRight/></p>
+                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/49/ingangen/Home-49-ingang-1.jpg' alt='jammer'></ExtraImg>
+                                <p>Kerst<FaChevronRight/></p>
                             </ExtraImgContainer>
                         </ExtraPromoLink>
                         <ExtraPromoLink href='#'>
                             <ExtraImgContainer>
-                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/47/ingangen/Home-47-ingang-2.jpg' alt='jammer'></ExtraImg>
-                                <p>Kaasfondue<FaChevronRight/></p>
+                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/49/ingangen/Home-49-ingang-2.jpg' alt='jammer'></ExtraImg>
+                                <p>Kerst voorgerechten<FaChevronRight/></p>
                             </ExtraImgContainer>
                         </ExtraPromoLink>
                         <ExtraPromoLink href='#'>
                             <ExtraImgContainer>
-                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/47/ingangen/Home-47-ingang-3.jpg' alt='jammer'></ExtraImg>
-                                <p>Borrelhapjes<FaChevronRight/></p>
+                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/49/ingangen/Home-49-ingang-3.jpg' alt='jammer'></ExtraImg>
+                                <p>Kerst hoofdgerechten<FaChevronRight/></p>
                             </ExtraImgContainer>
                         </ExtraPromoLink>
                         <ExtraPromoLink href='#'>
                             <ExtraImgContainer>
-                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/47/ingangen/Home-47-ingang-4.jpg' alt='jammer'></ExtraImg>
-                                <p>Chocolademelk<FaChevronRight/></p>
+                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/49/ingangen/Home-49-ingang-4.jpg' alt='jammer'></ExtraImg>
+                                <p>Kerst dessert<FaChevronRight/></p>
                             </ExtraImgContainer>
                         </ExtraPromoLink>
                         <ExtraPromoLink href='#'>
                             <ExtraImgContainer>
-                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/47/ingangen/Home-47-ingang-5.jpg' alt='jammer'></ExtraImg>
-                                <p>Pepernoten<FaChevronRight/></p>
+                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/49/ingangen/Home-49-ingang-5.jpg' alt='jammer'></ExtraImg>
+                                <p>Gourmetten met kerst<FaChevronRight/></p>
                             </ExtraImgContainer>
                         </ExtraPromoLink>
                         <ExtraPromoLink href='#'>
                             <ExtraImgContainer>
-                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/44/ingangen/Home-44-ingang-6.jpg' alt='jammer'></ExtraImg>
+                                <ExtraImg src='https://www.jumbo.com/dam/homepage/2021/49/ingangen/Home-49-ingang-6.jpg' alt='jammer'></ExtraImg>
                                 <p>Hallo magazine<FaChevronRight/></p>
                             </ExtraImgContainer>
                         </ExtraPromoLink>

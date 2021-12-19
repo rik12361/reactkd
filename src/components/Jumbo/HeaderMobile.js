@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import JumboLogo from './JumboLogo'
 import MyJumboGroup from './MyJumboGroup'
@@ -11,7 +11,7 @@ function HeaderMobile({showMessageLine, setScrollable}) {
             <HeaderMobiieContainer>
                 <FlexTop style= {{borderBottomStyle: showMessageLine? 'none' : 'solid 1px',   
                                   borderBottomColor: showMessageLine? '' : 'var(--jumbo-grey)'}}>
-                    <MobileMenu/>
+                    <MobileMenu setScrollable={setScrollable}/>
                     <JumboLogo/>
                     <MyJumboGroup/>
                 </FlexTop>
@@ -36,6 +36,7 @@ const HeaderMobiieContainer = styled.div`
     z-index: 1000;
 `
 const FlexTop = styled.div`
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;

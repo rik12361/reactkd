@@ -1,0 +1,43 @@
+.kd-explorer-container {
+    padding: 0 0.5em;
+    height: 100%;
+    overflow: auto;
+    padding-top: 5.2em;
+}
+
+.kd-explorer-container h6 {
+    font-size: 0.975em;
+    font-weight: 500;
+    color: #bbb;
+    margin: 1.5em 0.5em;
+
+}
+
+
+.kd-people-container {
+    position: relative;
+}
+
+.kd-person-container {
+}
+
+.kd-person-img {
+    width: 15px;
+    height: 15px;
+}
+
+.kd-person-container img {
+    width: 40px;
+    border-radius: 1.1em;
+}
+
+.kd-show-more-people {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f4f4f4;
+
+}

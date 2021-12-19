@@ -1,51 +1,95 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { FaApple, FaChevronRight, FaGooglePlay } from 'react-icons/fa'
 import styled from 'styled-components'
-function FooterRightColumn() {
-    return (
-        <div>
-            <RightMiddleColumn>
-            <h4>Download onze app</h4>
-            <p>Met de Jumbo app doe je nog vlotter boodschappen. Met de service, ruime keuze en laagsteprijsgarantie die je van ons gewend bent!</p>
-            <AppLink href="#"><span>Lees meer over de App</span><FaChevronRight></FaChevronRight></AppLink>
+import { FaChevronDown } from 'react-icons/fa'
+function FooterRightColumn( {sWidth}) {
+    const [showDropDown, setShowDropDown] = useState(false)
 
-            <AppContainer>
-            <AppLink href="#">
-                <StoreContainer>
-                <FaApple style={{width:'30px', height:'30px'}}/>
-                <div>
-                    <p>Download in the</p>
-                    <p>App Store</p>
-                </div>
-                </StoreContainer>
-            </AppLink>
-            <AppLink href="#">
-                <StoreContainer>
-                <FaGooglePlay style={{width:'30px', height:'30px'}}/>
-                <div>
-                    <p>Ontdek het in</p>
-                    <p>Google Play</p>
-                </div>
-                </StoreContainer>
-            </AppLink>
-            </AppContainer>
-            </RightMiddleColumn>
+    const OpenDropdown = (sWidth) => {
+        console.log(sWidth);
+        showDropDown? setShowDropDown(false):setShowDropDown(true);
+    }
+
+    return (
+        <BlackBackGroundContainer>
+        <div className='kd-Jumbo-container'>
+            {sWidth<=1100? 
+            <RightMiddleColumn>
+                <MenuContainer>
+                <MenuButton onClick={() => OpenDropdown(sWidth)}>
+                        <HyphenText><span>Download onze app</span>  <span><FaChevronDown style={{color: 'white', margin: '12px 0px', width:'32px', transition: 'all 250ms ease-in-out', height:'32px', transform: showDropDown? 'rotate(180deg)':'rotate(0deg)'}}/></span></HyphenText>
+                        <Hyphens>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------</Hyphens> 
+                </MenuButton>
+                </MenuContainer>
+                <MenuList style={{ opacity: showDropDown? '1' : '0', display: showDropDown? 'block' : 'none', transition: 'all 350ms ease-in-out' }}>
+                    <p>Met de Jumbo app doe je nog vlotter boodschappen. Met de service, ruime keuze en laagsteprijsgarantie die je van ons gewend bent!</p>
+                    <AppLink href="#"><span>Lees meer over de App</span><FaChevronRight></FaChevronRight></AppLink>
+                    <AppContainer>
+                    <AppLink href="#">
+                        <StoreContainer>
+                        <FaApple style={{width:'30px', height:'30px'}}/>
+                        <div>
+                            <p>Download in the</p>
+                            <p>App Store</p>
+                        </div>
+                        </StoreContainer>
+                    </AppLink>
+                    <AppLink href="#">
+                        <StoreContainer>
+                        <FaGooglePlay style={{width:'30px', height:'30px'}}/>
+                        <div>
+                            <p>Ontdek het in</p>
+                            <p>Google Play</p>
+                        </div>
+                        </StoreContainer>
+                    </AppLink>
+                    </AppContainer>
+                </MenuList>
+            </RightMiddleColumn> 
+            :
+            <RightMiddleColumn>
+                <h4>Download onze app</h4>
+                <p>Met de Jumbo app doe je nog vlotter boodschappen. Met de service, ruime keuze en laagsteprijsgarantie die je van ons gewend bent!</p>
+                <AppLink href="#"><span>Lees meer over de App</span><FaChevronRight></FaChevronRight></AppLink>
+                <AppContainer>
+                    <AppLink href="#">
+                        <StoreContainer>
+                        <FaApple style={{width:'30px', height:'30px'}}/>
+                        <div>
+                            <p>Download in the</p>
+                            <p>App Store</p>
+                        </div>
+                        </StoreContainer>
+                    </AppLink>
+                    <AppLink href="#">
+                        <StoreContainer>
+                        <FaGooglePlay style={{width:'30px', height:'30px'}}/>
+                        <div>
+                            <p>Ontdek het in</p>
+                            <p>Google Play</p>
+                        </div>
+                        </StoreContainer>
+                    </AppLink>
+                </AppContainer>
+            </RightMiddleColumn> 
+        }
         </div>
+        </BlackBackGroundContainer> 
     )
 }
 
 export default FooterRightColumn
 
+const BlackBackGroundContainer = styled.div`
+    @media (max-width: 1100px) {background: black;width:100%} 
+`
 
 const RightMiddleColumn = styled.div`
-    width: 400px;
-    margin: 0px 0px 0px 90px;
+    width:400px;
+    margin: 0px 0px 0px 0px;
     button {
-        width: 200px;
+        width: 100%;
         height: 40px;
-        :hover {
-            background: green;
-        }
     }
     h4 {
         font-size: 22px;
@@ -56,9 +100,9 @@ const RightMiddleColumn = styled.div`
     p {
         color: white;
     }
-    @media (max-width: 1536px) {margin: 0px 0px 0px 90px; width: 380px} 
-    @media (max-width: 1280px) {padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; width: 360px;}
-    @media (max-width: 1100px) {padding: 0px 0px 0px 0px; margin: 16px 0px 0px 0px; width: 960px;}
+    @media (max-width: 1536px) {padding: 0px 0px 0px 0px;width:380px} 
+    @media (max-width: 1280px) {padding: 0px 0px 0px 0px;width:380px;} 
+    @media (max-width: 1100px) {padding: 0px 0px 0px 0px;width:1050px;};
 `    
 
 const AppContainer = styled.div`
@@ -100,27 +144,62 @@ const StoreContainer = styled.div`
     }
 `
 
+const Hyphens = styled.div`
+    width: 90vw;
+    max-width: 90vw;
+    overflow-x: hidden;
+    height: 22px;
+    color: white;
+`
+const HyphenText = styled.div`
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 90vw;
+    height: 42px;
+    justify-content: space-between;
 
-const Apple = styled.img `
-    width: 200px;
-    height:60px;
+    span:nth-child(1) {
+        font-size: 32px;
+    }
+
+    span:nth-child(2) {
+        width: 48px;
+        height: 48px;
+    }
+`
+const MenuContainer = styled.div`
+    height: 52px;
+`
+
+const MenuButton = styled.button`
+    display: block;
+    background-color: black;
+    border: none;
+    width: 100%;
+    text-align: left;
+    :active {
+        border: none;
+    }
+`
+
+const MenuList = styled.div `
+    height: 180px;
 `
 
 const AppLink = styled.a`
     color: white;
-    /* :hover {
-        color: green;
-        background-color: green;
-    } */
+    :hover {
+        color: white;
+        background-color: black;
+        text-decoration: underline;
+    }
     span {
         padding: 0px 4px 0px 0px;
     }
 `
 
-const RightColumn = styled.div`
-`
-const MidRightColumn = styled.div`
-`
  /* @media (max-width: 7681px) {} 
     @media (max-width: 3840px) {} 
     @media (max-width: 2560px) {} 

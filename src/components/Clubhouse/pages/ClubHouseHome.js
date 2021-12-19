@@ -31,10 +31,11 @@ function ClubHouseHome() {
         setSheetCreateRoom(sheetCreateRoom);
         setCardId(cardId);
         console.log(rik);
-    }, []);
+    }, [dispatch, kaarten.find.isAap, itemsVisible, sheetCreateRoom, cardId]);
 
     return (
         <div>
+            
             {loaderVisible ? 
                 (<div className='kd-loader'> <img src='/images/clubhouse/loader.gif' alt="jammer"></img></div>) : 
                 ('') }
@@ -63,7 +64,7 @@ function ClubHouseHome() {
                 setSheetTitle= {(item) => setSheetTitle(item)}
                 setSheetVisible={(item) => setSheetVisible(item)}
                 sheetVisible={sheetVisible}
-                cardDetail = {dailyCards.find((item) => item.id == cardId)}
+                cardDetail = {dailyCards.find((item) => item.id === cardId)}
                 setItemsVisible={((item) => setItemsVisible(item))}
                 setSheetCreateRoom= {(item => {
                     setLoaderVisible(true)

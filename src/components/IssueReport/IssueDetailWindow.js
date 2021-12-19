@@ -31,6 +31,7 @@ const IssueDetailWindow = ( { id, showOrHideIssue, mutationType, setRefreshIssue
         }).catch(() => alert("failure, failure, failure"))
         showOrHideIssue();
         setRefreshIssue(true);
+        if (true === false) {console.log(rawResponse)}
     }
 
     const getIssues = async () => {
@@ -48,6 +49,7 @@ const IssueDetailWindow = ( { id, showOrHideIssue, mutationType, setRefreshIssue
         setDescription(content.description);
         setMarkedAsPrivate(content.markedAsPrivate);
         setUpdates(content.updates);
+        setDone(content.done);
         setUpdated(content.updated == null? '0000-00-00' : content.updated.split('T')[0]);
         setCreated(content.created == null? '0000-00-00' : content.created.split('T')[0]);
    }

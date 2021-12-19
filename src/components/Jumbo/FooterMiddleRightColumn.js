@@ -2,34 +2,45 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import { FaChevronDown } from 'react-icons/fa'
 
-function FooterMiddleRightColumn({sWidth, footerHeight, setFooterHeight}) {
+function FooterMiddleRightColumn({sWidth}) {
     
     const [showDropDown, setShowDropDown] = useState(false)
 
     const OpenDropdown = (sWidth) => {
         console.log(sWidth);
-        if (showDropDown)
-        {
-            setShowDropDown(false);
-            setFooterHeight(footerHeight - 220);
-        }
-        else
-        {
-            setShowDropDown(true);
-            setFooterHeight(footerHeight + 220);
-        }
+        showDropDown? setShowDropDown(false) : setShowDropDown(true);
     }
 
     return (
-        <div  className='kd-Jumbo-container'>
-           {sWidth<=1100? 
+        <BackgroundColorContainer>
+            {sWidth<=1100? 
+            <div  className='kd-Jumbo-container'>
             <RightMiddleColumn>
-                <MenuButton onClick={() => OpenDropdown(sWidth)}>
-                    <Hyphens>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------</Hyphens>
-                        <HyphenText><span>Over Jumbo</span>  <span><FaChevronDown style={{color: 'white', margin: '12px 0px', width:'32px', transition: 'all 250ms ease-in-out', height:'32px', transform: showDropDown? 'rotate(180deg)':'rotate(0deg)'}}/></span></HyphenText>
-                    <Hyphens>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------</Hyphens> 
-                </MenuButton>
-                <MenuList style={{ opacity: showDropDown? '1' : '0', display: showDropDown? 'block' : 'none', transition: 'all 350ms ease-in-out' }}>           
+                    <MenuButton onClick={() => OpenDropdown(sWidth)}>
+                            <HyphenText><span>Over Jumbo</span>  <span><FaChevronDown style={{color: 'white', margin: '12px 0px', width:'32px', transition: 'all 250ms ease-in-out', height:'32px', transform: showDropDown? 'rotate(180deg)':'rotate(0deg)'}}/></span></HyphenText>
+                        <Hyphens>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------</Hyphens> 
+                    </MenuButton>
+                    <MenuList style={{ opacity: showDropDown? '1' : '0', display: showDropDown? 'block' : 'none', transition: 'all 350ms ease-in-out' }}>           
+                        <div><Link href="#">Nieuwsbrief</Link></div>
+                        <div><Link href="#">De 7 Zekerheden</Link></div>
+                        <div><Link href="#">Werken bij Jumbo</Link></div>
+                        <div><Link href="#">Online boodschappen doen</Link></div>
+                        <div><Link href="#">Thuisbezorgen</Link></div>
+                        <div><Link href="#">Boodschappen ophalen</Link></div>
+                        <div><Link href="#">Openingstijden</Link></div>
+                        <div><Link href="#">Het bedrijf Jumbo</Link></div>
+                        <div><Link href="#">100-jarig jubileum</Link></div>
+                        <div><Link href="#">Duurzaamheid</Link></div>
+                        <div><Link href="#">Foodcoach</Link></div>
+                        <div><Link href="#">Pers</Link></div>
+                        <div><Link href="#">Corona maatregelen</Link></div>
+                        <div><Link href="#">Jumbo België</Link></div>
+                    </MenuList>
+                </RightMiddleColumn>
+                </div>
+            :
+                <RightMiddleColumn>
+                    <h4>Over Jumbo</h4>
                     <div><Link href="#">Nieuwsbrief</Link></div>
                     <div><Link href="#">De 7 Zekerheden</Link></div>
                     <div><Link href="#">Werken bij Jumbo</Link></div>
@@ -44,36 +55,21 @@ function FooterMiddleRightColumn({sWidth, footerHeight, setFooterHeight}) {
                     <div><Link href="#">Pers</Link></div>
                     <div><Link href="#">Corona maatregelen</Link></div>
                     <div><Link href="#">Jumbo België</Link></div>
-                </MenuList>
-            </RightMiddleColumn>
-        :
-        <RightMiddleColumn>
-            <h4>Over Jumbo</h4>
-            <div><Link href="#">Nieuwsbrief</Link></div>
-            <div><Link href="#">De 7 Zekerheden</Link></div>
-            <div><Link href="#">Werken bij Jumbo</Link></div>
-            <div><Link href="#">Online boodschappen doen</Link></div>
-            <div><Link href="#">Thuisbezorgen</Link></div>
-            <div><Link href="#">Boodschappen ophalen</Link></div>
-            <div><Link href="#">Openingstijden</Link></div>
-            <div><Link href="#">Het bedrijf Jumbo</Link></div>
-            <div><Link href="#">100-jarig jubileum</Link></div>
-            <div><Link href="#">Duurzaamheid</Link></div>
-            <div><Link href="#">Foodcoach</Link></div>
-            <div><Link href="#">Pers</Link></div>
-            <div><Link href="#">Corona maatregelen</Link></div>
-            <div><Link href="#">Jumbo België</Link></div>
-        </RightMiddleColumn>
-        
-        } 
-        </div> 
+                </RightMiddleColumn>            
+            } 
+        </BackgroundColorContainer>
   )
 }
 
 export default FooterMiddleRightColumn
 
+const BackgroundColorContainer = styled.div`
+    @media (max-width: 1100px) {background: black;width:100%} 
+`
+
 const RightMiddleColumn = styled.div`
-    padding: 0px 0px 0px 120px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     width: 300px;
 
     p {
@@ -85,8 +81,9 @@ const RightMiddleColumn = styled.div`
         font-weight: 600;
         color: white;
     }
-    @media (max-width: 1536px) {padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; width: 350;} 
-    @media (max-width: 1280px) {padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; width: 350;} 
+    @media (max-width: 1920px) {padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; width: 250px;} 
+    @media (max-width: 1536px) {padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; width: 250px;} 
+    @media (max-width: 1280px) {padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; width: 220px;} 
 `
 
 const Hyphens = styled.div`
@@ -112,7 +109,6 @@ const HyphenText = styled.div`
         height: 48px;
     }
 `
-
 const MenuButton = styled.button`
     display: block;
     background-color: black;
@@ -123,6 +119,7 @@ const MenuButton = styled.button`
     }
 `
 const MenuList = styled.div `
+    padding-bottom: 10px;
 `
 
 const Link = styled.a`

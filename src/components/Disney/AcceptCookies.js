@@ -12,17 +12,18 @@ function AcceptCookies() {
 
     useEffect (() => {
         CheckCookies();
-    },[]);
+    },[cookies, CheckCookies]);
 
     const setShowModal = (newState) => {
-        setshowModal(newState);
+        setshowModal(newState, CheckCookies);
     }
 
     function CheckCookies() {
-        allCookies.remove('kd-cookies-ingesteld');
-        if (allCookies.get('kd-cookies-ingesteld') == undefined) {
+       allCookies.remove('kd-cookies-ingesteld');
+        if (allCookies.get('kd-cookies-ingesteld') === undefined) {
             setCookie('kd-cookies-ingesteld', 'true', { path: '/' });
             setshowModal(true);
+            console.log("Cookies instellen");
         }
         // remove cookie:
         // allCookies.remove('kokosnoot');
@@ -44,7 +45,9 @@ function AcceptCookies() {
     }
 
     const closeModal = () => {
-        setshowModal(!showModal)
+        showModal? console.log("JA") : console.log("NEE");
+        setshowModal(false);
+        showModal? console.log("JA") : console.log("NEE");
     }
 
     return (

@@ -1,13 +1,13 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useRef} from 'react'
 import styled from 'styled-components'
-import icon, { FaBox, FaHeart, FaList, FaMale, FaReceipt, FaTrophy } from 'react-icons/fa'
+import { FaBox, FaList, FaMale, FaReceipt, FaTrophy } from 'react-icons/fa'
 
 function MyJumboDropdownMenu({showDropDown, setShowDropDown}) {
 
     const menuRef = useRef();
 
     const checkCloseMenu = (e) => {
-        if (e.target == menuRef.current)
+        if (e.target === menuRef.current)
         {
             setShowDropDown(false);
         }
@@ -17,13 +17,13 @@ function MyJumboDropdownMenu({showDropDown, setShowDropDown}) {
         <div>
             {showDropDown? <DropDownContainer onClick={(e) => checkCloseMenu(e)}>
                 <DropDownMenu>
-                    <MenuLine><FaMale/><a href="#"><span>Inloggen</span></a></MenuLine>
-                    <MenuLine><FaBox/><a href="#"><span>Bestellen</span></a></MenuLine>
-                    <MenuLine><FaTrophy/><a href="#"><span>Eerder gekocht</span></a></MenuLine>
-                    <MenuLine><FaList/><a href="#"><span>Lijstjes</span></a></MenuLine>
-                    <MenuLine><FaReceipt/><a href="#"><span>Recepten</span></a></MenuLine>
+                    <MenuLine><FaMale/><a href="/"><span>Inloggen</span></a></MenuLine>
+                    <MenuLine><FaBox/><a href="/"><span>Bestellen</span></a></MenuLine>
+                    <MenuLine><FaTrophy/><a href="/"><span>Eerder gekocht</span></a></MenuLine>
+                    <MenuLine><FaList/><a href="/"><span>Lijstjes</span></a></MenuLine>
+                    <MenuLine><FaReceipt/><a href="/"><span>Recepten</span></a></MenuLine>
                     <MenuLine><span>Nog geen account?</span></MenuLine>
-                    <MenuLine><RegisterMe href="#" className='kd-jumbo-button'>Registreer</RegisterMe></MenuLine>
+                    <MenuLine><RegisterMe href="/" className='kd-jumbo-button'>Registreer</RegisterMe></MenuLine>
                 </DropDownMenu>
                 <DropDownModal ref={menuRef}/> 
             </DropDownContainer>: '' }

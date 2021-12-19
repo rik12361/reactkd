@@ -25,6 +25,8 @@ const IssueDetailDelete = ( { id, showOrHideIssue, mutationType, setRefreshIssue
             method: sMethode,
         }).catch(() => alert("fetch failed!"))
 
+        if (true === false) {console.log(rawResponse)}
+
         showOrHideIssue();
         setRefreshIssue(true);
     }
@@ -42,6 +44,7 @@ const IssueDetailDelete = ( { id, showOrHideIssue, mutationType, setRefreshIssue
         setId(id); 
         setUrl(content.url);
         setEmail(content.email);
+        setDone(content.done);
         setDescription(content.description);
    }
 

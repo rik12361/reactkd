@@ -62,14 +62,12 @@ const Warning18 = styled.div`
         font-size: 12px;
     }
 `
-
 const ImgLink = styled.a`
     text-decoration: none;
     img:hover {
         opacity: 0.5;
     }
 `
-
 const ImageWrapper = styled.img`
     width: 100%;
     height: 100%;
@@ -79,7 +77,6 @@ const ImageContainer = styled.div`
     height: 22px;
     margin: 0px 24px 0px 0px;
 `
-
 const FlexContainer = styled.div`
     height: 100px;
     display: flex;
@@ -101,7 +98,6 @@ const RightBlock = styled.div`
     margin-left: 30vw;
     width: 300px;
 `
-
 /* @media (max-width: 7681px) {} 
     @media (max-width: 3840px) {} 
     @media (max-width: 2560px) {} 

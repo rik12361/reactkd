@@ -7,9 +7,9 @@ function HeaderMenuBar({showMessageLine}) {
     const [showModal, setshowModal] = useState(false)
 
     const showModalAndMenu = (newState) => {
-        var d = new Date();
         setshowModal(newState);
-        console.log("hovering..." + d.getSeconds());
+        // var d = new Date();
+        // console.log("hovering..." + d.getSeconds());
     }
 
     return (
@@ -17,19 +17,47 @@ function HeaderMenuBar({showMessageLine}) {
            <HeaderMenuBarContainer>
             {showModal? (<JumboModal/>) :  ('') }
                 <div className='kd-Jumbo-container kd-relative'>
-                    <MenuHeader>
-                        {MenuData.map((menuItem) => (
-                            <ul onMouseOver={() => showModalAndMenu(true)} onMouseLeave={() => showModalAndMenu(false)}>
-                            <div><a href="#"><span>{menuItem.title}</span></a></div>
-                            <div>
-                            {menuItem.producten != 0?  
-                                <li><a href="#">{menuItem.producten.map((productGroep) => <a href='#'>{productGroep.ProductGroep}</a>)}</a></li>
-                                : ''                                
-                            }
-                            </div>
-                            </ul>
-                            ))}
-                    </MenuHeader>
+                    <MenuContainer>
+                    {/* {MenuData.map((menuItem) => 
+                        <MenuColumn href='' onMouseOver={() => showModalAndMenu(true)} onMouseLeave={() => showModalAndMenu(false)}>
+                            <MenuHeader><span>{menuItem.title}</span></MenuHeader>
+                            {menuItem.producten !== 0? 
+                            <MenuItemsContainer>
+                              <div><a href="/">{menuItem.producten.map((productGroep) => <a href='/'>{productGroep.ProductGroep}</a>)}</a></div>
+                            </MenuItemsContainer> : '' }
+                        </MenuColumn>)} */}
+                        <MenuColumn>
+                            <MenuHeader href='' onMouseOver={() => showModalAndMenu(true)} onMouseLeave={() => showModalAndMenu(false)}><span>HEAD</span></MenuHeader>
+                            <MenuItemsContainer>
+                                <div> item 1 </div>
+                                <div> item 2 </div>
+                            </MenuItemsContainer> 
+                        </MenuColumn>
+                            
+                    </MenuContainer>
+                        {/* {MenuData.map((menuItem) => 
+                        (
+                            <MenuColumn>
+                             <ProductGroup onMouseOver={() => showModalAndMenu(true)} onMouseLeave={() => showModalAndMenu(false)}>{menuItem.title}</ProductGroup>
+                             {menuItem.producten !== 0?  
+                                 <div><a href="/">{menuItem.producten.map((productGroep) => <a href='/'>{productGroep.ProductGroep}</a>)}</a></div>
+                                 : ''                                
+                             }
+                             </MenuColumn>
+                        ))} */}
+
+                        {
+                    
+                    /* //         <ul onMouseOver={() => showModalAndMenu(true)} onMouseLeave={() => showModalAndMenu(false)}>
+                    //         <div><a href="/"><span>{menuItem.title}</span></a></div>
+                    //         <div>
+                    //         {menuItem.producten !== 0?  
+                    //             <li><a href="/">{menuItem.producten.map((productGroep) => <a href='/'>{productGroep.ProductGroep}</a>)}</a></li>
+                    //             : ''                                
+                    //         }
+                    //         </div>
+                    //         </ul>
+                    //         ))} */}
                 </div> 
             </HeaderMenuBarContainer> 
         </div>
@@ -37,9 +65,9 @@ function HeaderMenuBar({showMessageLine}) {
 }
 export default HeaderMenuBar
 
-const MenuHeader = styled.div`
+const MenuContainer = styled.div`
     position: absolute;
-    top: 131px;
+    top: 91px;
     left: 0px;
     right: 0px;
     display: flex;
@@ -48,12 +76,81 @@ const MenuHeader = styled.div`
     align-items: flex-start;
     z-index: 300;
 `
+const MenuColumn = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+`
+const MenuItemsContainer = styled.div`
+    background: white;
+    padding: 20px;
+    display: none;
+`
+
+const MenuHeader = styled.a`
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    span {
+        color: black;
+        font-size: 14px;    
+        padding-right: 30px;
+        font-weight: 800;
+
+        &::after {
+             position:absolute;
+             opacity: 0;
+             content: "";
+             height: 4px;
+             background:var(--jumbo-yellow);
+             top: 36px;
+             left: 0;
+             right: 0;
+             bottom: 0px;
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+    &:hover + div {
+        display: block;
+    }
+
+`
+
+const ProductGroup = styled.span`
+
+    display: inline;
+    margin: 0px 4px;
+    background: red;
+    &::after {
+             position:absolute;
+             opacity: 0;
+             content: "";
+             height: 4px;
+             background:var(--jumbo-yellow);
+             top: 36px;
+             left: 0;
+             right: 0;
+             bottom: 0px;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+
+`
+
 const HeaderMenuBarContainer = styled.div`
+    top: 40px;
     position: relative;
     height: 40px;
     width: 100%;
+`
+const HeaderMenuBarContainerold = styled.div`
 
-    ul:hover > div a span:nth-child(1)::after {
+    div:hover > div a span:nth-child(1)::after {
         opacity: 1;
     }
 

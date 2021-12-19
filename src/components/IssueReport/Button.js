@@ -1,8 +1,8 @@
 const Button = ({ text, color, background, height, onClick }) => {
 
-    const onClickLog = () => {
-        console.log("Klik");
-    }
+    // const onClickLog = () => {
+    //     console.log("Klik");
+    // }
 
     return (
         <button className="kd-hover-black-white kd-button-basic kd-48-h-p kd-32-text" style = {{ height: height, color: color, background: background}} onClick={() => onClick()}> { text } </button>

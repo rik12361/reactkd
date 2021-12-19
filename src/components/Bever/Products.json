@@ -1,0 +1,172 @@
+[
+    {
+        "id": 1,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/agaed60006_4441_001_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/agaed60006_4441_004_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "false",
+        "reduction": [{
+            "text": "-21%",
+            "color": "var(--bever-red)"
+        },
+        {
+            "text": "halve prijs",
+            "color": "var(--bever-orange)"
+        }]
+    },
+    {
+        "id": 2,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/adbgf10008_5555_001_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/adbgf10008_5555_002_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "false",
+        "reduction": [{
+            "text": "-21%",
+            "color": "var(--bever-red)"
+        },
+        {
+            "text": "halve prijs",
+            "color": "var(--bever-green)"
+        }]
+    },
+    {
+        "id": 3,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/laabd90001_7070_01_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/laabd90001_7070_03_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "false",
+        "reduction": [{
+            "text": "-21%",
+            "color": "var(--bever-red)"
+        },
+        {
+            "text": "halve prijs",
+            "color": "var(--bever-green)"
+        }]
+    },
+    {
+        "id": 4,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/naaed80003_3333_01_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/naaed80003_3333_01_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "false",
+        "reduction": [{
+            "text": "-21%",
+            "color": "var(--bever-red)"
+        },
+        {
+            "text": "halve prijs",
+            "color": "var(--bever-green)"
+        }]
+    },
+    {
+        "id": 5,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/baacf00001_4242_04_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/baacf00001_4242_05_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "true",
+        "reduction": [{
+            "text": "-21%",
+            "color": "var(--bever-blue)"
+        }]
+    },
+    {
+        "id": 6,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/adaif10007_5454_010_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/adaif10007_5454_012_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "false",
+        "reduction": [{
+            "text": "-21%",
+            "color": "var(--bever-blue)"
+        }]
+    },
+    {
+        "id": 7,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/laabb92004_1212_010_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/laabb92004_1212_010_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "false",
+        "reduction": [{
+            "text": "-10%",
+            "color": "var(--bever-red)"
+        },
+        {
+            "text": "tijdelijk",
+            "color": "var(--bever-green)"
+        }]
+    },
+    {
+        "id": 8,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/bfbcf00004_2121_01_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/bfbcf00004_2121_02_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "false",
+        "reduction": [{
+            "text": "Sale",
+            "color": "var(--bever-red)"
+        }]
+    },
+    {
+        "id": 9,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/b42a390057_0303_01_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/b42a390057_0303_03_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "false",
+        "reduction": [{
+            "text": "tijdelijk",
+            "color": "var(--bever-orange)"
+        }]
+    },
+    {
+        "id": 10,
+        "imgUrlFront": "https://productimage001.bever.nl/productimages/316x474/gpbad90013_7171_11_nl.jpg",
+        "imgUrlBack": "https://productimage001.bever.nl/productimages/316x474/gpbad90013_7171_11_nl.jpg",
+        "mark": "Fjällräven",
+        "description": "Övik Structure Sweater Dames",
+        "stars": 4.3,
+        "priceFrom": "€164,95",
+        "priceNow": "€129,95",
+        "favorite": "false",
+        "reduction": [{
+            "text": "-21%",
+            "color": "var(--bever-red)"
+        }]
+    }
+]

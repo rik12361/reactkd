@@ -2,54 +2,45 @@ import React, {useState} from 'react'
 import { FaChevronDown } from 'react-icons/fa'
 import styled from 'styled-components'
 
-function FooterMiddleLeftColumn({sWidth, footerHeight, setFooterHeight}) {
+function FooterMiddleLeftColumn({sWidth}) {
 
     const [showDropDown, setShowDropDown] = useState(false)
 
     const OpenDropdown = (sWidth) => {
         console.log(sWidth);
-        if (showDropDown)
-        {
-            setShowDropDown(false);
-            setFooterHeight(footerHeight - 390);
-        }
-        else
-        {
-            setShowDropDown(true);
-            setFooterHeight(footerHeight + 390);
-        }
+        showDropDown? setShowDropDown(false) : setShowDropDown(true);
     }
 
     return (
-        <div  className='kd-Jumbo-container'>
-
-           {sWidth<=1100? 
+            <BackgroundColorContainer>
+            {sWidth<=1100? 
+            <div className='kd-Jumbo-container'>
             <LeftMiddleColumn >
-                <MenuButton onClick={() => OpenDropdown(sWidth)}>
-                <Hyphens>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------</Hyphens>
-                <HyphenText><span>Laat je inspireren</span>  <span><FaChevronDown style={{color: 'white', margin: '12px 0px', width:'32px', transition: 'all 250ms ease-in-out', height:'32px', transform: showDropDown? 'rotate(180deg)':'rotate(0deg)'}}/></span></HyphenText>
-                <Hyphens>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------</Hyphens> 
-                </MenuButton>
-                <MenuList style={{ opacity: showDropDown? '1' : '0', display: showDropDown? 'block' : 'none', transition: 'all 350ms ease-in-out' }}>
-                <div><Link href="#">Nieuwsbrief</Link></div>
-                <div><Link href="#">Recepten</Link></div>
-                <div><Link href="#">Populairste recepten</Link></div>
-                <div><Link href="#">Wat eten we vandaag?</Link></div>
-                <div><Link href="#">Vind je perfecte wijn</Link></div>
-                <div><Link href="#">Kook- & instructie video’s</Link></div>
-                <div><Link href="#">Hallo magazine</Link></div>
-                <div><Link href="#">Inspiratie</Link></div>
-                <div><Link href="#">Kerst</Link></div>
-                <div><Link href="#">Kerstrecepten</Link></div>
-                <div><Link href="#">Voorgerecht</Link></div>
-                <div><Link href="#">Kerstdiner</Link></div>
-                <div><Link href="#">Kerstdessert</Link></div>
-                <div><Link href="#">Kerstontbijt</Link></div>
-                <div><Link href="#">Hoofdgerecht</Link></div>
-                <div><Link href="#">Recepten</Link></div>
-                <div><Link href="#">Gourmet</Link></div>
-                </MenuList>
-            </LeftMiddleColumn>
+                    <MenuButton onClick={() => OpenDropdown(sWidth)}>
+                        <HyphenText><span>Laat je inspireren</span>  <span><FaChevronDown style={{color: 'white', margin: '12px 0px', width:'32px', transition: 'all 250ms ease-in-out', height:'32px', transform: showDropDown? 'rotate(180deg)':'rotate(0deg)'}}/></span></HyphenText>
+                        <Hyphens>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------</Hyphens> 
+                    </MenuButton>
+                    <MenuList style={{ opacity: showDropDown? '1' : '0', display: showDropDown? 'block' : 'none', transition: 'all 350ms ease-in-out' }}>
+                        <div><Link href="#">Nieuwsbrief</Link></div>
+                        <div><Link href="#">Recepten</Link></div>
+                        <div><Link href="#">Populairste recepten</Link></div>
+                        <div><Link href="#">Wat eten we vandaag?</Link></div>
+                        <div><Link href="#">Vind je perfecte wijn</Link></div>
+                        <div><Link href="#">Kook- & instructie video’s</Link></div>
+                        <div><Link href="#">Hallo magazine</Link></div>
+                        <div><Link href="#">Inspiratie</Link></div>
+                        <div><Link href="#">Kerst</Link></div>
+                        <div><Link href="#">Kerstrecepten</Link></div>
+                        <div><Link href="#">Voorgerecht</Link></div>
+                        <div><Link href="#">Kerstdiner</Link></div>
+                        <div><Link href="#">Kerstdessert</Link></div>
+                        <div><Link href="#">Kerstontbijt</Link></div>
+                        <div><Link href="#">Hoofdgerecht</Link></div>
+                        <div><Link href="#">Recepten</Link></div>
+                        <div><Link href="#">Gourmet</Link></div>
+                    </MenuList>
+                </LeftMiddleColumn>
+                </div>
         :
             <LeftMiddleColumn>
                 <h4>Laat je inspireren</h4>
@@ -71,17 +62,20 @@ function FooterMiddleLeftColumn({sWidth, footerHeight, setFooterHeight}) {
                 <div><Link href="#">Recepten</Link></div>
                 <div><Link href="#">Gourmet</Link></div>
             </LeftMiddleColumn> }
-        </div>
+            </BackgroundColorContainer>
     )
 }
 
 export default FooterMiddleLeftColumn
 
+const BackgroundColorContainer = styled.div`
+    @media (max-width: 1100px) {background: black;width:100%} 
+`
 
 const LeftMiddleColumn = styled.div`
 
     padding: 0px 0px 0px 20px;
-    width: 400px;
+    width: 300px;
 
     z-index: 3;
     transition: all 250ms ease-in-out;
@@ -101,9 +95,9 @@ const LeftMiddleColumn = styled.div`
             }
         }
     }
-    @media (max-width: 1536px) {padding: 0px 0px 0px 0px;width:380px} 
-    @media (max-width: 1280px) {padding: 0px 0px 0px 0px;width:380px;} 
-    @media (max-width: 1100px) {padding: 0px 0px 0px 0px;width:1050px;}
+    @media (max-width: 1536px) {padding: 0px 0px 0px 0px;width:300px} 
+    @media (max-width: 1280px) {padding: 0px 0px 0px 0px;width:190px;} 
+    @media (max-width: 1100px) {padding: 0px 0px 0px 0px;width:150px;}
 
 `
 const Hyphens = styled.div`
@@ -129,7 +123,6 @@ const HyphenText = styled.div`
         height: 48px;
     }
 `
-
 const MenuButton = styled.button`
     display: block;
     background-color: black;
@@ -139,10 +132,7 @@ const MenuButton = styled.button`
         border: none;
     }
 `
-
-const MenuList = styled.div `
- 
-`
+const MenuList = styled.div ``
 
 const Link = styled.a`
     color: white;

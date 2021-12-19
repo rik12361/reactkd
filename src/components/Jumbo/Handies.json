@@ -13,26 +13,26 @@
     },
     {
         "id": 3,
-        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/43dad23f-88aa-4bb3-8da7-dd7c46ecbe68.jpg",
-        "handyTitle": "Koken met aanbiedingen",
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/39da6e43-1ee9-43fe-ac16-d489e22e70b0.jpg",
+        "handyTitle": "Kerst voorbereiding",
         "handyCheck": "jumbo"
     },
     {
         "id": 4,
-        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/12177913-221d-47a2-bdc4-4868bbf0fe11.jpg",
-        "handyTitle": "Sinterklaas lekkernijen",
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/b79d9d0e-f62e-49b4-be4f-e0c4a5a32fa0.jpg",
+        "handyTitle": "Kerst hoofdmaaltijden",
         "handyCheck": "jumbo"
     },
     {
         "id": 5,
-        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/2fcecc10-d46d-49cf-b5e5-10fcec72fd55.jpg",
-        "handyTitle": "Gourmet",
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/b02b6c8d-bb36-45c9-b8f0-67d05573f23d.jpg",
+        "handyTitle": "Desserts",
         "handyCheck": "jumbo"
     },
     {
         "id": 6,
-        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/678e4b8d-f978-4424-9997-ff2af14da193.jpg",
-        "handyTitle": "Sinterklaas presentjes",
+        "handyImg": "https://product-lists-static.prod.cloud.jumbo.com/product-list/thumbnails/96034204-91ca-4ff7-929d-fdea356cd7b8.jpg",
+        "handyTitle": "Gourmetten met Kerst",
         "handyCheck": "jumbo"
     }
 ]

@@ -12,6 +12,7 @@ function AcceptButtons({setShowModal}) {
         setCookie('kd-analytisch', 'true', { path: '/' });
         setCookie('kd-cookies-ingesteld', 'true', { path: '/' });
         setShowModal(false);
+        if (true === false) {console.log(cookies)};
     }
 
     const ConfigureAllCookies = () => {

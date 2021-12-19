@@ -65,8 +65,6 @@ const BlockHeader = styled.div`
     } 
 `
 
-const ImgRowContainerCentralizer = styled.div`
-`
 const ImgRowContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -77,20 +75,11 @@ const ImgRowContainer = styled.div`
         justify-content: flex-start;
     } 
 `
-
 const ImgContainer = styled.div`
     height: 180px;
     width: 350px;
     margin-right: 12px;
     margin-top: 10px;
-`
-const ImgLink = styled.a`
-    color: black;
-    font-size: 16px;
-    :hover {
-        color: black;
-        text-decoration: underline;
-    }
 `
 const CategoryImg = styled.img`
     height: 100%;

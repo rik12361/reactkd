@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 function ShowScreenResolution( {sWidth} ) {
@@ -17,7 +17,7 @@ const Reso = styled.div`
     text-align: center;
     width: 4vw;
     right: 10vw;
-    top: 450vh;
+    bottom: 150vh;
     z-index: 29000;
     font-size: 3vh;
     border: 0.1vh solid black;

@@ -19,7 +19,7 @@ function NewRoom({cardDetail, setSheetVisible, rik}) {
             <div className='kd-roomdetail-container'>
                 <div className='kd-roomdetail-head'>
                     <div className='d-flex align-items-center'>
-                        <a href='#' onClick={() => setSheetVisible(false)}>
+                        <a href='/' onClick={() => setSheetVisible(false)}>
                         <img src='/images/clubhouse/arrow.png' className='kd-arrow-icon' alt='jammer'></img>
                         <span>Hallway</span></a>
                     </div>

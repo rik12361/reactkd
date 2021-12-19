@@ -10,11 +10,14 @@ function Detail() {
     const { id } = useParams();
     const  [movieDetails, setmovieDetails ] = useState ('');
 
-    useEffect ( async () => {
+    useEffect ( () => {
+        async function fetchData () {
         const data = await fetch ('http://localhost:8080/movie/' + id).then(res => res.json());
         setmovieDetails(data);
         console.log(movieDetails);
-    }, []);
+        }
+        fetchData();
+    }, [id, movieDetails]);
     console.log(movieDetails);
 
     return (

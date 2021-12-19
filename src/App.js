@@ -20,6 +20,7 @@ import ClubHouseHeader from './components/Clubhouse/components/ClubHouseHeader'
 import ReduxMain from "./components/ReduxLab/ReduxMain";
 import RoomInfoCards from "./components/Clubhouse/components/RoomInfoCards"
 import Explorer from "./components/Clubhouse/pages/Explorer"
+import Bever from "./components/Bever/Bever"
 
 const App = () => {
 
@@ -103,6 +104,9 @@ const App = () => {
           </Route>
           <Route exact path="/jumbo.com">
             <Jumbo/>
+          </Route>
+          <Route exact path="/bever.nl">
+            <Bever/>
           </Route>
       </Switch>
       </Router>

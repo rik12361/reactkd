@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { FaCheck, FaHome, FaPhoneAlt } from 'react-icons/fa'
 import styled from 'styled-components'
 
@@ -11,13 +11,13 @@ function HeaderMessage({showMessageLine}) {
                 <div className='kd-jumbo-container'>
                     <MessageBar>
                         <ServiceMsg>
-                            <a href="#"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Gratis bezorging of afhalen bij actieproducten</span></a>
-                            <a href="#"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Grootste assortiment, laagste prijs</span></a>  
-                            <a href="#"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Vers is ook écht vers</span></a>
+                            <a href="/"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Gratis bezorging of afhalen bij actieproducten</span></a>
+                            <a href="/"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Grootste assortiment, laagste prijs</span></a>  
+                            <a href="/"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Vers is ook écht vers</span></a>
                         </ServiceMsg>
                         <ShopsAndCustomerService>
-                            <a href="#"><FaHome color='rgb(120,120,120)' size='0.9em'/><span>Winkels & openingstijden</span></a>
-                            <a href="#"><FaPhoneAlt color='rgb(120,120,120)' size='0.9em'/><span>Klantenservice</span></a>
+                            <a href="/"><FaHome color='rgb(120,120,120)' size='0.9em'/><span>Winkels & openingstijden</span></a>
+                            <a href="/"><FaPhoneAlt color='rgb(120,120,120)' size='0.9em'/><span>Klantenservice</span></a>
                         </ShopsAndCustomerService>
                     </MessageBar>
                 </div>
@@ -68,7 +68,7 @@ const MessageBar = styled.div`
                 left: 0;
                 right: 0;
                 bottom: 0.1em;
-                // opacity: 0;
+                opacity: 0;
                 transform: scaleX(0);
                 transition: all 0ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
             }

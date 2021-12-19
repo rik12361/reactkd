@@ -11,8 +11,9 @@ const ArrayReducer = (state = ["rik", "aap"], action) => {
             statenew.push('noot');
             console.log(statenew);
             return statenew;
+        default:
+            return state;
     }
-    return state;
 }
 export const selectArray = (state) => state.ArrayReducer;
 

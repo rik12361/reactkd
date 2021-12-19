@@ -42,7 +42,8 @@ const FlexMyJumbo = styled.div`
     text-align: center;
     z-index: 580;
     @media (max-width: 960px) {
-        height: 40px;
+        height: 44px;
+        padding: 2px;
     }    
 `
 const FaChevronStyle = styled.span`

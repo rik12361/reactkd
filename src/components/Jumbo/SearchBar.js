@@ -1,30 +1,18 @@
 import React, {useState, useEffect, useRef} from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal'
-import ShowScreenResolution from './ShowScreenResolution'
 
 function HeaderSearchInfoBar({showMessageLine, setScrollable}) {
     const [show, setShow] = useState(false);
     const [showTip, setShowTip] = useState(false);
     const [showDefaultTip, setShowDefaultTip] = useState(true);
     const [showDropDown, setShowDropDown] = useState(false);
-    const [searchId, setSearchId] = useState("searchText");
     const defaultTip = "Je kunt zoeken op bijvoorbeeld ‘groente’, maar ook op merk of productnaam.";
-
-    const [searchWidth, setSearchWidth] = useState('726px');
-    const [searchMargin, setSearchMargin] = useState('0px 127px');
-
-    const [searchTipWidth, setSearchTipWidth] = useState('726px');
-    const [searchTipLeft, setSearchTipLeft] = useState('127px');
-
-    const [loupeLeft, setLoupeLeft] = useState('818px');
-    const [modalBackgroundColor, setModalBackgroundColor] = useState('rgba(,0,0,0.5');
     const [tip, setTip] = useState('');
 
     const searchRef = useRef();
     const searchTipRef = useRef();
     const searchLoupeRef = useRef();
-    const loupeTop = '16px';
 
      useEffect(() => {
         console.log("USEFFECT+++++++++++++++++++");
@@ -34,117 +22,9 @@ function HeaderSearchInfoBar({showMessageLine, setScrollable}) {
         setShowTip(false);
         setShowDropDown(false);
         setShowDefaultTip(true);
-        updateDimensions();
-        window.addEventListener('resize', updateDimensions);
-        return () =>  {
-            window.removeEventListener("click", checkDisableModal)
-            window.removeEventListener('resize',updateDimensions);
-        }
-    }, []);
-
-    const updateDimensions = () => {
-        var sWidth ='726px';
-        var sbWidth ='726px';
-        var sbLeft ='127px';
-        var sMargin = '0px 127px';
-        var sBackground = 'white';
-        var sLoupe = "818p";
-        const width = window.innerWidth;
-        // console.log("UPDATE DIMENSION !!!!!!!!!!!!!!!")
-
-        if (width <=1920) {
-            sWidth = '726px';
-            sbWidth = '726px';
-            sbLeft ='127px'
-            sMargin = '4px 127px';
-            sLoupe = "818px";
-            sBackground = 'red';
-        }
-
-        if (width <=1536) {
-            sWidth = '700px';
-            sbWidth = '700px';
-            sbLeft ='90px'
-            sMargin = '4px 85px';
-            sLoupe = "750px";
-            sBackground = 'green';
-        }
-
-        if (width <=1280) {
-            sWidth = '600px';
-            sbWidth = '600px';
-            sbLeft ='90px'
-            sMargin = '4px 84px';
-            sBackground = 'blue';
-            sLoupe = "649px";
-        }
-
-        if (width <=1100) {
-            sWidth = '524px';
-            sbWidth = '524px';
-            sbLeft ='40px'
-            sMargin = '4px 40px';
-            sBackground = 'grey';
-            sLoupe = "535px";
-        }
-
-        if (width <=960) { // break
-            sWidth = '940px';
-            sbWidth = '860px';
-            sbLeft ='15px'
-            sMargin = '4px 10px';
-            sLoupe = "25px";
-            sBackground = 'orange';
-            // setModalBackgroundColor('rgba(255,255,255,0.5');
-        }
-
-        if (width <=768) {
-            sWidth = '748px';
-            sbWidth = '670px';
-            sbLeft ='8px'
-            sMargin = '4px 8px';
-            sLoupe = "18px";
-            sBackground = 'yellow';
-        }
-        if (width <=640) {
-            sWidth = '618px';
-            sbWidth = '549px';
-            sbLeft ='6px'
-            sMargin = '3px 5px';
-            sLoupe = "15px";
-            sBackground = 'pink';
-        }
-        if (width <=480) {
-            sWidth = '460px';
-            sbWidth = '390px';
-            sbLeft ='5px'
-            sMargin = '5px 5px';
-            sLoupe = "15px";
-            sBackground = 'purple';
-        }
-
-        if (width <=384) {
-            sWidth = '363px';
-            sbWidth = '297px';
-            sbLeft ='5px'
-            sMargin = '5px 5px';
-            sLoupe = "15px";
-            sBackground = 'purple';
-        }
-        // console.log('sbwith');
-        // console.log(sbWidth);
-
-        // searchRef.current.style.background = sBackground;
-
-        setSearchWidth(sWidth);
-        setSearchMargin(sMargin)
-        setSearchTipLeft(sbLeft);
-        setSearchTipWidth(sbWidth);
-        setLoupeLeft(sLoupe);
-}
+    }, [setScrollable]);
 
     const searchEntered = (e) => {
-        // console.log("LET OP SEARCH !!!!!!!!!!!!!!!")
         console.log(e.target.value);
         setShowDropDown(false);
         setShowDefaultTip(true);
@@ -152,55 +32,45 @@ function HeaderSearchInfoBar({showMessageLine, setScrollable}) {
         setScrollable(false);
         searchRef.current.style.border = '1px solid var(--jumbo-yellow)';
 
-        if (e.target.value.length == 0) 
+        if (e.target.value.length === 0) 
         {
             setShowTip(true);
             setShowDefaultTip(true);
             setShowDropDown(false)
-            console.log("Len=0");
         }
 
         if (e.target.value.length < 3 && e.target.value.length > 0 ) 
         {
-                console.log("Ja");
                 setShowTip(false);
                 setShowDefaultTip(false);
                 setShowDropDown(false)
-                console.log("Len 0-3");
                 setTip(e.target.value);
         } 
 
         if (e.target.value.length >= 3) 
         {
-                console.log("Nee");
                 setShowTip(true);
                 setShowDefaultTip(false);
                 setShowDropDown(true) 
                 setTip(e.target.value);
-                // console.log("Len>3");
         }
     }
 
     const checkDisableModal = (e) => {
-    {
-        // console.log("CHECK DISAVLES !!!!!!!!!!!!!!!")
-            // console.log(searchRef);
-            // console.log(searchLoupeRef);
-            const width = window.innerWidth;
+        const width = window.innerWidth;
 
-            // console.log(e);
-            if ((e.target == searchRef.current) || (e.target == searchLoupeRef.current))
+        // console.log(e);
+        if ((e.target === searchRef.current) || (e.target === searchLoupeRef.current))
+        {
+            // console.log("searchtext true");
+            searchEntered(e);
+        }
+        else
+        {
+            // console.log("CHECK DISABLE SHOW !!!!!!!!!!!!!!!");
+            if (width > 960)
             {
-                // console.log("searchtext true");
-                searchEntered(e);
-            }
-            else
-            {
-                // console.log("CHECK DISABLE SHOW !!!!!!!!!!!!!!!");
-                if (width > 960)
-                {
-                    disableSearchTip();
-                }
+                disableSearchTip();
             }
         }
     }
@@ -226,7 +96,7 @@ function HeaderSearchInfoBar({showMessageLine, setScrollable}) {
         <HeaderSearchContainer onClick={(e) => checkDisableModal(e) }>
             {/* <ShowScreenResolution/> */}
             <FlexGroup>
-               <JumboSearch style={{border: '1px solid grey', width:searchWidth, margin:searchMargin}}
+               <JumboSearch style={{border: '1px solid grey'}}
                             onFocus={(e) => enableModal(e)} 
                             onChange={(e) => searchEntered(e)}   
                             type='search' placeholder='Waar ben je naar op zoek?' 
@@ -236,10 +106,10 @@ function HeaderSearchInfoBar({showMessageLine, setScrollable}) {
                         <Fade right><CLoseButton onClick={() => disableSearchTip() }>Sluiten</CLoseButton></Fade>
                         : ''}
                <SearchLoupe>
-                <i ref={searchLoupeRef} style={{position: 'absolute', top: loupeTop, left : loupeLeft}} id='searchLoupe' class="fa fa-search"></i>
+                <i ref={searchLoupeRef} id='searchLoupe' class="fa fa-search"></i>
                 </SearchLoupe>
                 {showTip? (
-                    <SearchHint ref={searchTipRef} style={{left: searchTipLeft, width: searchTipWidth}}>                        
+                    <SearchHint ref={searchTipRef}>                        
                             { showDefaultTip? 
                                 (
                                     <span><TIP>Tip!</TIP><span>{defaultTip}</span></span>
@@ -255,7 +125,7 @@ function HeaderSearchInfoBar({showMessageLine, setScrollable}) {
             </FlexGroup>
 
             <SearchContainer>
-            {show? (<JumboModal style={{backgroundColor: modalBackgroundColor}}>                    
+            {show? (<JumboModal style={{backgroundColor: 'rgba(,0,0,0.5'}}>                    
                     </JumboModal>) : '' }
             </SearchContainer>
 
@@ -271,7 +141,7 @@ const HeaderSearchContainer = styled.div`
     width: 100%;
     height: 40px;
     background-color: white;
-
+    z-index: 600;
 `
 const JumboModal = styled.div`
     position: fixed;
@@ -286,8 +156,7 @@ const JumboModal = styled.div`
         top: 90px;
         background-color: rgba(255,255,255,0.9);
         z-index: 100;
-    }
-    
+    }    
 `
 const FlexGroup = styled.div `
     display:flex;
@@ -305,14 +174,23 @@ const TIP = styled.span`
 
 const JumboSearch = styled.input `
     height: 41px;
-    /* width: 726px; */
-    /* max-width: 726px; */
-    /* border-style: none;  */
     outline: none;
     padding: 0px 36px;
     margin: 0px 127px;
     border-radius: 2em;
     border: 1px solid var(--jumbo-grey);
+
+    @media (max-width: 7681px) {width:726px;margin:0px 127px;} 
+    @media (max-width: 1920px) {width:726px;margin:4px 127px;} 
+    @media (max-width: 1536px) {width:700px;margin:4px 85px;} 
+    @media (max-width: 1280px) {width:600px;margin:4px 84px;}
+    @media (max-width: 1100px) {width:508px;margin:4px 40px;} 
+    @media (max-width: 980px) {width:940px;margin:4px 10px;} 
+    @media (max-width: 768px) {width:748px;margin:4px 8px;} 
+    @media (max-width: 640px) {width:618px;margin:3px 8px;} 
+    @media (max-width: 480px) {width:460px;margin:5px 5px;} 
+    @media (max-width: 384) {width:363px;margin:5px 5px;}
+
 `
 const SearchHint = styled.div `    
     position: absolute;
@@ -329,6 +207,17 @@ const SearchHint = styled.div `
     span {
         background-color: white;
     }
+    
+    @media (max-width: 7681px) {width:726px;left:127px} 
+    @media (max-width: 1920px) {width:726px;left:127px} 
+    @media (max-width: 1536px) {width:700px;left:90px} 
+    @media (max-width: 1280px) {width:600px;left:90px} 
+    @media (max-width: 1100px) {width:508px;left:40px} 
+    @media (max-width: 980px) {width:852px;left:15px} 
+    @media (max-width: 768px) {width:670px;left:8px} 
+    @media (max-width: 640px) {width:549px;left:5px} 
+    @media (max-width: 480px) {width:390px;left:5px} 
+    @media (max-width: 384px) {width:297px;left:5px}
 `
 const CLoseButton = styled.button`
     display: none;
@@ -349,12 +238,21 @@ const CLoseButton = styled.button`
     }
 `
 const SearchLoupe = styled.div `    
-    /* position: absolute;
+    position: absolute;
     left: 818px;
-    top: 10px; */
-`
+    top: 10px;
 
-// used?
+    @media (max-width: 7681px) {left:818px} 
+    @media (max-width: 1920px) {left:818px} 
+    @media (max-width: 1536px) {left:750px} 
+    @media (max-width: 1280px) {left:649px} 
+    @media (max-width: 1100px) {left:517px} 
+    @media (max-width: 980px) {left:25px} 
+    @media (max-width: 768px) {left:18px} 
+    @media (max-width: 640px) {left:15px} 
+    @media (max-width: 480px) {left:15px} 
+    @media (max-width: 384) {left:15px;}    
+`
 
 const SearchContainer = styled.div`
     position: relative;

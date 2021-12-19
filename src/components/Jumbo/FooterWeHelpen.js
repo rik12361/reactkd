@@ -8,49 +8,34 @@ import FooterLastLine from './FooterLastLine'
 
 import styled from 'styled-components'
 
-const FooterContainer = styled.div`
-    padding: 48px 0px 30px 0px;
-    position: relative;
-    width: 100%;
-    width: 100%;
-    height: 730px;
-    background-image: url('/images/jumbo/Backgroundfooter.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
-    @media (max-width: 1100px) {
-        background-color: black;
-        background-image: none;
-    }
-`
-
-function FooterWeHelpen({sWidth, footerHeight, setFooterHeight }) {
+function FooterWeHelpen({sWidth}) {
     return (
         <div>
-            <FooterContainer style={{height:footerHeight+'px', transition: 'all 250ms ease-in-out'}}>
-                <Footeroverlay> </Footeroverlay>
                 {sWidth<=1100?
                 <>
-                    <FooterWrapper className='kd-Jumbo-container'>
-                        <FooterLeftColumn sWidth={sWidth}></FooterLeftColumn>
-                        <FooterRightColumn></FooterRightColumn>
-                        <FooterMiddleRightColumn sWidth={sWidth} footerHeight={footerHeight} setFooterHeight={setFooterHeight} ></FooterMiddleRightColumn>
-                        <FooterMiddleLeftColumn sWidth={sWidth} footerHeight={footerHeight} setFooterHeight={setFooterHeight} ></FooterMiddleLeftColumn>
-                    </FooterWrapper>
+                    <FooterContainerMobile>
+                        <FooterWrapper>
+                            <FooterLeftColumn sWidth={sWidth}></FooterLeftColumn>
+                            <FooterRightColumn sWidth={sWidth}></FooterRightColumn>
+                            <FooterMiddleLeftColumn sWidth={sWidth}></FooterMiddleLeftColumn>
+                            <FooterMiddleRightColumn sWidth={sWidth}></FooterMiddleRightColumn>
+                        </FooterWrapper>
+                        <FooterLine sWidth={sWidth}/>
+                    </FooterContainerMobile>
                 </>
                 :
                 <>
-                    <FooterWrapper className='kd-Jumbo-container'>
-                        <FooterLeftColumn sWidth={sWidth}></FooterLeftColumn>
-                        <FooterMiddleLeftColumn sWidth={sWidth} footerHeight={footerHeight} setFooterHeight={setFooterHeight}></FooterMiddleLeftColumn>
-                        <FooterMiddleRightColumn sWidth={sWidth} footerHeight={footerHeight} setFooterHeight={setFooterHeight}></FooterMiddleRightColumn>
-                        <FooterRightColumn></FooterRightColumn>
-                    </FooterWrapper>
+                    <FooterContainer>
+                        <Footeroverlay> </Footeroverlay>
+                        <FooterWrapper className='kd-Jumbo-container'>
+                            <FooterLeftColumn sWidth={sWidth}></FooterLeftColumn>
+                            <FooterMiddleLeftColumn sWidth={sWidth}></FooterMiddleLeftColumn>
+                            <FooterMiddleRightColumn sWidth={sWidth}></FooterMiddleRightColumn>
+                            <FooterRightColumn sWidth={sWidth}></FooterRightColumn>
+                        </FooterWrapper>
+                        <FooterLine sWidth={sWidth}/>
+                    </FooterContainer>
                 </>}
-                <FooterLine sWidth={sWidth}/>
-                <FooterBackground></FooterBackground>
-            </FooterContainer>
             <FooterLastLine></FooterLastLine>
         </div>
     )
@@ -58,18 +43,33 @@ function FooterWeHelpen({sWidth, footerHeight, setFooterHeight }) {
 
 export default FooterWeHelpen
 
+const FooterContainer = styled.div`
+    padding: 48px 0px 30px 0px;
+    position: relative;
+    width: 100%;
+    width: 100%;
+    height: 530px;
+    background-image: url('/images/jumbo/Backgroundfooter.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+`
+const FooterContainerMobile = styled.div`
+    background-image: none;
+`
+
 const FooterWrapper = styled.div`
     display: flex;
     flex-direction: row;
-        align-items: flex-start;
+    align-items: flex-start;
+
     @media (max-width: 1100px) {
         flex-direction: column;
         align-items: flex-start;
     } 
 `
 
-const FooterBackground = styled.div`
-`
 const Footeroverlay = styled.div `
     position: absolute;
     top: 0px;

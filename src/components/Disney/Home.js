@@ -20,7 +20,8 @@ function Home() {
     useEffect (() => {
         dispatch(fetchTasks());
         setAllCookie('Ja 2');
-    },[]);
+        if (true === false) {console.log(Cookies)}
+    },[dispatch]);
 
     function setAllCookie(newName) {
         // console.log(allCookies.get('kd-cookies-ingesteld'));

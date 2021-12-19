@@ -1,10 +1,9 @@
 import React from 'react'
-import { Prompt } from 'react-router'
 import styled from 'styled-components'
 
 function ProductCard({product}) {
     return (
-        <ProductLink href='#'>
+        <ProductLink href={product.url}>
         <CardContainer>
             <ImgBlockContainer>
                 <ImgBlock>

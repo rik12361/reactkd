@@ -38,7 +38,7 @@ function Jumbo() {
 
         return () => {window.removeEventListener("scroll", checkRemoveHeaderMessage)
         window.removeEventListener("click", checkRemoveHeaderMessage)};
-    }, []);
+    }, [sWidth]);
 
     const checkRemoveHeaderMessage = () => {
         var sh =  document.documentElement.scrollTop;
@@ -52,7 +52,7 @@ function Jumbo() {
     }
 
     return (
-        <JumboMainContainer style={{overflow: Scrollable? 'auto' : 'hidden'}}>
+        <JumboMainContainer style={{overflow: Scrollable? 'auto' : 'hidden', height: Scrollable? 'auto' : '100vh'}}>
             <ShowScreenResolution sWidth={sWidth} />
             <Desktopview>
                 <HeaderMessage showMessageLine={showMessageLine}></HeaderMessage>
@@ -62,7 +62,7 @@ function Jumbo() {
             <MobileView>
                 <HeaderMobile showMessageLine={showMessageLine} setScrollable={setScrollable}></HeaderMobile>
             </MobileView>
-            <HeroImage sWidth={sWidth}></HeroImage>
+            <HeroImage sWidth={sWidth}></HeroImage >
             <MobileExtraInfo sWidth={sWidth}/>
             <Productoverview/>
             <GourmetTip/>

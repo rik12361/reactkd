@@ -8,8 +8,9 @@ const JumboMessageBarReducer = (state = true, action) => {
             return !state;
         case 'MSGSTATUS':
             return state;
+        default:
+            return state;
     }
-    return state;
 }
 export const selectJumboMessageBar = (state) => state.JumboMessageBarReducer;
 

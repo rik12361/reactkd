@@ -40,7 +40,7 @@ function Header() {
                 history.push("/disney/home");
             }
          })
-    }, []);
+    });
 
     const signIn = () => {
         auth.signInWithPopup(provider).then((result) => {
@@ -87,25 +87,23 @@ function Header() {
                     </LoginContainer>) :
                 (<>
                 <NavMenu>
-                    <a>
                         <Link to={'/disney'}>
                             <img src={home} alt='jammer'/>
                             <span>Home</span>
                         </Link>
-                    </a>
-                    <a>
+                    <a href="/disney">
                         <img src={search} alt='jammer'/>
                         <span>search</span>
                     </a>
-                    <a>
+                    <a href="/disney">
                         <img src={watchlist} alt='jammer'/>
                         <span>watchlist</span>
                     </a>
-                    <a>
+                    <a href="/disney">
                         <img src={original} alt='jammer'/>
                         <span>original</span>
                     </a>
-                    <a>
+                    <a href="/disney">
                         <img src={series} alt='jammer'/>
                         <span>series</span>
                     </a>
