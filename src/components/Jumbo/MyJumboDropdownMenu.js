@@ -53,11 +53,8 @@ const RegisterMe = styled.a `
 
 const MenuLine = styled.li`
     position: relative;
-    display: flex;
+    display: inline-block;
     color: rgb(120,120,120);
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
     span {
         padding: 8px 5px;
         font-size: 10px;
@@ -92,6 +89,9 @@ const DropDownMenu = styled.ul`
     border-radius: 0.5em;
     padding: 15px;
     z-index: 40;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 `
 const DropDownModal = styled.div`
     position: fixed;

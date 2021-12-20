@@ -4,7 +4,60 @@
         "title": "Producten",
         "producten":  [
             {
-                "ProductGroep": "Aardappel, rijst, pasta"
+                "ProductGroep": "Aardappel, rijst, pasta",
+                "ProductSubGroep": [
+                    {
+                        "Subgroep": "Aardappel, rijst, pasta"
+                    },
+                    {
+                        "Subgroep": "Bekijk alles"
+                    },
+                    {
+                        "Subgroep": "Ongeschilde aardappelen"
+                    },
+                    {
+                        "Subgroep": "Biologische aardappelen"
+                    },
+                    {
+                        "Subgroep": "Koelverse aardappelen"
+                    },
+                    {
+                        "Subgroep": "Vriesverse aardappelen"
+                    },
+                    {
+                        "Subgroep": "Aardappelpuree"
+                    },
+                    {
+                        "Subgroep": "Zoete aardappelen"
+                    },
+                    {
+                        "Subgroep": "Pasta"
+                    },                    
+                    {
+                        "Subgroep": "Aardappel, rijst, pasta"
+                    },
+                    {
+                        "Subgroep": "Noedels"
+                    },
+                    {
+                        "Subgroep": "Mie"
+                    },
+                    {
+                        "Subgroep": "Mihoen"
+                    },
+                    {
+                        "Subgroep": "Quinoa"
+                    },
+                    {
+                        "Subgroep": "Couscous"
+                    },
+                    {
+                        "Subgroep": "Bulgur"
+                    },
+                    {
+                        "Subgroep": "Boekweit"
+                    }
+                ]
             },
             {
                 "ProductGroep": "Vlees, vis, vegetarisch"

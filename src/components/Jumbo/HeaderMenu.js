@@ -16,55 +16,36 @@ function HeaderMenuBar({showMessageLine}) {
         <div>
            <HeaderMenuBarContainer>
             {showModal? (<JumboModal/>) :  ('') }
-                <div className='kd-Jumbo-container kd-relative'>
+                <JumboContainer className='kd-Jumbo-container'>
                     <MenuContainer>
-                    {/* {MenuData.map((menuItem) => 
-                        <MenuColumn href='' onMouseOver={() => showModalAndMenu(true)} onMouseLeave={() => showModalAndMenu(false)}>
-                            <MenuHeader><span>{menuItem.title}</span></MenuHeader>
-                            {menuItem.producten !== 0? 
-                            <MenuItemsContainer>
-                              <div><a href="/">{menuItem.producten.map((productGroep) => <a href='/'>{productGroep.ProductGroep}</a>)}</a></div>
-                            </MenuItemsContainer> : '' }
-                        </MenuColumn>)} */}
-                        <MenuColumn>
-                            <MenuHeader href='' onMouseOver={() => showModalAndMenu(true)} onMouseLeave={() => showModalAndMenu(false)}><span>HEAD</span></MenuHeader>
-                            <MenuItemsContainer>
-                                <div> item 1 </div>
-                                <div> item 2 </div>
-                            </MenuItemsContainer> 
-                        </MenuColumn>
-                            
+                        {MenuData.map((menuItem) => 
+                            <MenuColumn href='' onMouseOver={() => showModalAndMenu(true)} 
+                                                onMouseLeave={() => showModalAndMenu(false)}>
+                                <MenuHeader><span>{menuItem.title}</span></MenuHeader>
+                                {menuItem.producten.length !== 0? 
+                                    <MenuItemsContainer>
+                                        {menuItem.producten.map((productGroep) => 
+                                            <div><a href='/'>{productGroep.ProductGroep}</a></div>)}
+                                    </MenuItemsContainer> : '' }
+                            </MenuColumn>)
+                        }                            
                     </MenuContainer>
-                        {/* {MenuData.map((menuItem) => 
-                        (
-                            <MenuColumn>
-                             <ProductGroup onMouseOver={() => showModalAndMenu(true)} onMouseLeave={() => showModalAndMenu(false)}>{menuItem.title}</ProductGroup>
-                             {menuItem.producten !== 0?  
-                                 <div><a href="/">{menuItem.producten.map((productGroep) => <a href='/'>{productGroep.ProductGroep}</a>)}</a></div>
-                                 : ''                                
-                             }
-                             </MenuColumn>
-                        ))} */}
-
-                        {
-                    
-                    /* //         <ul onMouseOver={() => showModalAndMenu(true)} onMouseLeave={() => showModalAndMenu(false)}>
-                    //         <div><a href="/"><span>{menuItem.title}</span></a></div>
-                    //         <div>
-                    //         {menuItem.producten !== 0?  
-                    //             <li><a href="/">{menuItem.producten.map((productGroep) => <a href='/'>{productGroep.ProductGroep}</a>)}</a></li>
-                    //             : ''                                
-                    //         }
-                    //         </div>
-                    //         </ul>
-                    //         ))} */}
-                </div> 
+                </JumboContainer> 
             </HeaderMenuBarContainer> 
         </div>
     )
 }
 export default HeaderMenuBar
 
+const HeaderMenuBarContainer = styled.div`
+    top: 40px;
+    position: relative;
+    height: 40px;
+    width: 100%;
+`
+const JumboContainer = styled.div`
+    position: relative;
+`
 const MenuContainer = styled.div`
     position: absolute;
     top: 91px;
@@ -77,24 +58,27 @@ const MenuContainer = styled.div`
     z-index: 300;
 `
 const MenuColumn = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-`
-const MenuItemsContainer = styled.div`
-    background: white;
-    padding: 20px;
-    display: none;
-`
 
+    &:hover > div {
+        display: block;
+    }
+
+    &:hover > a > span::after {
+            opacity: 1;
+    }
+`
 const MenuHeader = styled.a`
     position: relative;
     padding: 0px;
-    margin: 0px;
+    margin: 0px 30px 0px 0px;
     span {
         color: black;
         font-size: 14px;    
-        padding-right: 30px;
+        padding: 0px 0px 130px 0px;
         font-weight: 800;
 
         &::after {
@@ -108,118 +92,45 @@ const MenuHeader = styled.a`
              right: 0;
              bottom: 0px;
         }
-
-        &:hover::after {
-            opacity: 1;
-        }
     }
-    &:hover + div {
-        display: block;
-    }
-
 `
+const MenuItemsContainer = styled.div`
+    position: absolute;
+    top:54px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    padding: 32px 32px 16px 32px;
+    border-radius: 1em;
+    display: none;
 
-const ProductGroup = styled.span`
-
-    display: inline;
-    margin: 0px 4px;
-    background: red;
-    &::after {
+    div {
+        position: relative;
+        padding: 0px 0px 16px 0px;
+        display: inline-block;
+        &::after {
              position:absolute;
              opacity: 0;
              content: "";
              height: 4px;
              background:var(--jumbo-yellow);
-             top: 36px;
+             top: 26px;
              left: 0;
              right: 0;
              bottom: 0px;
-    }
+        }
 
-    &:hover::after {
-        opacity: 1;
-    }
-
-`
-
-const HeaderMenuBarContainer = styled.div`
-    top: 40px;
-    position: relative;
-    height: 40px;
-    width: 100%;
-`
-const HeaderMenuBarContainerold = styled.div`
-
-    div:hover > div a span:nth-child(1)::after {
-        opacity: 1;
-    }
-
-    ul:hover > div li {
-        display: flex;
-    }
-
-    span:nth-child(2) {
-        display: list-item;
-        border: 1px solid black;
-        border-radius: 1em;
-        position: absolute;
-        background-color: yellow;
-        top: 0px;
-        margin-top: 0px;
-        top: 31px;
-        padding: 0px 0px;
-    }
-
-    ul {
-        position: relative;
-        padding: 0px;
-        margin: 0px;
-        list-style-type: none;
-        a {
-            span:nth-child(1) {
-                color: black;
-                font-size: 14px;
-                padding-right: 30px;
-                font-weight: 800;
-                &::after {
-                    position:absolute;
-                    opacity: 0;
-                    content: "";
-                    height: 4px;
-                    background:var(--jumbo-yellow);
-                    top: 36px;
-                    left: 0;
-                    right: 0;
-                    bottom: 0px;
-                    /* transform: scaleX(0);
-                    transition: all 0ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; */
-                }
-            }
-
+        &:hover::after {
+            opacity: 1;
         }
     }
-    li {
-        list-style-type: none;
-        position: absolute;
-        top: 53px;
-        padding-top: 1em;
+
+    div a {
         color: black;
-        padding: 0px;
-        display: none;
-        background-color: white;
-        padding: 1em;
-        border-radius: 1em;
-        width: 260px;
-        overflow-x: hidden;
-        a {
-            top: 10px;
-            left: 0px;
-            color: black;
-        }
+        white-space: nowrap;
     }
-
 `
-
 const JumboModal = styled.div`
   position: fixed;
   display: flex;
