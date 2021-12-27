@@ -5,16 +5,16 @@ function HeroImage({sWidth}) {
     
     return (
         <HeroContainer className='kd-Jumbo-container'>
-            <HeroImgContainer><Hero src='https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/CMS/Images/2021/Homepage/Week_49/Homepage-hero-M-week-49-Kerst-voorgerecht-V2.jpg' alt='jammer'></Hero></HeroImgContainer>
+            <HeroImgContainer><Hero src='https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/CMS/Images/2021/Homepage/Week_51/Homepage-hero-L-week-51-Kerst-hoofd-bijgerechten-Zalm.jpg' alt='jammer'></Hero></HeroImgContainer>
             <HeroButton href="#" className='kd-jumbo-button'>Bekijk de producten</HeroButton>
             <CardContainer>
                 {sWidth<=640? <CardGroup>
-                        <Cardbox><ImgLink href="#"><CardImg src="/images/jumbo/Actual 1.webp" alt='jammer'></CardImg></ImgLink><span>Aanbiedingen</span></Cardbox>
+                        <Cardbox><ImgLink href="/jumbo.com/aanbiedingen"><CardImg src="/images/jumbo/Actual 1.webp" alt='jammer'></CardImg></ImgLink><span>Aanbiedingen</span></Cardbox>
                         <Cardbox><ImgLink href="#"><CardImg src="/images/jumbo/Actual 2.webp" alt='jammer'></CardImg></ImgLink><span>Recepten</span></Cardbox>
                         <Cardbox><ImgLink href="#"><CardImg src="/images/jumbo/Week-01-Assortiment-S-v2.webp" alt='jammer'></CardImg></ImgLink><span>Assortiment</span></Cardbox>
                     </CardGroup> :
                     <CardGroup>
-                        <Cardbox><ImgLink href="#"><CardImg src="/images/jumbo/Toptaak-1.png" alt='jammer'></CardImg></ImgLink></Cardbox>
+                        <Cardbox><ImgLink href="/jumbo.com/aanbiedingen"><CardImg src="/images/jumbo/Toptaak-1.png" alt='jammer'></CardImg></ImgLink></Cardbox>
                         <Cardbox><ImgLink href="#"><CardImg src="/images/jumbo/Toptaak-2.webp" alt='jammer'></CardImg></ImgLink></Cardbox>
                         <Cardbox><ImgLink href="#"><CardImg src="/images/jumbo/Toptaak-3.webp" alt='jammer'></CardImg></ImgLink></Cardbox>
                     </CardGroup>}
@@ -27,7 +27,6 @@ export default HeroImage
 
 const ImgLink = styled.a` 
 `
-
 const HeroContainer = styled.div`
     display: block;
     z-index: 1;

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 function Productoverview() {
     return (
         <div className='kd-Jumbo-container'>
-            <BlockHeader className='kd-Jumbo-container'>Hallo, heerlijke <span>sinterklaas lekkernijen</span></BlockHeader>
+            <BlockHeader className='kd-Jumbo-container'>Hallo, heerlijke <span>Kerst lekkernijen</span></BlockHeader>
                 <ProductContainer>
                 {Products.map((product) => 
                     <ProductCard key={product.id} product={product}>

@@ -8,7 +8,7 @@ function HeaderMessage({showMessageLine}) {
         <div className='kd-fixed'>
             {showMessageLine?
             <GreyBar>
-                <div className='kd-jumbo-container'>
+                <div className='kd-Jumbo-container'>
                     <MessageBar>
                         <ServiceMsg>
                             <a href="/"><FaCheck color='rgb(15,198,71)' size='0.8em'/><span>Gratis bezorging of afhalen bij actieproducten</span></a>

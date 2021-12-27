@@ -16,7 +16,7 @@ const ToggleNavMenu = (nwstate) => {
             <HamburgerButton onClick={() => ToggleNavMenu(true)}><img src='/images/jumbo/menu_black_24dp.svg' alt='jammer'></img><span>MENU</span></HamburgerButton>
             {navMenu? <JumboModal onClick={() => ToggleNavMenu(false)} ></JumboModal> : ''}
             <SidebarContainer>
-            <SideBar style={{left:navMenu? '0vw':'-50vw', transition:'all 350ms'}}>
+            <SideBar style={{left:navMenu? '0vw':'-240px', transition:'all 350ms'}}>
                 <MenuLogo>
                     <ImgContainer>
                         <Image src='/images/jumbo/jum-logo.svg' alt='jammer'/>
@@ -146,16 +146,12 @@ const HamburgerButton = styled.button`
     height: 20px;
     z-index:901;
 
-
     span {
         font-weight: 500;
         font-size: 12px;
         padding: 0px 2px;
     }
 
-    ${FaBars} {
-        background-color: red;
-    }
     img {
         transform: translateY(-0.5px);
     }

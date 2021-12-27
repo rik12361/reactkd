@@ -2,17 +2,10 @@ import React, {useState, useEffect} from 'react'
 import HeaderMessage from './HeaderMessage'
 import HeaderSearchInfoBar from './HeaderSearchInfoBar'
 import HeaderMenu from './HeaderMenu'
-import HeroImage from './HeroImage'
 import HeaderMobile from './HeaderMobile'
+import JumboMain from './JumboMain'
+import JumboOffer from './aanbiedingen/OfferMain'
 import ShowScreenResolution from './ShowScreenResolution'
-import MobileExtraInfo from './MobileExtraInfo'
-import Productoverview from './Productoverview'
-import GourmetTip from './GourmetTip'
-import HandyLists from './HandyLists'
-import WhatDoWeEatToday from './WhatDoWeEatToday'
-import SevenGaranties from './SevenGaranties'
-import HowToSaveMoney from './HowToSaveMoney'
-import ExtraPromo from './ExtraPromo'
 import FooterWeHelpen from './FooterWeHelpen'
 
 import '../../css/kd-general.css'
@@ -20,14 +13,14 @@ import '../../css/kd-devices.css'
 import '../../css/kd-app.css'
 import styled from 'styled-components'
 
-function Jumbo() {
+function JumboLayout({page}) {
     const [showMessageLine, setShowMessageLine] = useState(true);
     const [Scrollable, setScrollable] = useState(true);
     const [sWidth, setsWidth] = useState(0);
     const [footerHeight, setFooterHeight] = useState(0);
 
     useEffect (() => {
-        console.log("Add evemt");
+        console.log("Add event");
         window.addEventListener("scroll", () => checkRemoveHeaderMessage());
         window.addEventListener("click", () => checkRemoveHeaderMessage());
         window.addEventListener('resize', checkResolution);
@@ -62,20 +55,13 @@ function Jumbo() {
             <MobileView>
                 <HeaderMobile showMessageLine={showMessageLine} setScrollable={setScrollable}></HeaderMobile>
             </MobileView>
-                <HeroImage sWidth={sWidth}></HeroImage >
-                <MobileExtraInfo sWidth={sWidth}/>
-                <Productoverview/>
-                <GourmetTip/>
-                <HandyLists/>
-                <WhatDoWeEatToday/>
-                <ExtraPromo/>
-                <SevenGaranties/>
-                <HowToSaveMoney/>
+                {page === 'main'? <JumboMain Scrollable={Scrollable} sWidth={sWidth}></JumboMain> : ''}
+                {page === 'offer'? <JumboOffer Scrollable={Scrollable} sWidth={sWidth}></JumboOffer> : ''}
             <FooterWeHelpen  sWidth={sWidth} footerHeight={footerHeight} setFooterHeight={setFooterHeight} />
         </JumboMainContainer>
     )
 }
-export default Jumbo
+export default JumboLayout
 
 const JumboMainContainer = styled.div` 
     position: relative;
