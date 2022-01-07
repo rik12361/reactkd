@@ -8,7 +8,7 @@ function Productoverview() {
         <div className='kd-Jumbo-container'>
             <BlockHeader className='kd-Jumbo-container'>Hallo, heerlijke <span>Kerst lekkernijen</span></BlockHeader>
                 <ProductContainer>
-                {Products.map((product) => 
+                {Products.filter((prodcheck) => prodcheck.id <= 6).map((product) => 
                     <ProductCard key={product.id} product={product}>
                     </ProductCard> )}
                 </ProductContainer>

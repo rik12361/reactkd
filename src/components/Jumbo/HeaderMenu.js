@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 import { FaChevronCircleRight } from 'react-icons/fa'
 import styled from 'styled-components'
 import MenuData from './data/HeaderMenuBar.json'
@@ -29,25 +30,28 @@ function HeaderMenuBar({showMessageLine}) {
                         <MenuHorizontalContainer> 
                         {showMessageLine?
                         <>
-                        {MenuData.map((menuItem) => 
+                        {MenuData.menuItems.map((menuItem) => 
                             <MenuColumn href='' onMouseOver={() => showModalAndMenu(true)} 
                                                 onMouseLeave={() => showModalAndMenu(false)}>
-                                <MenuColumnHeader><a href="/jumbo.com/aanbiedingen">{menuItem.title}</a></MenuColumnHeader>
+                                <MenuColumnHeader><Link to={menuItem.url}>{menuItem.title}</Link></MenuColumnHeader>
                                 
-                                {menuItem.producten.length !== 0?
+                                {menuItem.productGroepen.length !== 0?
                                 <MenuGroupContainer>
-                                {menuItem.producten.map((productGroep, index) => 
+                                {menuItem.productGroepen.map((productGroep, index) => 
     
                                     <MenuItemContainer> 
-                                        <ProductHeader><a href=""><span>{productGroep.ProductGroep}</span></a></ProductHeader>
-                                        {productGroep.ProductSubGroep !== undefined? 
-                                            <SubMenuItemContainer style={{top:getTop(index), height: getHeight(menuItem.producten)}}>
+                                        {productGroep.url !== undefined? <ProductHeader><Link to={productGroep.url}><span>{productGroep.productGroepNaam}</span></Link></ProductHeader>
+                                        :
+                                        <ProductHeader><Link to=''><span>{productGroep.productGroepNaam}</span></Link></ProductHeader>}
+                                        {/* <h1>{productGroep.url}</h1> */}
+                                        {productGroep.productSubGroep !== undefined? 
+                                            <SubMenuItemContainer style={{top:getTop(index), height: getHeight(menuItem.productGroepen)}}>
                                                 <SubGroepHeader>
-                                                    <span><a href=""><span>{productGroep.ProductGroep}</span></a></span>
+                                                    <span><a href=""><span>{productGroep.productGroepNaam}</span></a></span>
                                                     <span><span>Bekijk alles</span><a href=''><FaChevronCircleRight/></a></span>
                                                 </SubGroepHeader>
                                                 <SubGroepItems>
-                                                    {productGroep.ProductSubGroep.map((subgroep) => 
+                                                    {productGroep.productSubGroep.map((subgroep) => 
                                                         <li><a href=""><span>{subgroep.Subgroep}</span></a></li>)} 
                                                 </SubGroepItems>
                                             </SubMenuItemContainer> : '' }
@@ -155,7 +159,7 @@ const MenuColumnHeader = styled.span`
     a {
         color: black;
     }
-    
+
     &::after {
         position:absolute;
         opacity: 0;

@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import {FaBars} from 'react-icons/fa';
-
+import { Link } from 'react-router-dom'
 function MobileMenu({setScrollable}) {
 
 const [navMenu, setNavMenu] = useState(false);
@@ -26,7 +25,7 @@ const ToggleNavMenu = (nwstate) => {
 
                 <SideBarMenu>
                     <MenuItem><MenuLink href="#"><span className="material-icons">local_pizza</span>Producten</MenuLink></MenuItem>
-                    <MenuItem><MenuLink href="#"><span className="material-icons">percent</span>Aanbiedingen</MenuLink></MenuItem>
+                    <MenuItem><Link to="/jumbo.com/aanbiedingen" onClick={() => ToggleNavMenu(false)}><span className="material-icons">percent</span>Aanbiedingen</Link></MenuItem>
                     <MenuItem><MenuLink href="#"><span className="material-icons">card_membership</span>Win- en spaaracties</MenuLink></MenuItem>
                     <MenuItem><MenuLink href="#"><span className="material-icons">shopping_cart</span>Online bestellen</MenuLink></MenuItem>
                     <MenuItem><MenuLink href="#"><span className="material-icons">local_dining</span>Wat eten we</MenuLink></MenuItem>
@@ -104,6 +103,10 @@ const MenuItem = styled.li`
     height: 24px;
     span {
         margin: 0px 0px 0px 0px;
+    }
+    a {
+        color: grey;
+        font-size: 16px;
     }
 `
 const MenuLink = styled.a`

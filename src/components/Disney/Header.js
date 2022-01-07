@@ -11,14 +11,14 @@ import { selectUserName, selectUserPhoto, setUserLogin, setSignOut } from'./user
 import {useSelector} from 'react-redux'
 import { auth, provider } from './firebaseDisney'
 import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router'
+import { useNavigate  } from 'react-router'
 import { useEffect } from 'react'
 import Cookies from 'universal-cookie';
 
 function Header() {
     var userName=  useSelector (selectUserName);
     var userPhoto=  useSelector (selectUserPhoto);
-    const history = useHistory();
+    const history = useNavigate ();
     const dispatch = useDispatch();
  
     const shwCookies = () => {

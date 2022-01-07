@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import TaskTrackerApp from "./components/TaskTracker/TaskTrackerApp"
 import IssueReportApp from "./components/IssueReport/IssueReportApp.js"
 import LandingPage from "./components/LandingPage";
@@ -7,8 +7,6 @@ import DisneyApp from "./components/Disney/DisneyApp";
 import Header from "./components/Disney/Header";
 import Detail from "./components/Disney/Detail";
 import Login from "./components/Disney/Login";
-import JumboMain from "./components/Jumbo/JumboMain";
-import OfferMain from "./components/Jumbo/aanbiedingen/OfferMain";
 import ClubHouseApp from "./components/Clubhouse/ClubHouseApp";
 import PhoneConfirmation from "./components/Clubhouse/pages/PhoneConfirmation";
 import PlanLayout from './components/Clubhouse/layouts/PlanLayout'
@@ -29,93 +27,136 @@ const App = () => {
   return (
     <div>
       <Router> 
-        <Switch>
-          <Route exact path="/tasktracker">
-            <TaskTrackerApp/>
+        <Routes>
+          <Route exact path="/" element={<LandingPage/>}>
           </Route>
-          <Route exact path="/issuereport">
-            <IssueReportApp/>
+          <Route path="/tasktracker" element={<TaskTrackerApp/>}>
           </Route>
-          <Route exact path="/tesla">
-            <TeslaApp/>
+          <Route exact path="/issuereport" element={<IssueReportApp/>}>
           </Route>
-          <Route exact path="/disney/detail/:id">
-            <Header></Header>
-            <Detail/>
+          <Route exact path="/tesla" element={<TeslaApp/>}>
           </Route>
-          <Route exact path="/disney/login">
-            <Header></Header>
-            <Login/>
+          <Route exact path="/rik" element={
+            <>
+            <TeslaApp></TeslaApp>
+            </>
+          }>
           </Route>
-          <Route exact path="/disney/home">
-            <DisneyApp/>
+          <Route exact path="/disney/detail/:id" element={
+            <>
+              <Header></Header>
+              <Detail/>
+            </>
+            }>
           </Route>
-          <Route exact path="/disney">
-            <DisneyApp/>
+          <Route exact path="/disney/login" element={
+            <>
+              <Header></Header>
+              <Login/>
+            </>}>
           </Route>
-          <Route exact path="/clubhouse/getUsername">
-            <PlanLayout>
-              <ClubHouseApp/>
-            </PlanLayout>
+          <Route exact path="/disney/home" element={<DisneyApp/>}>
+          </Route>
+          <Route exact path="/disney" element={<DisneyApp/>}>
+          </Route>
+          <Route exact path="/clubhouse/getUsername" element={
+            <>
+              <PlanLayout>
+                <ClubHouseApp/>
+              </PlanLayout>
+            </>
+          }>
           </Route>          
-          <Route exact path="/clubhouse/phoneconfirmation">
-            <PlanLayout>
-              <PhoneConfirmation/>
-            </PlanLayout>
+          <Route exact path="/clubhouse/phoneconfirmation" element={
+            <>
+              <PlanLayout>
+                <PhoneConfirmation/>
+              </PlanLayout>
+            </>
+          }>
           </Route>
-          <Route exact path="/clubhouse/codeconfirm">
+          <Route exact path="/clubhouse/codeconfirm" element={
+            <>
             <PlanLayout>
               <CodeConfirm/>
             </PlanLayout>
+            </>
+          }>
           </Route>
-          <Route exact path="/clubhouse/allownotification">
+          <Route exact path="/clubhouse/allownotification" element={
+        	<>
             <PlanLayout>
               <AllowNotification/>
             </PlanLayout>
+          </>            
+          }>
           </Route>
-          <Route exact path="/clubhouse/explore">
+          <Route exact path="/clubhouse/explore" element={
+            <>
             <PlanLayout>
               <ClubHouseHeader/>
             </PlanLayout>
+            </>
+          }>
           </Route>
-          <Route exact path="/clubhouse">
+          <Route exact path="/clubhouse" element={
+            <>
             <PlanLayout>
                 <Welcome/>
             </PlanLayout>
+            </>
+          }>
           </Route>
-          <Route exact path="/clubhouse/home">
+          <Route exact path="/clubhouse/home" element={
+          <>
             <AppLayout>
                 <ClubHouseHome/>
             </AppLayout>
+          </>            
+          }>
           </Route>
-          <Route exact path="/clubhouse/roominfocards">
+          <Route exact path="/clubhouse/roominfocards" element={
+            <>
             <AppLayout>
               <RoomInfoCards/>
             </AppLayout>
+            </>
+          }>
           </Route>
-          <Route exact path="/clubhouse/explorer">
+          <Route exact path="/clubhouse/explorer" element={
+            <>
             <AppLayout>
               <Explorer/>
             </AppLayout>
+            </>
+          }>
           </Route>
-          <Route exact path="/">
-            <LandingPage/>
+          <Route exact path="/reduxlab" element={<ReduxMain/>}>
           </Route>
-          <Route exact path="/reduxlab">
-            <ReduxMain/>
+          <Route exact path="/jumbo.com/aanbiedingen" element={
+            <>
+              <JumboLayout page='offer'>
+              </JumboLayout>
+            </>
+          }>
           </Route>
-          <Route exact path="/jumbo.com/aanbiedingen">
-            <JumboLayout page='offer'>
+          <Route exact path="/jumbo.com/aanbiedingen/:id" element={
+            <>
+              <JumboLayout page='offer'>
+              </JumboLayout>
+            </>
+          }>
+          </Route>
+          <Route exact path="/jumbo.com" element={
+          <>
+           <JumboLayout page='main' >
             </JumboLayout>
+          </>
+          }>
           </Route>
-          <Route exact path="/jumbo.com">
-            <JumboLayout page='main' >
-            </JumboLayout>
+          <Route exact path="/bever.nl" element={<Bever/>}>
           </Route>
-          <Route exact path="/bever.nl">
-            <Bever/>
-          </Route>
-      </Switch>
+      </Routes>
       </Router>
     </div>
   );

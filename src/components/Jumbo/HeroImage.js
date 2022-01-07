@@ -5,7 +5,7 @@ function HeroImage({sWidth}) {
     
     return (
         <HeroContainer className='kd-Jumbo-container'>
-            <HeroImgContainer><Hero src='https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/CMS/Images/2021/Homepage/Week_51/Homepage-hero-L-week-51-Kerst-hoofd-bijgerechten-Zalm.jpg' alt='jammer'></Hero></HeroImgContainer>
+            <HeroImgContainer><Hero src='https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/CMS/Images/2022/Homepage/01/Homepage-hero-L-week-01-Gratis-Eentje-Extra.jpg' alt='jammer'></Hero></HeroImgContainer>
             <HeroButton href="#" className='kd-jumbo-button'>Bekijk de producten</HeroButton>
             <CardContainer>
                 {sWidth<=640? <CardGroup>

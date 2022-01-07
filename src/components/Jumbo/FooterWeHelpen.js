@@ -47,7 +47,6 @@ const FooterContainer = styled.div`
     padding: 48px 0px 30px 0px;
     position: relative;
     width: 100%;
-    width: 100%;
     height: 530px;
     background-image: url('/images/jumbo/Backgroundfooter.jpg');
     background-position: center;

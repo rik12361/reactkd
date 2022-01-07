@@ -53,7 +53,7 @@ const ButtonBLock = styled.div`
 const TextBlock = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 0px;
     margin: 0px;
@@ -95,6 +95,7 @@ const RightBlock = styled.div`
     max-width: 30%;
     height: 100%;
     color: black;
+    margin-right: 10px;
     div {
         /* background: green; */
         display: flex;

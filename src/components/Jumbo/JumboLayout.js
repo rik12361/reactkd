@@ -4,7 +4,7 @@ import HeaderSearchInfoBar from './HeaderSearchInfoBar'
 import HeaderMenu from './HeaderMenu'
 import HeaderMobile from './HeaderMobile'
 import JumboMain from './JumboMain'
-import JumboOffer from './aanbiedingen/OfferMain'
+import OfferMain from './aanbiedingen/OfferMain'
 import ShowScreenResolution from './ShowScreenResolution'
 import FooterWeHelpen from './FooterWeHelpen'
 
@@ -35,7 +35,7 @@ function JumboLayout({page}) {
 
     const checkRemoveHeaderMessage = () => {
         var sh =  document.documentElement.scrollTop;
-        console.log("SSSSSSSSSSSScroll"+sh);
+        // console.log("Scroll "+sh);
         (sh > 0? setShowMessageLine(false) : setShowMessageLine(true));
     }
     
@@ -56,7 +56,7 @@ function JumboLayout({page}) {
                 <HeaderMobile showMessageLine={showMessageLine} setScrollable={setScrollable}></HeaderMobile>
             </MobileView>
                 {page === 'main'? <JumboMain Scrollable={Scrollable} sWidth={sWidth}></JumboMain> : ''}
-                {page === 'offer'? <JumboOffer Scrollable={Scrollable} sWidth={sWidth}></JumboOffer> : ''}
+                {page === 'offer'? <OfferMain Scrollable={Scrollable} sWidth={sWidth}></OfferMain> : ''}
             <FooterWeHelpen  sWidth={sWidth} footerHeight={footerHeight} setFooterHeight={setFooterHeight} />
         </JumboMainContainer>
     )

@@ -1,241 +1,348 @@
-[
-    {
-        "id": 1,
-        "title": "Producten",
-        "producten":  [
-            {
-                "ProductGroep": "Aardappel, rijst, pasta",
-                "ProductSubGroep": [
-                    {
-                        "Subgroep": "Ongeschilde aardappelen"
-                    },
-                    {
-                        "Subgroep": "Biologische aardappelen"
-                    },
-                    {
-                        "Subgroep": "Koelverse aardappelen"
-                    },
-                    {
-                        "Subgroep": "Vriesverse aardappelen"
-                    },
-                    {
-                        "Subgroep": "Aardappelpuree"
-                    },
-                    {
-                        "Subgroep": "Zoete aardappelen"
-                    },
-                    {
-                        "Subgroep": "Pasta"
-                    },                    
-                    {
-                        "Subgroep": "Aardappel, rijst, pasta"
-                    },
-                    {
-                        "Subgroep": "Noedels"
-                    },
-                    {
-                        "Subgroep": "Mie"
-                    },
-                    {
-                        "Subgroep": "Mihoen"
-                    },
-                    {
-                        "Subgroep": "Quinoa"
-                    },
-                    {
-                        "Subgroep": "Couscous"
-                    },
-                    {
-                        "Subgroep": "Bulgur"
-                    },
-                    {
-                        "Subgroep": "Boekweit"
-                    }
-                ]
-            },
-            {
-                "ProductGroep": "Vlees, vis, vegetarisch"
-            },
-            {
-                "ProductGroep": "Groente"
-            },
-            {
-                "ProductGroep": "Fruit"
-            },
-            {
-                "ProductGroep": "Koken, soepen, maaltijden"
-            },
-            {
-                "ProductGroep": "Diepvries"
-            },
-            {
-                "ProductGroep": "Brood, cereals, beleg"
-            },
-            {
-                "ProductGroep": "Zuivel, eieren, boter"
-            },
-            {
-                "ProductGroep": "Koek, gebak, snoep, chips"
-            },
-            {
-                "ProductGroep": "Fris, sap, koffie, thee"
-            },
-            {
-                "ProductGroep": "Wijn, bier, sterke drank"
-            },
-            {
-                "ProductGroep": "Drogisterij"
-            },
-            {
-                "ProductGroep": "Baby, peuter"
-            },
-            {
-                "ProductGroep": "Huishouden, dieren, servicebalie"
-            },
-            {
-                "ProductGroep": "Handige lijstjes"
-            },
-            {
-                "ProductGroep": "Nieuw assortiment"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "title": "Aanbiedingen",
-        "producten":  [
-            {
-                "ProductGroep": "Weekaanbiedingen"
-            },
-            {
-                "ProductGroep": "Seizoensaanbiedingen"
-            },
-            {
-                "ProductGroep": "Geen bestelkosten"
-            },
-            {
-                "ProductGroep": "Bieraanbiedingen"
-            },
-            {
-                "ProductGroep": "Koken met Aanbiedingen"
-            },
-            {
-                "ProductGroep": "Altijd Lage Prijs"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "title": "Win- en spaaracties",
-        "producten":  [
-            {
-                "ProductGroep": "100 jaar"
-            },
-            {
-                "ProductGroep": "Gouden Ticket spaaractie"
-            },
-            {
-                "ProductGroep": "Jumbo Extra's"
-            },
-            {
-                "ProductGroep": "Vrienden van Amstel Live"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "title": "Online bestellen",
-        "producten":  [
-            {
-                "ProductGroep": "Start je bestelling"
-            },
-            {
-                "ProductGroep": "Thuisbezorgen"
-            },
-            {
-                "ProductGroep": "Pick Up Points"
-            },
-            {
-                "ProductGroep": "Zo werkt het"
-            },
-            {
-                "ProductGroep": "Jumbo app"
-            },
-            {
-                "ProductGroep": "Gebak bestellen"
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "title": "Wat eten we?",
-        "producten":  [
-            {
-                "ProductGroep": "Weekmenu"
-            },
-            {
-                "ProductGroep": "Klaar in 20 minuten"
-            },
-            {
-                "ProductGroep": "5 ingredienten"
-            },
-            {
-                "ProductGroep": "Makkelijke gerechten"
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "title": "Recepten",
-        "producten":  [
-            {
-                "ProductGroep": "Hoofdgerechten"
-            },
-            {
-                "ProductGroep": "Makkelijke recepten"
-            },
-            {
-                "ProductGroep": "Vegetarische recepten"
-            },
-            {
-                "ProductGroep": "Koolhydraatarme recepten"
-            },
-            {
-                "ProductGroep": "Pasta recepten"
-            },
-            {
-                "ProductGroep": "Budget recepten"
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "title": "Services",
-        "producten":  [
-            {
-                "ProductGroep": "Er is iets mis met mijn bestelling"
-            },
-            {
-                "ProductGroep": "Actuele informatie"
-            },
-            {
-                "ProductGroep": "Veelgestelde vragen"
-            },
-            {
-                "ProductGroep": "Winkels & openingstijden"
-            },
-            {
-                "ProductGroep": "Weekaanbiedingen"
-            },
-            {
-                "ProductGroep": "Weekaanbiedingen"
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "title": "Zakelijk bestellen",
-        "producten":  [
-        ]
-    }
-]
+{
+    "menuItems":
+    [
+        {
+            "id": 1,
+            "title": "Producten",
+            "url":"/jumbo.com/aanbiedingen",
+            "productGroepen":  [
+                {
+                    "productGroepNaam": "Aardappel, rijst, pasta",
+                    "id": 1,
+                    "url":"/jumbo.com/aanbiedingen",
+                    "productSubGroep": [
+                        {
+                            "Subgroep": "Ongeschilde aardappelen"
+                        },
+                        {
+                            "Subgroep": "Biologische aardappelen"
+                        },
+                        {
+                            "Subgroep": "Koelverse aardappelen"
+                        },
+                        {
+                            "Subgroep": "Vriesverse aardappelen"
+                        },
+                        {
+                            "Subgroep": "Aardappelpuree"
+                        },
+                        {
+                            "Subgroep": "Zoete aardappelen"
+                        },
+                        {
+                            "Subgroep": "Pasta"
+                        },                    
+                        {
+                            "Subgroep": "Aardappel, rijst, pasta"
+                        },
+                        {
+                            "Subgroep": "Noedels"
+                        },
+                        {
+                            "Subgroep": "Mie"
+                        },
+                        {
+                            "Subgroep": "Mihoen"
+                        },
+                        {
+                            "Subgroep": "Quinoa"
+                        },
+                        {
+                            "Subgroep": "Couscous"
+                        },
+                        {
+                            "Subgroep": "Bulgur"
+                        },
+                        {
+                            "Subgroep": "Boekweit"
+                        }
+                    ]
+                },
+                {
+                    "productGroepNaam": "Vlees, vis, vegetarisch",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 2
+                },
+                {
+                    "productGroepNaam": "Groente",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 3
+                },
+                {
+                    "productGroepNaam": "Fruit",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 4
+                },
+                {
+                    "productGroepNaam": "Koken, soepen, maaltijden",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 5
+                },
+                {
+                    "productGroepNaam": "Diepvries",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 6
+                },
+                {
+                    "productGroepNaam": "Brood, cereals, beleg",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 7
+                },
+                {
+                    "productGroepNaam": "Zuivel, eieren, boter",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 8
+                },
+                {
+                    "productGroepNaam": "Koek, gebak, snoep, chips",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 9
+                
+                },
+                {
+                    "productGroepNaam": "Fris, sap, koffie, thee",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 10
+                },
+                {
+                    "productGroepNaam": "Wijn, bier, sterke drank",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 11
+                },
+                {
+                    "productGroepNaam": "Drogisterij",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 12
+                },
+                {
+                    "productGroepNaam": "Baby, peuter",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 13
+                },
+                {
+                    "productGroepNaam": "Huishouden, dieren, servicebalie",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 14
+                },
+                {
+                    "productGroepNaam": "Handige lijstjes",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 15
+                },
+                {
+                    "productGroepNaam": "Nieuw assortiment",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 16
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Aanbiedingen",
+            "url":"/jumbo.com/aanbiedingen",
+            "productGroepen":  [
+                {
+                    "productGroepNaam": "Weekaanbiedingen",
+                    "url":"/jumbo.com/aanbiedingen/1",
+                    "id": 1
+                },
+                {
+                    "productGroepNaam": "Seizoensaanbiedingen",
+                    "url":"/jumbo.com/aanbiedingen/2",
+                    "id": 2
+                },
+                {
+                    "productGroepNaam": "Geen bestelkosten",
+                    "url":"/jumbo.com/aanbiedingen/3",
+                    "id": 3
+                },
+                {
+                    "productGroepNaam": "Bieraanbiedingen",
+                    "url":"/jumbo.com/aanbiedingen/4",
+                    "id": 4
+                },
+                {
+                    "productGroepNaam": "Koken met Aanbiedingen",
+                    "url":"/jumbo.com/aanbiedingen/5",
+                    "id": 5
+                },
+                {
+                    "productGroepNaam": "Altijd Lage Prijs",
+                    "id": 6
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Win- en spaaracties",
+            "url":"/jumbo.com/aanbiedingen",
+            "productGroepen":  [
+                {
+                    "productGroepNaam": "100 jaar",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 1
+                },
+                {
+                    "productGroepNaam": "Gouden Ticket spaaractie",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 2
+                },
+                {
+                    "productGroepNaam": "Jumbo Extra's",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 3
+                },
+                {
+                    "productGroepNaam": "Vrienden van Amstel Live",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 4
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Online bestellen",
+            "url":"/jumbo.com/aanbiedingen",
+            "productGroepen":  [
+                {
+                    "productGroepNaam": "Start je bestelling",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 1
+                },
+                {
+                    "productGroepNaam": "Thuisbezorgen",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 2
+                },
+                {
+                    "productGroepNaam": "Pick Up Points",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 3
+                },
+                {
+                    "productGroepNaam": "Zo werkt het",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 4
+                },
+                {
+                    "productGroepNaam": "Jumbo app",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 5
+                },
+                {
+                    "productGroepNaam": "Gebak bestellen",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 6
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Wat eten we?",
+            "url":"/jumbo.com/aanbiedingen",
+            "productGroepen":  [
+                {
+                    "productGroepNaam": "Weekmenu",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 1
+                },
+                {
+                    "productGroepNaam": "Klaar in 20 minuten",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 2
+                },
+                {
+                    "productGroepNaam": "5 ingredienten",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 3
+                },
+                {
+                    "productGroepNaam": "Makkelijke gerechten",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 4
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Recepten",
+            "url":"/jumbo.com/aanbiedingen",
+            "productGroepen":  [
+                {
+                    "productGroepNaam": "Hoofdgerechten",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 1
+                },
+                {
+                    "productGroepNaam": "Makkelijke recepten",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 2
+                },
+                {
+                    "productGroepNaam": "Vegetarische recepten",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 3
+                },
+                {
+                    "productGroepNaam": "Koolhydraatarme recepten",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 4
+                },
+                {
+                    "productGroepNaam": "Pasta recepten",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 5
+                },
+                {
+                    "productGroepNaam": "Budget recepten",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 6
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Services",
+            "url":"/jumbo.com/aanbiedingen",
+            "productGroepen":  [
+                {
+                    "productGroepNaam": "Er is iets mis met mijn bestelling",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 1
+                },
+                {
+                    "productGroepNaam": "Actuele informatie",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 2
+                },
+                {
+                    "productGroepNaam": "Veelgestelde vragen",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 3
+                },
+                {
+                    "productGroepNaam": "Winkels & openingstijden",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 4
+                },
+                {
+                    "productGroepNaam": "Weekaanbiedingen",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 5
+                },
+                {
+                    "productGroepNaam": "Weekaanbiedingen",
+                    "url":"/jumbo.com/aanbiedingen",
+                    "id": 6
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Zakelijk bestellen",
+            "url":"/jumbo.com/aanbiedingen",
+            "productGroepen":  [
+            ]
+        }
+    ]
+}

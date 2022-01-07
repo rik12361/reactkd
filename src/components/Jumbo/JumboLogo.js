@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 function JumboLogo() {
     return (
         <div>
-            <Logo src='/images/jumbo/jum-logo.svg' alt='jammer'></Logo>
+            <Link to='/jumbo.com'><Logo src='/images/jumbo/jum-logo.svg' alt='jammer'></Logo></Link>
         </div>
     )
 }
