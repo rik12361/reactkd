@@ -2,6 +2,9 @@ import React from 'react'
 import '../style/RoomInfoCard.css'
 import data from './RoomCards.json'
 import { BsChatDots, BsChatDotsFill, BsFillPersonFill } from 'react-icons/bs'
+
+// This show the info cards with double picture and 'Good times'
+
 function RoomInfoCards() {
 
     return (

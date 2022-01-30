@@ -27,7 +27,7 @@ function SeasonOffers() {
 
             <OfferContainer>
                 {productData.filter((prd) => prd.id > 0).map((prod) => 
-                        <OfferCard prod={prod} showProdGroup={false} showFreeDelivery={false}></OfferCard>
+                        <OfferCard prod={prod} key={prod.id} showProdGroup={false} showFreeDelivery={false}></OfferCard>
                     )}
             </OfferContainer>
             </SeasonInnerContainer>

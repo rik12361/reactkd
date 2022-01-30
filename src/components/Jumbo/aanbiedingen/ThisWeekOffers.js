@@ -17,7 +17,7 @@ function ThisWeekOffers() {
 
         <ThisWeekOuterContainer>
             <ThisWeekInnerContainer className='kd-Jumbo-container'>
-
+            <h1>Deze week actie</h1>
             <PageHeader>
                 <span>Deze week extra voordelig {showNextPeriod? 'Ja' : 'Nee'}</span>
                 <ThisWeekRightButtonContainer showNextPeriod={showNextPeriod}>
@@ -28,7 +28,7 @@ function ThisWeekOffers() {
 
             <OfferContainer>
                 {productData.filter((prd) => prd.id > 0).map((prod) => 
-                        <OfferCard prod={prod} showProdGroup={false} showFreeDelivery={false}></OfferCard>
+                        <OfferCard key={prod.id} prod={prod} showProdGroup={false} showFreeDelivery={false}></OfferCard>
                     )}
             </OfferContainer>
             </ThisWeekInnerContainer>

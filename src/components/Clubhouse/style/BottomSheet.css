@@ -1,11 +1,13 @@
 .kd-bottomSheetContainer {
 
     background-color: #ffffff;
+    margin: 100px 0px 0px 0px;
     border-radius: 1.5em;
     padding: 1.5em 1em;
     position: relative; 
     height: 100%;
 }
+
 
 .kd-switch-line {
     position: absolute;
@@ -17,9 +19,17 @@
     background-color: #cccccc;
 }
 
-.kd-bottom-sheet-bontainer {
+.kd-bottom-sheet-container {
     font-size: 1em;
     color: var(--text-color);
     text-align: center;
     font-weight: 500;
+
+}
+
+.kd-bottom-swipe {
+    height: 400px;
+    background-color: blue;
+    position: relative;
+    bottom: 0px;
 }

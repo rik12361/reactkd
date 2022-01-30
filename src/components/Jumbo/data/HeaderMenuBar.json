@@ -239,7 +239,7 @@
         {
             "id": 5,
             "title": "Wat eten we?",
-            "url":"/jumbo.com/aanbiedingen",
+            "url":"/jumbo.com/watetenwe",
             "productGroepen":  [
                 {
                     "productGroepNaam": "Weekmenu",

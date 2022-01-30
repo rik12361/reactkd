@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import '../style/DailyInfoCards.css'
 import {useEffect} from 'react'
 
+// this is the first card in the block, it show MIND BODY GAME
+//
 function DailyInfoCards() {
     var dailyCardsDisp = useSelector(state => state.dailycards.dailyCards);
 

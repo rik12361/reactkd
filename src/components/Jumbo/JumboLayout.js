@@ -7,6 +7,7 @@ import JumboMain from './JumboMain'
 import OfferMain from './aanbiedingen/OfferMain'
 import ShowScreenResolution from './ShowScreenResolution'
 import FooterWeHelpen from './FooterWeHelpen'
+import WhatDoWeEatContainer from './whatDoWeEat/WhatDoWeEat'
 
 import '../../css/kd-general.css'
 import '../../css/kd-devices.css'
@@ -57,6 +58,7 @@ function JumboLayout({page}) {
             </MobileView>
                 {page === 'main'? <JumboMain Scrollable={Scrollable} sWidth={sWidth}></JumboMain> : ''}
                 {page === 'offer'? <OfferMain Scrollable={Scrollable} sWidth={sWidth}></OfferMain> : ''}
+                {page === 'watetenwe'? <WhatDoWeEatContainer Scrollable={Scrollable} sWidth={sWidth}></WhatDoWeEatContainer> : ''}
             <FooterWeHelpen  sWidth={sWidth} footerHeight={footerHeight} setFooterHeight={setFooterHeight} />
         </JumboMainContainer>
     )

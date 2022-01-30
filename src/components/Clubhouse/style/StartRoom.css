@@ -31,11 +31,6 @@
     line-height: 1.2;
 }
 
-/* .kd-select-room button:active {
-    border: 1px solid lightseagreen;
-    background-color: lightblue;
-}
- */
 .kd-active {
     border: 31px solid lightseagreen;
     background-color: lightseagreen!important;

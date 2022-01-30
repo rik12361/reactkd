@@ -20,6 +20,7 @@ import ReduxMain from "./components/ReduxLab/ReduxMain";
 import RoomInfoCards from "./components/Clubhouse/components/RoomInfoCards"
 import Explorer from "./components/Clubhouse/pages/Explorer"
 import Bever from "./components/Bever/Bever"
+import DuoMain from "./components/Duo/DuoMain"
 import JumboLayout from "./components/Jumbo/JumboLayout";
 
 const App = () => {
@@ -58,6 +59,8 @@ const App = () => {
           <Route exact path="/disney/home" element={<DisneyApp/>}>
           </Route>
           <Route exact path="/disney" element={<DisneyApp/>}>
+          </Route>
+          <Route exact path="/duo" element={<DuoMain/>}>
           </Route>
           <Route exact path="/clubhouse/getUsername" element={
             <>
@@ -150,6 +153,13 @@ const App = () => {
           <Route exact path="/jumbo.com" element={
           <>
            <JumboLayout page='main' >
+            </JumboLayout>
+          </>
+          }>
+          </Route>
+          <Route exact path="/jumbo.com/watetenwe" element={
+          <>
+           <JumboLayout page='watetenwe' >
             </JumboLayout>
           </>
           }>

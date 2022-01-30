@@ -21,7 +21,7 @@ function Troep() {
 
     return (
         <div>
-			{state.book}
+			{/* {state.book}
             <div class="cl-6 cl-s-6 cl-m-4 cl-l-4 cl-xl-2 product-list-item">
 			<a href="https://www.jumbo.com/producten/jumbo-speculaas-brokken-375g-184135PAK?cb=product-card_wk48_184135PAK">
 				<img class="optanon-category-J1000 packshotPromoCardHome full-width" src="https://www.jumbo.com/dam/homepage/2021/48/productwrapper/Speculaas-brokken.jpg" alt="Promo week 48"/>
@@ -38,7 +38,7 @@ function Troep() {
 				</div>					
 				<div class="jum-button secondary">Bekijk <span class="smallHide">product</span></div>
 			</a>
-    		</div>
+    		</div> */}
         </div>
     )
 }

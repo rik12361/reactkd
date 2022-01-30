@@ -19,17 +19,17 @@ function AcceptCookies() {
     }
 
     function CheckCookies() {
-       allCookies.remove('kd-cookies-ingesteld');
         if (allCookies.get('kd-cookies-ingesteld') === undefined) {
             setCookie('kd-cookies-ingesteld', 'true', { path: '/' });
             setshowModal(true);
-            console.log("Cookies instellen");
+            console.log("Cookies instellen !!");
         }
         // remove cookie:
         // allCookies.remove('kokosnoot');
 
         const dispCookies = allCookies.getAll();
         console.log(dispCookies);
+        allCookies.remove('kd-cookies-ingesteld');
 
         // Query coockies vanilla javascript:
         // var allCookiesJs = document.cookie;

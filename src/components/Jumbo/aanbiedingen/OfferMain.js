@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import AllOffers from './AllOffers';
@@ -8,19 +8,33 @@ import NoOrderCosts from './NoOrderCosts'
 
 function OfferMain({sWidth}) {
 
-    const [actualPage, setActualPage] = useState(1);
+    const [actualPage, setActualPage] = useState(0);
     const { id } = useParams();
+
+    useEffect(() => {
+        if (id !== undefined)
+        { 
+                setActualPage(Number(id));
+                console.log('/jumbo.com/aanbiedingen/'+id);
+                console.log(typeof id);
+                console.log(typeof actualPage);
+        }
+        else
+        {
+            console.log("In useEffect no page....");
+            setActualPage(0);
+        }
+    }, [id])
 
     return (
         <OfferMainOuterContainer className='kd-Jumbo-container'>
             <OfferMainInnerContainer>
                 {sWidth>=768? <TopText>Aanbiedingen</TopText> : ''}
-                {id !== undefined? <h1>{id}</h1> : ''}
                 <PagerBarContainer>
-                    <Link to='' onClick={() => setActualPage(1)}>
+                    <Link to='' onClick={() => setActualPage(0)}>
                         <PageTabContainer style={{
-                                background:actualPage===1? 'white' : 'rgb(227,227,227)',
-                                borderTop:actualPage===1? '3px solid var(--jumbo-yellow)' : 'rgb(227,227,227)'
+                                background:actualPage===0? 'white' : 'rgb(227,227,227)',
+                                borderTop:actualPage===0? '3px solid var(--jumbo-yellow)' : 'rgb(227,227,227)'
                                 }}>
                             {sWidth>=960?
                             <>
@@ -34,10 +48,10 @@ function OfferMain({sWidth}) {
                             }
                         </PageTabContainer>
                     </Link>
-                    <Link to='' onClick={() => setActualPage(2)}>
+                    <Link to='' onClick={() => setActualPage(1)}>
                         <PageTabContainer style={{
-                                background:actualPage===2? 'white' : 'rgb(227,227,227)',
-                                borderTop:actualPage===2? '3px solid var(--jumbo-yellow)' : 'rgb(227,227,227)'
+                                background:actualPage===1? 'white' : 'rgb(227,227,227)',
+                                borderTop:actualPage===1? '3px solid var(--jumbo-yellow)' : 'rgb(227,227,227)'
                                 }}>
                             {sWidth>=960?
                             <>
@@ -51,10 +65,10 @@ function OfferMain({sWidth}) {
                             }
                         </PageTabContainer>
                     </Link>
-                    <Link to='' onClick={() => setActualPage(3)}>
+                    <Link to='' onClick={() => setActualPage(2)}>
                         <PageTabContainer style={{
-                                background:actualPage===3? 'white' : 'rgb(227,227,227)',
-                                borderTop:actualPage===3? '3px solid var(--jumbo-yellow)' : 'rgb(227,227,227)'
+                                background:actualPage===2? 'white' : 'rgb(227,227,227)',
+                                borderTop:actualPage===2? '3px solid var(--jumbo-yellow)' : 'rgb(227,227,227)'
                                 }}>
                             {sWidth>=960?
                             <>
@@ -68,10 +82,10 @@ function OfferMain({sWidth}) {
                             }
                         </PageTabContainer>
                     </Link>
-                    <Link to='' onClick={() => setActualPage(4)}>
+                    <Link to='' onClick={() => setActualPage(3)}>
                         <PageTabContainer style={{
-                                background:actualPage===4? 'white' : 'rgb(227,227,227)',
-                                borderTop:actualPage===4? '3px solid var(--jumbo-yellow)' : 'rgb(227,227,227)'
+                                background:actualPage===3? 'white' : 'rgb(227,227,227)',
+                                borderTop:actualPage===3? '3px solid var(--jumbo-yellow)' : 'rgb(227,227,227)'
                                 }}>
                             {sWidth>=960?
                             <>
@@ -87,10 +101,10 @@ function OfferMain({sWidth}) {
                     </Link>
                 </PagerBarContainer>
 
-                {actualPage===1?  <AllOffers/> : '' }
-                {actualPage===2?  <ThisWeekOffers/> : '' }
-                {actualPage===3?  <SeasonOffers/> : '' }
-                {actualPage===4?  <NoOrderCosts sWidth={sWidth}/> : '' }
+                {actualPage===0?  <AllOffers/> : '' }
+                {actualPage===1?  <ThisWeekOffers/> : '' }
+                {actualPage===2?  <SeasonOffers/> : '' }
+                {actualPage===3?  <NoOrderCosts sWidth={sWidth}/> : '' }
             </OfferMainInnerContainer>
         </OfferMainOuterContainer>
     )

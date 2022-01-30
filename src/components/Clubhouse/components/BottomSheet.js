@@ -21,7 +21,7 @@ function BottomSheet({sheetTitle, setSheetTitle, setSheetVisible, sheetVisible, 
                     setItemsVisible(true)}}
                 fullscreen={sheetTitle === 'room detail' ? true : false}
             >
-            <div className='kd-bottom-sheet-bontainer' 
+            <div className='kd-bottom-sheet-container' 
                 style={{backgroundColor: sheetTitle === 'profile'? 'transparent' : ''}}
             >
             { sheetTitle==='New room'? (

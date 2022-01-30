@@ -106,7 +106,7 @@ function HeaderSearchInfoBar({showMessageLine, setScrollable}) {
                         <Fade right><CLoseButton onClick={() => disableSearchTip() }>Sluiten</CLoseButton></Fade>
                         : ''}
                <SearchLoupe>
-                <i ref={searchLoupeRef} id='searchLoupe' class="fa fa-search"></i>
+                <i ref={searchLoupeRef} id='searchLoupe' className="fa fa-search"></i>
                 </SearchLoupe>
                 {showTip? (
                     <SearchHint ref={searchTipRef}>                        

@@ -37,7 +37,7 @@ function Header() {
                     userEmail: user.email, 
                     userPhoto: user.photoURL, 
                 }))
-                history.push("/disney/home");
+                // history("/disney/home");
             }
          })
     });
@@ -59,17 +59,17 @@ function Header() {
                 console.log(result.user.email);
                 console.log(result.user.displayName);
 
-                history.push("/disney/home");
+                // history("/disney/home");
             })
     }
 
     const signOut = () => {
         auth.signOut().then(dispatch(setSignOut()));
-        history.push("/disney/login");
+        // history("/disney/login");
     }
 
     const goHome = () => {
-        history.push("/disney/home");
+        // history("/disney/home");
     }
 
     return (

@@ -70,7 +70,7 @@ function NoOrderCosts({sWidth}) {
                         <>
                             {checkAddExtraPromotionBlock(index+1, sWidth)? 
                             <>
-                                <ExtraBlock><span>HI HIHI</span></ExtraBlock>
+                                <ExtraBlock key={index}><span>HI HIHI</span></ExtraBlock>
                             </>
                             : 
                             ''

@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import '../style/ClubHouseHeader.css'
 
+// Top menu bar with search e-mail, calendar, alarm en user-profile picture
+//
 function ClubHouseHeader() {
     return (
         <div className="kd-relative">

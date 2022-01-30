@@ -6,7 +6,6 @@ function StartRoom({setSheetCreateRoom, setSheetVisible, setSheetTitle, sheetTit
     const [room, setRoom] = useState('');
     console.log("Sheetvi");
     console.log(setSheetVisible);
-    console.log("Sheetvi");
     return (
         <div>
         <div className='kd-switch-line'>

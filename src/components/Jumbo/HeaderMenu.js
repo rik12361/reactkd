@@ -39,7 +39,7 @@ function HeaderMenuBar({showMessageLine}) {
                                 <MenuGroupContainer>
                                 {menuItem.productGroepen.map((productGroep, index) => 
     
-                                    <MenuItemContainer> 
+                                    <MenuItemContainer key={index}> 
                                         {productGroep.url !== undefined? <ProductHeader><Link to={productGroep.url}><span>{productGroep.productGroepNaam}</span></Link></ProductHeader>
                                         :
                                         <ProductHeader><Link to=''><span>{productGroep.productGroepNaam}</span></Link></ProductHeader>}
@@ -52,7 +52,7 @@ function HeaderMenuBar({showMessageLine}) {
                                                 </SubGroepHeader>
                                                 <SubGroepItems>
                                                     {productGroep.productSubGroep.map((subgroep) => 
-                                                        <li><a href=""><span>{subgroep.Subgroep}</span></a></li>)} 
+                                                        <li key={subgroep.id}><a href=""><span>{subgroep.Subgroep}</span></a></li>)} 
                                                 </SubGroepItems>
                                             </SubMenuItemContainer> : '' }
                                     </MenuItemContainer> )}
