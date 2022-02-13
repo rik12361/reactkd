@@ -31,7 +31,7 @@ const Img = styled.img`
 `
 const ImgSlogan = styled.div`
     position: absolute;
-    border-radius: 0em;
+    border-radius: 0.2em;
     font-size: 40px;
     font-weight: 700;
     background: rgba(0,0,0,0.5);

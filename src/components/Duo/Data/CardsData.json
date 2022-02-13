@@ -8,15 +8,15 @@
             {
                 "Id": 1,
                 "CardTitle": "NPO Programma",
-                "Date": "28-1-2022",
-                "Time": "9:25",
+                "Date": "21-6-2021",
+                "Time": "17:31",
                 "CardUrl": "https://www.aobmedezeggenschap.nl/app/uploads/2021/04/NPOnderwijs1-vierkant-1.jpg",
                 "CardText": "De Corona-crisis trekt diepe sporen in het onderwijs. Leerlingen en leraren gaan door een jojo van lock-downs, thuisonderwijs en toch weer naar school. Ondertussen lopen de achterstanden in het hele onderwijs op en dat raakt kwetsbare kinderen het hardst."
             },
             {
                 "Id": 2,
                 "CardTitle": "Scholen deels open",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://i.regiogroei.cloud/1104x621/655a5c3b-76b8-3c39-9077-50c8702fbaf8.jpg",
                 "CardText": "Scholen voor basis- en voortgezet onderwijs gaan komende maandag, na de kerstvakantie, weer open. Dat heeft het kabinet besloten. Het middelbaar- en hoger onderwijs blijft nog wel dicht, op enkele uitzonderingen na."
@@ -30,42 +30,47 @@
             {
                 "Id": 1,
                 "CardTitle": "Een school starten",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://i2.wp.com/www.nieuworganiseren.nu/wp-content/uploads/2016/01/schoolstichten.jpg?fit=630%2C315&ssl=1",
-                "CardText": "Heb je al eens gedacht om een nieuwe school te starten, waar je een nieuwe visie op onderwijs kan uitwerken? Dan heb je misschien ook al gemerkt dat er heel veel nodig is om deze droom te verwezenlijken."
+                "CardText": "Heb je al eens gedacht om een nieuwe school te starten, waar je een nieuwe visie op onderwijs kan uitwerken? Dan heb je misschien ook al gemerkt dat er heel veel nodig is om deze droom te verwezenlijken.",
+                "Url": "/duo/voorzieningenplanning"
             },
             {
                 "Id": 2,
                 "CardTitle": "Gewijzigd aantal studenten",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://imgo.rgcdn.nl/b647f628b8204bc0a0e0f4dd22e41020/opener/Leerlingen-buiten-de-school-Foto-GinoPress.jpg",
-                "CardText": "Toegestaan voortgezet onderwijs per schoolvestiging en leerjaar. Laatste wijziging 28 november 2021. Samen maken we onderwijs en ontwikkeling"
+                "CardText": "Toegestaan voortgezet onderwijs per schoolvestiging en leerjaar. Laatste wijziging 28 november 2021. Samen maken we onderwijs en ontwikkeling",
+                "Url": "/duo/statustoekenning"
             },
             {
                 "Id": 3,
                 "CardTitle": "Overzicht financien",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://niveopleidingen.nl/wp-content/uploads/2016/07/geld.png",
-                "CardText": "Scholen voor het basisonderwijs en speciaal onderwijs krijgen vanaf 1 januari 2023 een basisbedrag per leerling en school. Schoolbesturen kunnen dit geld naar eigen inzicht besteden. Ook wordt het hele bedrag vanaf dat moment per kalenderjaar vastgesteld."
+                "CardText": "Scholen voor het basisonderwijs en speciaal onderwijs krijgen vanaf 1 januari 2023 een basisbedrag per leerling en school. Schoolbesturen kunnen dit geld naar eigen inzicht besteden. Ook wordt het hele bedrag vanaf dat moment per kalenderjaar vastgesteld.",
+                "Url": "/duo/bekostigen"
             },
             {
                 "Id": 4,
                 "CardTitle": "Verantwoorden",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://www.managementimpact.nl/content/uploads/2020/07/jaarrekening.jpg",
-                "CardText": "Scholen voor het basisonderwijs en speciaal onderwijs krijgen vanaf 1 januari 2023 een basisbedrag per leerling en school. Schoolbesturen kunnen dit geld naar eigen inzicht besteden. Ook wordt het hele bedrag vanaf dat moment per kalenderjaar vastgesteld."
+                "CardText": "Scholen voor het basisonderwijs en speciaal onderwijs krijgen vanaf 1 januari 2023 een basisbedrag per leerling en school. Schoolbesturen kunnen dit geld naar eigen inzicht besteden. Ook wordt het hele bedrag vanaf dat moment per kalenderjaar vastgesteld.",
+                "Url": "/duo/verantwoorden"
             },
             {
                 "Id": 5,
                 "CardTitle": "Bezwaar indienen",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://www.hvdadvocaten.nl/wp-content/uploads/2017/12/bezwaar-300x217-300x217.jpg",
-                "CardText": "Scholen voor het basisonderwijs en speciaal onderwijs krijgen vanaf 1 januari 2023 een basisbedrag per leerling en school. Schoolbesturen kunnen dit geld naar eigen inzicht besteden. Ook wordt het hele bedrag vanaf dat moment per kalenderjaar vastgesteld."
+                "CardText": "Scholen voor het basisonderwijs en speciaal onderwijs krijgen vanaf 1 januari 2023 een basisbedrag per leerling en school. Schoolbesturen kunnen dit geld naar eigen inzicht besteden. Ook wordt het hele bedrag vanaf dat moment per kalenderjaar vastgesteld.",
+                "Url": "/duo/bezwaarenberoep"
             }
         ]
     },
@@ -76,50 +81,56 @@
             {
                 "Id": 1,
                 "CardTitle": "Regelingen HO",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://www.scienceguide.nl/wp-content/uploads/2018/04/Schermafbeelding-2018-04-03-om-17.19.43.jpg",
-                "CardText": "Het onderwijs is verdeeld in min of meer leeftijdsgebonden sectoren: basisonderwijs, voortgezet onderwijs, middelbaar beroepsonderwijs en hoger onderwijs. "
+                "CardText": "Het onderwijs is verdeeld in min of meer leeftijdsgebonden sectoren: basisonderwijs, voortgezet onderwijs, middelbaar beroepsonderwijs en hoger onderwijs. ",
+                "Url": "/duo/ho"
             },
             {
                 "Id": 2,
                 "CardTitle": "Regelingen HBO",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://www.aob.nl/wp-content/uploads/2021/09/29986485507_eca986f517_o.jpg",
-                "CardText": "Het onderwijs is verdeeld in min of meer leeftijdsgebonden sectoren: basisonderwijs, voortgezet onderwijs, middelbaar beroepsonderwijs en hoger onderwijs. "
+                "CardText": "Het onderwijs is verdeeld in min of meer leeftijdsgebonden sectoren: basisonderwijs, voortgezet onderwijs, middelbaar beroepsonderwijs en hoger onderwijs. ",
+                "Url": "/duo/ho"
             },
             {
                 "Id": 3,
                 "CardTitle": "Regelingen MBO",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://www.datocms-assets.com/14326/1606479092-best-betaalde-banen-mbo.png?auto=compress&fm=jpg&h=600&w=800",
-                "CardText": "Het onderwijs is verdeeld in min of meer leeftijdsgebonden sectoren: basisonderwijs, voortgezet onderwijs, middelbaar beroepsonderwijs en hoger onderwijs. "
+                "CardText": "Het onderwijs is verdeeld in min of meer leeftijdsgebonden sectoren: basisonderwijs, voortgezet onderwijs, middelbaar beroepsonderwijs en hoger onderwijs. ",
+                "Url": "/duo/mbo"
             },
             {
                 "Id": 4,
                 "CardTitle": "Regelingen PO",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://images0.persgroep.net/rcs/lv2r_TQbWtCnQv28Doif1Q4tDis/diocontent/203232497/_fitwidth/763?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.8",
-                "CardText": "Het onderwijs is verdeeld in min of meer leeftijdsgebonden sectoren: basisonderwijs, voortgezet onderwijs, middelbaar beroepsonderwijs en hoger onderwijs. "
+                "CardText": "Het onderwijs is verdeeld in min of meer leeftijdsgebonden sectoren: basisonderwijs, voortgezet onderwijs, middelbaar beroepsonderwijs en hoger onderwijs. ",
+                "Url": "/duo/po"
             },
             {
                 "Id": 5,
                 "CardTitle": "Kinderopvang",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://www.kinderopvangtotaal.nl/content/uploads/sites/3/2021/09/AdobeStock_320819860.jpg",
-                "CardText": "Als kinderopvangorganisatie of gastouderbureau koppelt u na inschrijving in het Personenregister Kinderopvang de persoon aan uw organisatie. Regel het hier."
+                "CardText": "Als kinderopvangorganisatie of gastouderbureau koppelt u na inschrijving in het Personenregister Kinderopvang de persoon aan uw organisatie. Regel het hier.",
+                "Url": "/duo/kinderopvang"
             },
             {
                 "Id": 6,
                 "CardTitle": "Inburgering: ketenpartners",
-                "Date": "28-1-2022",
+                "Date": "18-6-2021",
                 "Time": "9:25",
                 "CardUrl": "https://imgo.rgcdn.nl/184a9708d81d43848b3aeeb7b9eca260/opener/Almelo-start-proef-met-verzwaarde-inburgeringscursus-Foto-ANP-Marco-de-Swart.jpg?v=w7tA6W2FRBFAV5FQDgnJmw2",
-                "CardText": "Informatie over regelingen en aanvragen van kinderopvang door ketenpartners."
+                "CardText": "Informatie over regelingen en aanvragen van kinderopvang door ketenpartners.",
+                "Url": "/duo/inburgering"
             }
         ]
     }

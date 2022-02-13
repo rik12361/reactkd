@@ -11,7 +11,7 @@ function DuoRulesAndSectors() {
        <h1>Informatie over regelingen voor elke onderwijssector</h1>
        <CardsContainer>
        {duoNews.CardsCategory.filter(cat => cat.CardCategory === "Sectors").map((news) => (
-         news.Cards.map((card) => <Card header={card.CardTitle} imglink={card.CardUrl} text={card.CardText} reflink={''}></Card>)
+         news.Cards.map((card) => <Card header={card.CardTitle} imglink={card.CardUrl} text={card.CardText} reflink={card.Url}></Card>)
        )
        )}
        </CardsContainer>

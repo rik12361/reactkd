@@ -7,12 +7,12 @@ function DuoSocialMedia() {
         <InnerContainer>
             <hr></hr>
             <Header>Sociale Media</Header>
-            <Media><img src="https://img.icons8.com/color/48/000000/facebook.png"/><a href="/">Facebook Duo</a></Media>
-            <Media><img src="https://img.icons8.com/color/48/000000/twitter--v1.png"/><a href="/">Twitter Duo</a></Media>
-            <Media><img src="https://img.icons8.com/color/48/000000/instagram-new--v2.png"/><a href="/">Instagram Duo</a></Media>
-            <Media><img src="https://img.icons8.com/color/48/000000/linkedin.png"/><a href="/">Linkedin Duo</a></Media>
-            <Media><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/><a href="/">Youtube Duo</a></Media>
-            <Media><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/><a href="/">WhatsApp Duo</a></Media>
+            <Media><img src="https://img.icons8.com/color/48/000000/facebook.png" alt="jammer"/><a href="/">Facebook Duo</a></Media>
+            <Media><img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="jammer"/><a href="/">Twitter Duo</a></Media>
+            <Media><img src="https://img.icons8.com/color/48/000000/instagram-new--v2.png" alt="jammer"/><a href="/">Instagram Duo</a></Media>
+            <Media><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="jammer"/><a href="/">Linkedin Duo</a></Media>
+            <Media><img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="jammer"/><a href="/">Youtube Duo</a></Media>
+            <Media><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="jammer"/><a href="/">WhatsApp Duo</a></Media>
         </InnerContainer>
     </OuterContainer>
   </div>;

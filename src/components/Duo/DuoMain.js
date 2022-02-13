@@ -2,34 +2,49 @@ import React from 'react';
 import styled from 'styled-components';
 import DuoHeader from './DuoHeader';
 import DuoMenuBar from './DuoMenuBar'
-import DuoHeroPage from './DuoHeroPage';
-import DuoNews from './DuoNews';
-import DuoProcess from './DuoProcess';
-import DuoRulesAndSectors from './DuoRulesAndSectors';
-import DuoNewsFlash from './DuoNewsFlash';
-import DuoFirstFooter from './DuoFirstFooter';
-import DuoSocialMedia from './DuoSocialMedia';
-import DuoBreadCrust from './DuoBreadCrust';
-function DuoMain() {
+
+import DuoSectorToJourney from './DuoSectorToJourney';
+import DuoBreadCrum from './DuoBreadCrum';
+import DuoMainContainer from './DuoMainContent';
+import DuoProcessToJourney from './DuoProcessToJourney'
+
+function DuoMain({page}) {
   return <>
-      <DuoHeader></DuoHeader>
-      <DuoMenuBar></DuoMenuBar>
-      <DuoBreadCrust></DuoBreadCrust>
-      <DuoHeroPage></DuoHeroPage>
-      <DuoNews></DuoNews>
+      <DuoHeaderContainer>
+        <DuoHeader></DuoHeader>
+        <DuoMenuBar></DuoMenuBar>
+        <DuoBreadCrum></DuoBreadCrum>
+      </DuoHeaderContainer>
+      {page==='main'? <DuoMainContainer></DuoMainContainer> : ''}
+      {page==='voorzieningenplanning'?  <DuoSectorToJourney domein={'OI-Voorzieningenplanning'} domeinName={'Voorzieningenplanning'}></DuoSectorToJourney> : ''}
+      {page==='statustoekenning'? <DuoSectorToJourney domein={'OI-Statustoekenning'} domeinName={'Statustoekenning'}></DuoSectorToJourney> : ''}
+      {page==='bekostigen'? <DuoSectorToJourney domein={'OI-Bekostiging'} domeinName={'Bekostiging'}></DuoSectorToJourney> : ''}
+      {page==='verantwoorden'? <DuoSectorToJourney domein={'OI-Verantwoorden'} domeinName={'Verantwoorden'}></DuoSectorToJourney>: ''}
+      {page==='bezwaarenberoep'? <DuoSectorToJourney domein={'OI-BenB'} domeinName={'Bezwaar en beroep'}></DuoSectorToJourney>: ''}
+
+      {page==='ho'? <DuoProcessToJourney sector={'Hoger onderwijs'} sectorName={'Hoger onderwijs'}></DuoProcessToJourney>: ''}
+      {page==='po'? <DuoProcessToJourney sector={'Primair onderwijs'} sectorName={'Primair onderwijs'}></DuoProcessToJourney>: ''}
+      {page==='vo'? <DuoProcessToJourney sector={'Voortgezet onderwijs'} sectorName={'Voortgezet onderwijs'}></DuoProcessToJourney>: ''}
+      {page==='mbo'? <DuoProcessToJourney sector={'Middelbaar beroepsonderwijs en Vavo'} sectorName={'Middelbaar beroepsonderwijs en Vavo'}></DuoProcessToJourney>: ''}
+      {/* {page==='po'? <DuoProcessToJourney sector={'OI-Primair onderwijs'} sectorName={'Primair onderwijs'}></DuoProcessToJourney>: ''}
+      {page==='po'? <DuoProcessToJourney sector={'OI-Primair onderwijs'} sectorName={'Primair onderwijs'}></DuoProcessToJourney>: ''} */}
+
+      {/* <DuoHeroPage></DuoHeroPage> */}
+      {/* <DuoNews></DuoNews>
       <DuoNewsFlash></DuoNewsFlash>
       <DuoProcess></DuoProcess>
       <DuoRulesAndSectors></DuoRulesAndSectors>
       <DuoSocialMedia></DuoSocialMedia>
-      <DuoFirstFooter></DuoFirstFooter>
+      <DuoFirstFooter></DuoFirstFooter> */}
   </>;
 }
 
 export default DuoMain;
 
-const MainContainer = styled.div`
-  width: 1920px;
-  height: 1200px;
+const DuoHeaderContainer = styled.div`
+  /* position: fixed;
+  width: 100%; */
 `
+
 
 //https://www.rijksoverheid.nl/binaries/content/gallery/rijksoverheid/channel-afbeeldingen/logos/logo-ro.svg

@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link  } from 'react-router-dom'
 import styled from 'styled-components';
 function Card({imglink, header, text, reflink}) {
 
   console.log(imglink);
   return <div>
       <CardContainer>
-                <ImgLink href={reflink}>
+                <Link to={reflink}>
                     <ImgContainer>
                         <Img src={imglink} alt='jammer'></Img>
                     </ImgContainer>
                     <Header>{header}</Header>
-                </ImgLink>
+                </Link>
                 <Text>{text}</Text>
       </CardContainer>
   </div>;

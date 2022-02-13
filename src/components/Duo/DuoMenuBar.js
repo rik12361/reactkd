@@ -10,7 +10,10 @@ function DuoMenuBar() {
   return <div>
       <OuterContainer>          
         <InnerContainer className='kd-duo-container'> 
-            <LeftContainer><Menu href="#">Home</Menu></LeftContainer> 
+            <LeftContainer>
+                <Menu href="/duo"><span class="material-icons">home</span><span>Home</span></Menu>
+                <Menu href="#"><span class="material-icons">menu</span><span>Menu</span></Menu>
+            </LeftContainer> 
             <RightContainer>
                 <SearchFieldContainer style={{
                     width:search? '300px': '0px', 
@@ -18,6 +21,7 @@ function DuoMenuBar() {
                         <SearchField type='text' placeholder='Zoeken' size='36'></SearchField>
                 </SearchFieldContainer>
                 <SearchContainer><SearchBtn onClick={()=>setSearch(!search)}><i className="fa fa-search"></i></SearchBtn> </SearchContainer>
+                <Menu href="#"><span class="material-icons">person</span><span>Inloggen</span></Menu>
             </RightContainer> 
         </InnerContainer>
       </OuterContainer>
@@ -29,12 +33,30 @@ export default DuoMenuBar;
 const InnerContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    height: 85px;
 `
 const LeftContainer = styled.div`
+    height: 85px;
     color: white;
-    font-size: 32px;
-    padding: 12px 0px 12px 0px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    span:nth-child(1) {
+        position: relative;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        color: white;
+    }
+    span:nth-child(2) {
+        font-size: 16px;
+        margin: 0px 0px 0px 12px;
+        color: white;
+    }
+
 `
 
 const RightContainer = styled(LeftContainer)`
@@ -53,6 +75,7 @@ const OuterContainer = styled.div`
 
 const SearchBtn = styled.button`
     position: relative;
+    top: -1px;
     z-index: 2;
 
     height: 56px;
@@ -76,7 +99,6 @@ const SearchBtn = styled.button`
 `
 const SearchField = styled.input`
     padding: 4px;
-    border: 13px solid red;
     background: white;
     border: none;
     color: black
@@ -96,10 +118,11 @@ const SearchFieldContainer = styled.div`
     transition: all 400ms ease;
 `
 const Menu = styled.a`
+    padding: 0px 24px;
     color: white;
     font-size: 24px;
     &:hover {
-        color: white;
-        text-decoration: underline;
+        background: var(--duoVeryLightBlue);
+        padding: 24px 24px 25px 24px;
     }
 `

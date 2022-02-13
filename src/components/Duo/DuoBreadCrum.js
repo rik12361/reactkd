@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaChevronRight } from 'react-icons/fa';
 
-function DuoBreadCrust() {
+function DuoBreadCrum() {
   return <div>
       <OuterContainer>
           <InnerContainer>
@@ -11,7 +11,7 @@ function DuoBreadCrust() {
       </OuterContainer>
   </div>
 }
-export default DuoBreadCrust;
+export default DuoBreadCrum;
 const OuterContainer = styled.div`
     height: 30px;
     background: var(--duoExtremeLightBlue);

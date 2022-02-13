@@ -60,8 +60,82 @@ const App = () => {
           </Route>
           <Route exact path="/disney" element={<DisneyApp/>}>
           </Route>
-          <Route exact path="/duo" element={<DuoMain/>}>
+          <Route exact path="/duo" element={
+            <>
+              <DuoMain page='main'>
+              </DuoMain>
+            </>
+          }>
           </Route>
+          <Route exact path="/duo/voorzieningenplanning" element={
+            <>
+              <DuoMain page='voorzieningenplanning'>
+              </DuoMain>
+            </>
+          }>
+          </Route>
+          <Route exact path="/duo/statustoekenning" element={
+            <>
+              <DuoMain page='statustoekenning'>
+              </DuoMain>
+            </>
+          }>
+          </Route>
+          <Route exact path="/duo/bekostigen" element={
+            <>
+              <DuoMain page='bekostigen'>
+              </DuoMain>
+            </>
+          }>
+          </Route>
+          <Route exact path="/duo/verantwoorden" element={
+            <>
+              <DuoMain page='verantwoorden'>
+              </DuoMain>
+            </>
+          }>
+          </Route>
+          <Route exact path="/duo/bezwaarenberoep" element={
+            <>
+              <DuoMain page='bezwaarenberoep'>
+              </DuoMain>
+            </>
+          }>
+          </Route>
+
+          <Route exact path="/duo/po" element={
+            <>
+              <DuoMain page='po'>
+              </DuoMain>
+            </>
+          }>
+          </Route>
+
+          <Route exact path="/duo/ho" element={
+            <>
+              <DuoMain page='ho'>
+              </DuoMain>
+            </>
+          }>
+          </Route>
+
+          <Route exact path="/duo/mbo" element={
+            <>
+              <DuoMain page='mbo'>
+              </DuoMain>
+            </>
+          }>
+          </Route>
+
+          <Route exact path="/duo/vo" element={
+            <>
+              <DuoMain page='vo'>
+              </DuoMain>
+            </>
+          }>
+          </Route>
+
+
           <Route exact path="/clubhouse/getUsername" element={
             <>
               <PlanLayout>
