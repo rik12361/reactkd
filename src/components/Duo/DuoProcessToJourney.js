@@ -42,7 +42,7 @@ const groupBySector = (sector, sectorDescription) => {
     sectorTranslated = (sectorDescription === "Sector PO en MBO"? "Middelbaar beroepsonderwijs en Vavo" : sectorDescription);
     sectorTranslated = (sectorDescription === "Sector MBO en HBO"? "Middelbaar beroepsonderwijs en Vavo" : sectorDescription);
   }
-
+// "homepage": "http://rik12361.github.io.reactkd"
 
   if (sector === 'Voortgezet onderwijs') {
     sectorTranslated = (sectorDescription === "Overig"? "Voortgezet onderwijs" : sectorDescription);
@@ -51,6 +51,7 @@ const groupBySector = (sector, sectorDescription) => {
     sectorTranslated = (sectorDescription === "Sector PO en VO"? "Voortgezet onderwijs" : sectorDescription);
   }
 
+  console.log(sector + "=>" + sectorTranslated);
   return sectorTranslated;
 }
 
@@ -72,7 +73,7 @@ return <div>
                 <SectorHeader>Voorzieningenplanning</SectorHeader>
                 {(
                   Journeys.Journey.filter((cat) => (groupBySector (sector, cat.Sector)===sector && cat.Domein==="OI-Voorzieningenplanning")).map((Onderwerp) => 
-                    <ProcessContainer href="/"><Process>{RemoveAbrevs(Onderwerp.Proces)} - {Onderwerp.Sector}</Process></ProcessContainer>)
+                    <ProcessContainer href="/"><Process>{RemoveAbrevs(Onderwerp.Proces)}</Process></ProcessContainer>)
                 )}</>
                 : ''
             }
@@ -82,7 +83,7 @@ return <div>
                 <SectorHeader>Statustoekenning</SectorHeader>
                 {(
                   Journeys.Journey.filter((cat) => (groupBySector (sector, cat.Sector)===sector && cat.Domein==="OI-Statustoekenning")).map((Onderwerp) => 
-                  <ProcessContainer href="/"><Process>{RemoveAbrevs(Onderwerp.Proces)} - {Onderwerp.Sector}</Process></ProcessContainer>)
+                  <ProcessContainer href="/"><Process>{RemoveAbrevs(Onderwerp.Proces)}</Process></ProcessContainer>)
                   )}</>
                 : ''
             }
